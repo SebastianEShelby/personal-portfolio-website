@@ -22,6 +22,14 @@ nav {
     grid-row: 2/span 1;
 }
 
+nav li {
+    display: inline-block;
+}
+
+nav li a{
+    text-decoration-line: none;
+}
+
 main {
     background-color: green;
     grid-column: 2/3;
