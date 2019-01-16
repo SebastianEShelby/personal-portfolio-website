@@ -2,12 +2,12 @@
 
 .container {
     display: grid;
-    grid-template-columns: [first-line] 10vw [line2] 80vw [line3] 10vw [last-line];
-    grid-template-rows: [first-row] 25vh [row2] 5vh [row3] 85vh [row4] 5vh [last-row];
+    grid-template-columns: [first-line] 1fr [line2] 80vw [line3] 1fr [last-line];
+    grid-template-rows: [first-row] 25vh [row2] 5vh [row3] 65vh [row4] 5vh [last-row];
 }
 
 header {
-    background-color: red;
+    background-image: linear-gradient(to right,rgb(255, 99, 126, 1) , rgba(230, 214, 0, 0.8));
     grid-column-start: first-line;
     grid-column-end: last-line;
     grid-row-start: first-row;
@@ -15,18 +15,22 @@ header {
 } 
 
 nav {
-    background-color: purple;
+    background-color: rgb(148, 58, 148);
+    /* background-image: linear-gradient(to right, rgb(255, 99, 126, 1), rgb(230, 214, 0, 0.8)); */
     /* Format: grid-column-start/grid-column-end */
     grid-column: first-line/last-line;
     /* Format: grid-row-start/grid-row-end */
     grid-row: 2/span 1;
 }
 
-nav li {
+nav ul {
+    margin: 0;
+}
+nav ul li {
     display: inline-block;
 }
 
-nav li a{
+nav ul li a{
     text-decoration-line: none;
 }
 
@@ -37,7 +41,7 @@ main {
 }
 
 footer {
-    background-color: purple;
+    background-color: orange;
     /* Format: grid-row-start/grid-column-start/grid-row-end/grid-column-end */
     grid-area: 4/first-line/span 1/last-line;
 }
