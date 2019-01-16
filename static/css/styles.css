@@ -1,5 +1,35 @@
-@import url(./node_modules/sanitize.css/sanitize.css);
+@import url(../../node_modules/sanitize.css/sanitize.css);
 
 .container {
     display: grid;
+    grid-template-columns: [first-line] 10vw [line2] 80vw [line3] 10vw [last-line];
+    grid-template-rows: [first-row] 25vh [row2] 5vh [row3] 85vh [row4] 5vh [last-row];
+}
+
+header {
+    background-color: red;
+    grid-column-start: first-line;
+    grid-column-end: last-line;
+    grid-row-start: first-row;
+    grid-row-end: span 1;
+} 
+
+nav {
+    background-color: purple;
+    /* Format: grid-column-start/grid-column-end */
+    grid-column: first-line/last-line;
+    /* Format: grid-row-start/grid-row-end */
+    grid-row: 2/span 1;
+}
+
+main {
+    background-color: green;
+    grid-column: 2/3;
+    grid-row: 3/span 1;
+}
+
+footer {
+    background-color: purple;
+    /* Format: grid-row-start/grid-column-start/grid-row-end/grid-column-end */
+    grid-area: 4/first-line/span 1/last-line;
 }
