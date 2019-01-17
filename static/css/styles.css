@@ -8,7 +8,16 @@ div.grid-container {
 }
 /* Grid Container End */
 
-/* Navbar - 2nd Grid Item */
+/***** Header - 1st Grid Item *****/
+header.grid-item {
+    background-image: linear-gradient(to right,rgb(255, 99, 126, 1) , rgba(230, 214, 0, 0.8));
+    grid-column-start: first-line;
+    grid-column-end: last-line;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+} 
+
+/* Navbar - Grid sub-item */
 nav.grid-item {
     background-color: rgb(158, 132, 158);
     /* background-image: linear-gradient(to right, rgb(255, 99, 126, 1), rgb(230, 214, 0, 0.8)); */
@@ -21,7 +30,7 @@ nav.grid-item {
     justify-content: space-between;
     align-items: center;
 }
-/* Grid sub-item and Flexbox Container */
+/* Nav Flexbox Container */
 nav.grid-item ul.grid-sub-item {
     margin: 0;
     padding: 0;
@@ -32,7 +41,7 @@ nav.grid-item ul.grid-sub-item {
     height: 100%;
     min-width: 25vw;
 }
-/* Grid sub-item and Flexbox Container End*/
+/* Nav Flexbox Container End*/
 
 /* Flex item */
 nav.grid-item ul.flex-container li.flex-item {
@@ -52,38 +61,30 @@ nav ul li a{
 nav ul li a:hover{
     color: tomato;
 }
-/* Navbar - 2nd Grid Item End */
+/* Navbar - Grid sub-item End */
 
-/* Header - 1st Grid Item */
-header.grid-item {
-    background-image: linear-gradient(to right,rgb(255, 99, 126, 1) , rgba(230, 214, 0, 0.8));
-    grid-column-start: first-line;
-    grid-column-end: last-line;
-    grid-row-start: 2;
-    grid-row-end: span 1;
-} 
-/* Header - 1st Grid Item End */
+/***** Header - 1st Grid Item End *****/
 
-/* Main Content - 3rd Grid Item */
+/****** Main Content - 2nd Grid Item ******/
 main.grid-item {
     background-color: rgb(166, 231, 166);
     grid-column: 2/3;
     grid-row: 3/span 1;
 }
-/* Main Content - 3rd Grid Item End */
+/****** Main Content - 2nd Grid Item End ******/
 
-/* Footer - Last Grid Item */
+/****** Footer - Last Grid Item ******/
 footer.grid-item {
     background-color: rgb(221, 199, 159);
     /* Format: grid-row-start/grid-column-start/grid-row-end/grid-column-end */
     grid-area: 4/first-line/span 1/last-line;
 }
-/* Footer - Last Grid Item End */
+/****** Footer - Last Grid Item End ******/
 
 
 
-/********** Mobile Design **********/ /********** Mobile Design **********/ /********** Mobile Design **********/ /********** Mobile Design **********/
+/****************** Mobile Design ******************/ 
 @media all and (max-width: 375px){
-    
+
 }
-/********** Mobile Design End **********/    
+/****************** Mobile Design End ******************/   
