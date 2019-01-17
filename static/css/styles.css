@@ -1,21 +1,26 @@
 @import url(../../node_modules/sanitize.css/sanitize.css);
 
-.container {
+/* Grid Container */
+div.container {
     display: grid;
-    grid-template-columns: [first-line] 1fr [line2] 80vw [line3] 1fr [last-line];
-    grid-template-rows: [first-row] 25vh [row2] 5vh [row3] 65vh [row4] 5vh [last-row];
+    grid-template-columns: [first-line] 10vw [line2] auto [line3] 10vw [last-line];
+    grid-template-rows: [first-row] minmax(60vh, auto) [row2] 5vh [row3] minmax(70vh, auto) [row4] 5vh [last-row];
 }
+/* End Grid Container */
 
-header {
+/* Header - 1st Grid Item */
+header.grid-item {
     background-image: linear-gradient(to right,rgb(255, 99, 126, 1) , rgba(230, 214, 0, 0.8));
     grid-column-start: first-line;
     grid-column-end: last-line;
     grid-row-start: first-row;
     grid-row-end: span 1;
 } 
+/* End Header - 1st Grid Item */
 
-nav {
-    background-color: rgb(148, 58, 148);
+/* Navbar - 2nd Grid Item */
+nav.grid-item {
+    background-color: rgb(158, 132, 158);
     /* background-image: linear-gradient(to right, rgb(255, 99, 126, 1), rgb(230, 214, 0, 0.8)); */
     /* Format: grid-column-start/grid-column-end */
     grid-column: first-line/last-line;
@@ -23,14 +28,17 @@ nav {
     grid-row: 2/span 1;
 }
 
+/* Navbar ul - Grid sub-item and Flexbox container */
 nav ul {
     margin: 0;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     height: 100%;
-
 }
+/* End Navbar ul - Grid sub-item and flexbox container */
+
 nav ul li {
     display: inline-block;
 }
@@ -38,15 +46,20 @@ nav ul li {
 nav ul li a{
     text-decoration-line: none;
 }
+/* End Navbar - 2nd Grid Item */
 
-main {
-    background-color: green;
+/* Main Content - 3rd Grid Item */
+main.grid-item {
+    background-color: rgb(166, 231, 166);
     grid-column: 2/3;
     grid-row: 3/span 1;
 }
+/* End Main Content - 3rd Grid Item */
 
-footer {
-    background-color: orange;
+/* Footer - Last Grid Item */
+footer.grid-item {
+    background-color: rgb(221, 199, 159);
     /* Format: grid-row-start/grid-column-start/grid-row-end/grid-column-end */
     grid-area: 4/first-line/span 1/last-line;
 }
+/* End Footer - Last Grid Item */
