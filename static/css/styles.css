@@ -60,49 +60,54 @@ div.nav-bar-container {
     grid-template-columns: inherit;
     grid-template-rows: inherit;
     grid-column: first-line/last-line;
+    grid-row: first-row/span 1;
     /* display: none; */
     /* text-align: center; */
     position: fixed;
     top: 0;
-    width: 100%;
-    min-height:6vh;
+    width: 100vw;
+    height: 6vh;
 }
 
 nav.nav-bar {
-    /* grid-row: first-row/last-row;
-    grid-column: first-line/last-line; */
-    /* grid-template-rows: [first-row] 6vh [row2] 1fr [last-row]; */
-    /* border-collapse: collapse; */
-    /* border: 1px solid red; */
-    display: flex;
-    grid-template-columns: [first-line] 8vh [line2] auto [line3] 8vh [last-line];
-    grid-template-rows: [first-row] 6vh [row2] auto [last-row];
-    /* grid-column: first-line/last-line;
-    grid-row: 1/span 1; */
+    grid-row: first-row/last-row;
+    grid-column: first-line/last-line;
+
+    /* display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    align-items: flex-start;
+    justify-items: flex-start; */
+    /* justify-content: space-evenly; */
+    
     background-color: rgb(255, 255, 255, 0.3);
-    position: absolute;
+    /* position: absolute; */
     /* text-align: left; */
     /* padding: 0 1.7vh; */
     margin-top: 6vh;
     /* display: none; */
     transform: scale(1, 0);
     height: max-content;
-    width: 100%;
-
-    /* grid-column: first-line/2;
-    grid-row: 1/span 1;
-    display: flex;
-    position: absolute;
-    align-self: center;
-    justify-self: center;
-    align-items: center;
-    justify-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    height: 100%; */
+    /* width: 100vw; */
 }
 
 nav ul {
+    display: flex;
+    flex-direction: column;
+    /* align-self: center;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+    justify-content: center; */
+    
+    /* display: subgrid; */
+    margin-left: 1em;
+    /* flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-items: center; */
     /* display: flex; */
     /* flex-direction: column; */
 
@@ -114,12 +119,11 @@ nav ul {
     /* display: subgrid;
     grid-column: first-line/last-line;
     grid-row: first-row/last-row; */
-    width: 100vw;
+    /* width: 100%; */
     height: max-content;
-
-    /* width: 100vw;
-    height: 100%; */
-     /* margin-top: 6vh; */
+    width: 100%;
+    height: 100%; 
+    /* margin-top: 6vh; */
     /* border-collapse: collapse; */
     /* border: 1px solid red; */
     /* text-align: left; */
@@ -127,12 +131,12 @@ nav ul {
 
 nav ul li {
     display: flex;
-    align-self: center;
-    justify-self: center;
+    flex-direction: column;
+    /* align-items: center; */
     justify-items: center;
-    align-items: center;
+    justify-content: center;
     height: 6vh;
-    width: 100vw;
+    width: 100%;
     /* grid-column: 1/span 1;
     grid-row: 2/ span 1; */
     /* justify-self: flex-start; */
@@ -148,6 +152,7 @@ nav ul li {
 }
 
 nav ul li a{
+    /* margin-left: 15px; */
     /* height: 6vh; */
     font-size: 1.2rem;
     /* grid-column: 3/last-line;
@@ -183,15 +188,14 @@ input[type='checkbox'].nav-toggle{
 .nav-toggle-label {
     grid-column: first-line/2;
     grid-row: 1/span 1;
-    display: flex;
     position: absolute;
-    align-self: center;
-    justify-self: center;
-    align-items: center;
-    justify-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
+    /* justify-self: center; */
+    /* justify-content: space-evenly;
+    flex-direction: column; */
     height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
     /* width: 100%; */
     /* border: 1px solid red; */
 }
@@ -205,7 +209,7 @@ input[type='checkbox'].nav-toggle{
     width: 8vw; */
     width: 33px;
     height: 4px;
-    border-radius: 4vh;
+    border-radius: 3px;
     position: relative;
     /* The '::after' pseudo-selector won't work without this */
     z-index: 1; 
@@ -241,11 +245,11 @@ input[type='checkbox'].nav-toggle{
 }
 
 .nav-toggle-label span::before{
-    bottom: 1vh;
+    bottom: 7px;
 }
 
 .nav-toggle-label span::after {
-    top: 1vh;
+    top: 7px;
 }
 
 div.nav-bar-container p{
