@@ -7,31 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alex Samari</title>
     <link rel="stylesheet" href="./static/css/styles.css">
+    <!-- <link rel="stylesheet" href="./static/css/nav-backup.css"> -->
+    <!-- <script type="text/javascript" src="./static/js/sticky-nav.js"></script> -->
 </head>
 
 <body>
 
-    <div class="grid-container" id="home">
+    <div class="container" id="home">
 
-        <header class="grid-item">
-            <div class="header-logo">
+        <header>
+            <div class="nav-bar-container">
 
+                <label class="nav-toggle-label" for="nav-toggle">
+                    <span></span>
+                </label>
+
+                <input class="nav-toggle" type="checkbox" id="nav-toggle" >
+                
+                <nav class="nav-bar">
+                    <ul class="nav-ul">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#contact">Projects</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                    </ul>
+                </nav>
+                <p>Alex Samari</p>
             </div>
-            <nav class="grid-container grid-item">
-                <ul class="grid-sub-item flex-container">
-                    <li class="flex-item"><a href="#home">Home</a></li>
-                    <li class="flex-item"><a href="#contact">Projects</a></li>
-                    <li class="flex-item"><a href="#contact">Contact Me</a></li>
-                </ul>
-            </nav>
         </header>
 
-        <main class="grid-item">
-            Placeholder
+        <main>
+            <h2>Your content would go here</h2>
         </main>
 
-        <footer class="grid-item">
-            Placeholder
+        <footer>
+            <h2>Your content would go here</h2>
         </footer>
 
     </div>

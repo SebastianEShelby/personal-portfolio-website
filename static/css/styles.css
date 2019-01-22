@@ -1,90 +1,300 @@
 @import url(../../node_modules/sanitize.css/sanitize.css);
 
-/* Grid Container */
-div.grid-container {
-    display: grid;
-    grid-template-columns: [first-line] 10vw [line2] auto [line3] 10vw [last-line];
-    grid-template-rows: [first-row] 6vh [row2] minmax(60vh, auto) [row3] minmax(100vh, auto) [row4] minmax(20vh, auto) [last-row];
+/* Global styles start here  */
+p, h1, ul {
+    margin: 0;
+    padding: 0;
 }
-/* Grid Container End */
+h2 {
+    color: white;
+}
 
-/***** Header - 1st Grid Item *****/
-header.grid-item {
-    background-image: linear-gradient(to right,rgb(255, 99, 126, 1) , rgba(230, 214, 0, 0.8));
+a {
+    text-decoration: none;
+    color: rgb(236, 235, 235);
+    text-transform: capitalize;
+}
+
+a:hover{
+    color: tomato;
+}
+/* Global styles end here  */
+
+/* Page structure styles start here */
+
+div.container {
+    /* container grid template */
+    display: grid;
+    height: 100%;
+    grid-template-columns: [first-line] 8vh [line2] auto [line3] 8vh [last-line];
+    grid-template-rows: [first-row] 6vh [row2] minmax(94vh, auto) [row3] minmax(100vh, auto) [row4] minmax(20vh, auto) [last-row];
+}
+/* Page structure styles end here */
+
+/* Header styles start here */
+
+header {
+    /* header structure */
+    display: grid;
+    grid-template-columns: inherit;
+    grid-template-rows: [first-row] 6vh [row2] 1fr [last-row];
+    /* header position */
     grid-column-start: first-line;
     grid-column-end: last-line;
     grid-row-start: 1;
     grid-row-end: span 2;
-} 
+    /* header image */
+    background-image: url(../img/seneca-open-house-2019-newnham-2.jpg);
+    background-color: #333;
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center;
+}
+/* Header styles end here */
 
-/* Navbar - Grid sub-item */
-nav.grid-item {
-    background-color: rgb(158, 132, 158);
-    /* background-image: linear-gradient(to right, rgb(255, 99, 126, 1), rgb(230, 214, 0, 0.8)); */
-    /* Format: grid-column-start/grid-column-end */
-    grid-column: 1/4;
-    margin: 0 1fr;
-    /* Format: grid-row-start/grid-row-end */
+/* Navigation styles start here  */
+
+div.nav-bar-container {
+    background-color: rgb(255, 255, 255, 0.3);
+    display: grid;
+    grid-template-columns: inherit;
+    grid-template-rows: inherit;
+    grid-column: first-line/last-line;
+    /* display: none; */
+    /* text-align: center; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height:6vh;
+}
+
+nav.nav-bar {
+    /* grid-row: first-row/last-row;
+    grid-column: first-line/last-line; */
+    /* grid-template-rows: [first-row] 6vh [row2] 1fr [last-row]; */
+    /* border-collapse: collapse; */
+    /* border: 1px solid red; */
+    display: flex;
+    grid-template-columns: [first-line] 8vh [line2] auto [line3] 8vh [last-line];
+    grid-template-rows: [first-row] 6vh [row2] auto [last-row];
+    /* grid-column: first-line/last-line;
+    grid-row: 1/span 1; */
+    background-color: rgb(255, 255, 255, 0.3);
+    position: absolute;
+    /* text-align: left; */
+    /* padding: 0 1.7vh; */
+    margin-top: 6vh;
+    /* display: none; */
+    transform: scale(1, 0);
+    height: max-content;
+    width: 100%;
+
+    /* grid-column: first-line/2;
     grid-row: 1/span 1;
     display: flex;
-    justify-content: space-between;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
     align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%; */
 }
-/* Nav Flexbox Container */
-nav.grid-item ul.grid-sub-item {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
-    min-width: 25vw;
-}
-/* Nav Flexbox Container End*/
 
-/* Flex item */
-nav.grid-item ul.flex-container li.flex-item {
-    background-color: aliceblue;
+nav ul {
+    /* display: flex; */
+    /* flex-direction: column; */
+
+    /* flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center; */
+    /* background-color: rgb(255, 255, 255, 0.3); */
+    /* display: subgrid;
+    grid-column: first-line/last-line;
+    grid-row: first-row/last-row; */
+    width: 100vw;
+    height: max-content;
+
+    /* width: 100vw;
+    height: 100%; */
+     /* margin-top: 6vh; */
+    /* border-collapse: collapse; */
+    /* border: 1px solid red; */
+    /* text-align: left; */
+}
+
+nav ul li {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+    height: 6vh;
+    width: 100vw;
+    /* grid-column: 1/span 1;
+    grid-row: 2/ span 1; */
+    /* justify-self: flex-start; */
+    /* align-self: auto; */
+    
+    /* justify-items: center;
+    align-items:center; */
+    /* border-collapse: collapse; */
+    /* border: 1px solid red; */
+    /* width: 100%;
+    min-height: max-content; */
+    /* text-align: left; */
+}
+
+nav ul li a{
+    /* height: 6vh; */
+    font-size: 1.2rem;
+    /* grid-column: 3/last-line;
+    grid-row: 1/span 1;
+    display: flex;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    flex-direction: row;
+    width: 200%; */
+    /* display: flex;
+    justify-self: flex-start;
+    align-self:flex-start; */
+}
+
+.nav-toggle:checked ~ nav.nav-bar {
+    /* display: block; */
+    transform: scale(1, 1);
+    /* height: max-content; */
+} 
+
+input[type='checkbox'].nav-toggle{
+    display: none;
+    /* position: sticky;
+    top: 0; */
+    grid-column: first-line/2;
+    grid-row: 1/span 1;
+    align-self: center;
+    justify-self: center;
+    /* z-index: 20; */
+}
+
+.nav-toggle-label {
+    grid-column: first-line/2;
+    grid-row: 1/span 1;
+    display: flex;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     height: 100%;
-    flex: auto;
+    /* width: 100%; */
+    /* border: 1px solid red; */
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: rgb(236, 235, 235);
+    /* height: .4vh;
+    width: 8vw; */
+    width: 33px;
+    height: 4px;
+    border-radius: 4vh;
+    position: relative;
+    /* The '::after' pseudo-selector won't work without this */
+    z-index: 1; 
+    /* margin-bottom: 1vh; */
+
+    /* transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease; */
+  /* 
+  display: block;     
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease; */
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom: 1vh;
+}
+
+.nav-toggle-label span::after {
+    top: 1vh;
+}
+
+div.nav-bar-container p{
+    grid-column: 3/last-line;
+    grid-row: 1/span 1;
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    justify-self: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    text-align: center;
+    margin-right: 2vh;
+    color: rgb(236, 235, 235);
+    font-size: 1.4rem;
 }
-/* Flex item End */
 
-nav ul li a{
-    text-decoration-line: none;
-}
+/* Navigation styles end here  */
 
-nav ul li a:hover{
-    color: tomato;
-}
-/* Navbar - Grid sub-item End */
+/* Main content styles start here */
 
-/***** Header - 1st Grid Item End *****/
-
-/****** Main Content - 2nd Grid Item ******/
-main.grid-item {
-    background-color: rgb(166, 231, 166);
-    grid-column: 2/3;
+main {
+    display: grid;
+    grid-column: first-line/last-line;
     grid-row: 3/span 1;
-}
-/****** Main Content - 2nd Grid Item End ******/
+    background-color: #191919;
 
-/****** Footer - Last Grid Item ******/
-footer.grid-item {
+    /* background-image: url(https://picsum.photos/1000/1000);
+    background-blend-mode: multiply;
+    background-size: cover;
+    place-items: center; */
+}
+/* Main content styles end here */
+
+/* Footer styles start here */
+
+footer {
     background-color: rgb(221, 199, 159);
     /* Format: grid-row-start/grid-column-start/grid-row-end/grid-column-end */
     grid-area: 4/first-line/span 1/last-line;
 }
-/****** Footer - Last Grid Item End ******/
+/* Footer styles end here */
 
+/* Responsive design start here */ 
 
-
-/****************** Mobile Design ******************/ 
 @media all and (max-width: 375px){
 
 }
-/****************** Mobile Design End ******************/   
+/* Responsive design start here  */   
