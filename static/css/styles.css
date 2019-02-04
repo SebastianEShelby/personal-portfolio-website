@@ -1,9 +1,10 @@
 @import url(../../node_modules/sanitize.css/sanitize.css);
 
 /* Global styles start here  */
-p, h1, ul {
+p, h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 h2 {
     color: white;
@@ -27,18 +28,17 @@ div.container {
     display: grid;
     height: 100%;
     grid-template-columns: [first-line] 8vh [line2] auto [line3] 8vh [last-line];
-    grid-template-rows: [first-row] 6vh [row2] minmax(94vh, auto) [row3] minmax(100vh, auto) [row4] minmax(20vh, auto) [last-row];
+    grid-template-rows: [first-row] 7vh [row2] minmax(93vh, auto) [row3] minmax(100vh, auto) [row4] minmax(20vh, auto) [last-row];
 }
 /* Page structure styles end here */
 
 /* Header styles start here */
 
 header {
-    /* header structure */
     display: grid;
-    grid-template-columns: inherit;
-    grid-template-rows: [first-row] 6vh [row2] 1fr [last-row];
-    /* header position */
+    grid-template-columns: [first-line] 8vh [line2] auto [line3] 8vh [last-line];
+    grid-template-rows: inherit;
+    
     grid-column-start: first-line;
     grid-column-end: last-line;
     grid-row-start: 1;
@@ -49,6 +49,42 @@ header {
     background-blend-mode: soft-light;
     background-size: cover;
     background-position: center;
+    height: 100vh;
+}
+
+.header-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    grid-column: 2/span 1;
+    grid-row: 2/span 1;
+    color: white;
+    font-size: 1.2rem;
+    height: 80%;
+    align-self: center;
+}
+.header-text h3 {
+    padding: .5em;
+    width: 90%;
+    line-height: 1.1;
+    /* letter-spacing: 10px; */
+}
+.header-text h5 {
+    padding: .5em;
+
+    width: 90%;
+}
+
+.header-social{
+    grid-column: 1/ span 1;
+    grid-row: 2/span 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
 }
 /* Header styles end here */
 
@@ -57,147 +93,74 @@ header {
 div.nav-bar-container {
     background-color: rgb(255, 255, 255, 0.3);
     display: grid;
-    grid-template-columns: inherit;
+    grid-template-columns: [first-line] 8vh [line2] auto [line3] 8vh [last-line];
     grid-template-rows: inherit;
-    grid-column: first-line/last-line;
-    grid-row: first-row/span 1;
-    /* display: none; */
-    /* text-align: center; */
+
+
     position: fixed;
+    /* justify-content: space-between; */
     top: 0;
+    /* padding: 8px 16px; */
     width: 100vw;
-    height: 6vh;
+    height: 7vh;
 }
 
 nav.nav-bar {
-    grid-row: first-row/last-row;
-    grid-column: first-line/last-line;
-
-    /* display: flex;
-    flex-direction: column;
-    align-self: center;
-    justify-self: center;
-    align-items: flex-start;
-    justify-items: flex-start; */
-    /* justify-content: space-evenly; */
-    
     background-color: rgb(255, 255, 255, 0.3);
-    /* position: absolute; */
-    /* text-align: left; */
-    /* padding: 0 1.7vh; */
-    margin-top: 6vh;
-    /* display: none; */
+    position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
     transform: scale(1, 0);
-    height: max-content;
-    /* width: 100vw; */
+    transform-origin: top;
+  transition: transform 400ms ease-in-out;
+    width: 100%;
 }
 
 nav ul {
     display: flex;
     flex-direction: column;
-    /* align-self: center;
-    justify-self: center;
-    justify-items: center;
-    align-items: center;
-    justify-content: center; */
-    
-    /* display: subgrid; */
-    margin-left: 1em;
-    /* flex-direction: column;
-    align-self: center;
-    justify-self: center;
-    align-items: center;
-    justify-items: center; */
-    /* display: flex; */
-    /* flex-direction: column; */
-
-    /* flex-direction: column;
-    justify-items: center;
-    justify-content: center;
-    align-items: center; */
-    /* background-color: rgb(255, 255, 255, 0.3); */
-    /* display: subgrid;
-    grid-column: first-line/last-line;
-    grid-row: first-row/last-row; */
-    /* width: 100%; */
     height: max-content;
+    justify-content: space-around;
     width: 100%;
     height: 100%; 
-    /* margin-top: 6vh; */
-    /* border-collapse: collapse; */
-    /* border: 1px solid red; */
-    /* text-align: left; */
+
 }
 
 nav ul li {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-items: center;
-    justify-content: center;
-    height: 6vh;
-    width: 100%;
-    /* grid-column: 1/span 1;
-    grid-row: 2/ span 1; */
-    /* justify-self: flex-start; */
-    /* align-self: auto; */
-    
-    /* justify-items: center;
-    align-items:center; */
-    /* border-collapse: collapse; */
-    /* border: 1px solid red; */
-    /* width: 100%;
-    min-height: max-content; */
-    /* text-align: left; */
+    padding-bottom: 1em;
+    padding-left: 1em;
 }
 
 nav ul li a{
-    /* margin-left: 15px; */
-    /* height: 6vh; */
     font-size: 1.2rem;
-    /* grid-column: 3/last-line;
-    grid-row: 1/span 1;
-    display: flex;
-    position: absolute;
-    align-self: center;
-    justify-self: center;
-    flex-direction: row;
-    width: 200%; */
-    /* display: flex;
-    justify-self: flex-start;
-    align-self:flex-start; */
+    opacity: 0;
+  transition: opacity 150ms ease-in-out;
 }
 
 .nav-toggle:checked ~ nav.nav-bar {
-    /* display: block; */
     transform: scale(1, 1);
-    /* height: max-content; */
-} 
+}
 
-input[type='checkbox'].nav-toggle{
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 50ms;
+  }
+
+.nav-toggle{
+    position: absolute !important;
     display: none;
-    /* position: sticky;
-    top: 0; */
-    grid-column: first-line/2;
-    grid-row: 1/span 1;
-    align-self: center;
-    justify-self: center;
-    /* z-index: 20; */
+    /* grid-column: first-line/2;
+    grid-row: 1/span 1; */
+    /* align-self: center;
+    justify-self: center; */
 }
 
 .nav-toggle-label {
-    grid-column: first-line/2;
-    grid-row: 1/span 1;
-    position: absolute;
-    /* justify-self: center; */
-    /* justify-content: space-evenly;
-    flex-direction: column; */
     height: 100%;
     display: flex;
     align-items: center;
-    margin-left: 1em;
-    /* width: 100%; */
-    /* border: 1px solid red; */
+    justify-content: center;
 }
 
 .nav-toggle-label span,
@@ -205,15 +168,12 @@ input[type='checkbox'].nav-toggle{
 .nav-toggle-label span::after {
     display: block;
     background: rgb(236, 235, 235);
-    /* height: .4vh;
-    width: 8vw; */
     width: 33px;
     height: 4px;
     border-radius: 3px;
     position: relative;
     /* The '::after' pseudo-selector won't work without this */
     z-index: 1; 
-    /* margin-bottom: 1vh; */
 
     /* transform-origin: 4px 0px;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
@@ -223,7 +183,6 @@ input[type='checkbox'].nav-toggle{
   display: block;     
   width: 33px;
   height: 4px;
-  margin-bottom: 5px;
   position: relative;
   
   background: #cdcdcd;
@@ -252,22 +211,16 @@ input[type='checkbox'].nav-toggle{
     top: 7px;
 }
 
-div.nav-bar-container p{
-    grid-column: 3/last-line;
+.nav-headline{
+    grid-column: 3/span 1;
     grid-row: 1/span 1;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-self: flex-end;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    height: 100%;
     width: max-content;
-    text-align: center;
-    margin-right: 2vh;
+    display: flex;
+    justify-self: flex-end;
+    align-items: center;
     color: rgb(236, 235, 235);
-    font-size: 1.4rem;
+    margin-right: 3vw;
 }
 
 /* Navigation styles end here  */
@@ -275,7 +228,6 @@ div.nav-bar-container p{
 /* Main content styles start here */
 
 main {
-    display: grid;
     grid-column: first-line/last-line;
     grid-row: 3/span 1;
     background-color: #191919;
@@ -298,7 +250,95 @@ footer {
 
 /* Responsive design start here */ 
 
-@media all and (max-width: 375px){
+@media screen and (min-width: 800px) {
 
-}
+    .header-text{
+        font-size: 1.5rem;
+    }
+    .header-text h3 {
+
+    }
+    .header-text h5 {
+
+    }
+
+    .nav-toggle-label {
+      display: none;
+    }
+
+    .nav-bar-container {
+        display: grid;
+        grid-template-columns: [first-line] 10vw [line2] auto [line3] 10vw [last-line];
+    }
+    
+    nav.nav-bar {
+        grid-column: 2/span 1;
+        grid-row: 1/span 1;
+      /* the following lines are not from my video, but add Edge support */
+      position: relative;
+      text-align: left;
+      transition: none;
+      transform: scale(1,1);
+      background: none;
+      top: 0;
+      left: 0;
+      /* end Edge support stuff */
+      
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-items: flex-start;
+        /* height: max-content; */
+        align-items: center;
+        justify-content: flex-start;
+        /* width: 100%; */
+        height: 100%; 
+
+    }
+    
+    nav ul li {
+        padding-bottom: 0;
+        padding-left: 1em;
+    }
+    
+    nav ul li a{
+        opacity: 1;
+      transform: scale(1, 1);
+      transition: transform ease-in-out 250ms;
+      font-weight: 600;
+    }
+    
+    /* nav a::before {
+      content: '';
+      display: block;
+      height: 5px;
+      background: black;
+      position: absolute;
+      transform: scale(1, 1);
+      transition: transform ease-in-out 250ms;
+    } */
+    
+    /* nav a:hover::before {
+      transform: scale(1,1);
+    } */
+
+    .nav-headline{
+        grid-column: 3/span 1;
+        grid-row: 1/span 1;
+        height: 100%;
+        width: max-content;
+        display: flex;
+        justify-self: flex-end;
+        align-items: center;
+        color: rgb(236, 235, 235);
+        margin-right: 10vw;
+        font-weight: 100;
+
+    }
+}    
 /* Responsive design start here  */   
