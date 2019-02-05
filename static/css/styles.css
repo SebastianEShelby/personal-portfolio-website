@@ -43,7 +43,7 @@ header {
     grid-column-end: last-line;
     grid-row-start: 1;
     grid-row-end: span 2;
-    /* header image */
+
     background-image: url(../img/seneca-open-house-2019-newnham-2.jpg);
     background-color: #333;
     background-blend-mode: soft-light;
@@ -58,18 +58,20 @@ header {
     align-items: center;
     justify-content: center;
     justify-items: center;
+    justify-self: center;
+    align-self: center;
     grid-column: 2/span 1;
     grid-row: 2/span 1;
     color: white;
     font-size: 1.2rem;
     height: 80%;
+    width: 80%;
     align-self: center;
 }
 .header-text h3 {
     padding: .5em;
     width: 90%;
     line-height: 1.1;
-    /* letter-spacing: 10px; */
 }
 .header-text h5 {
     padding: .5em;
@@ -98,9 +100,7 @@ div.nav-bar-container {
 
 
     position: fixed;
-    /* justify-content: space-between; */
     top: 0;
-    /* padding: 8px 16px; */
     width: 100vw;
     height: 7vh;
 }
@@ -150,10 +150,6 @@ nav ul li a{
 .nav-toggle{
     position: absolute !important;
     display: none;
-    /* grid-column: first-line/2;
-    grid-row: 1/span 1; */
-    /* align-self: center;
-    justify-self: center; */
 }
 
 .nav-toggle-label {
@@ -174,27 +170,6 @@ nav ul li a{
     position: relative;
     /* The '::after' pseudo-selector won't work without this */
     z-index: 1; 
-
-    /* transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease; */
-  /* 
-  display: block;     
-  width: 33px;
-  height: 4px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease; */
 }
 
 .nav-toggle-label span::before,
@@ -231,11 +206,33 @@ main {
     grid-column: first-line/last-line;
     grid-row: 3/span 1;
     background-color: #191919;
+}
 
-    /* background-image: url(https://picsum.photos/1000/1000);
-    background-blend-mode: multiply;
-    background-size: cover;
-    place-items: center; */
+div.skills {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: blueviolet;
+  height: 50vh;
+}
+
+div.projects {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(1fr);
+  grid-gap: 1em; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* justify-items: center; */
+  height: max-content;
+}
+
+.projects div {
+  /* display: flex; */
+  margin: 1em;
+  width: 80vw;
+  height: 80vw;
+  background-color: rgb(75, 122, 161);
 }
 /* Main content styles end here */
 
@@ -243,7 +240,6 @@ main {
 
 footer {
     background-color: rgb(221, 199, 159);
-    /* Format: grid-row-start/grid-column-start/grid-row-end/grid-column-end */
     grid-area: 4/first-line/span 1/last-line;
 }
 /* Footer styles end here */
@@ -255,12 +251,6 @@ footer {
     .header-text{
         font-size: 1.5rem;
     }
-    .header-text h3 {
-
-    }
-    .header-text h5 {
-
-    }
 
     .nav-toggle-label {
       display: none;
@@ -268,7 +258,7 @@ footer {
 
     .nav-bar-container {
         display: grid;
-        grid-template-columns: [first-line] 10vw [line2] auto [line3] 10vw [last-line];
+        grid-template-columns: [first-line] 15vh [line2] auto [line3] 15vh [last-line];
     }
     
     nav.nav-bar {
@@ -293,10 +283,8 @@ footer {
         display: flex;
         flex-direction: row;
         justify-items: flex-start;
-        /* height: max-content; */
         align-items: center;
         justify-content: flex-start;
-        /* width: 100%; */
         height: 100%; 
 
     }
