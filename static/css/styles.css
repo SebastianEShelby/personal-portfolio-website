@@ -1,201 +1,202 @@
 @import url(../../node_modules/sanitize.css/sanitize.css);
 
 /* Global styles start here  */
-p, h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
 }
-h2 {
-    color: white;
+
+ul, li {
+    list-style-type: none;
 }
 
 a {
-    text-decoration: none;
-    color: rgb(236, 235, 235);
-    text-transform: capitalize;
+  text-decoration: none;
+  color: rgb(236, 235, 235);
+  text-transform: capitalize;
 }
 
-a:hover{
-    color: tomato;
+a:hover {
+  color: tomato;
 }
 /* Global styles end here  */
 
 /* Page structure styles start here */
 
 div.container {
-    /* container grid template */
-    display: grid;
-    height: 100%;
-    grid-template-columns: [first-line] 8vh [line2] auto [line3] 8vh [last-line];
-    grid-template-rows: [first-row] 7vh [row2] minmax(93vh, auto) [row3] minmax(100vh, auto) [row4] minmax(20vh, auto) [last-row];
+  /* container grid template */
+  display: grid;
+  height: 100%;
+  grid-template-columns: [first-line] 8vh [line2] auto [line3] 8vh [last-line];
+  grid-template-rows: [first-row] 8vh [row2] minmax(92vh, auto) [row3] minmax(100vh, auto) [row4] minmax(20vh, auto) [last-row];
 }
 /* Page structure styles end here */
 
 /* Header styles start here */
 
 header {
-    display: grid;
-    grid-template-columns: [first-line] 8vh [line2] auto [line3] 8vh [last-line];
-    grid-template-rows: inherit;
-    
-    grid-column-start: first-line;
-    grid-column-end: last-line;
-    grid-row-start: 1;
-    grid-row-end: span 2;
+  display: grid;
+  grid-template-columns: inherit;
+  grid-template-rows: inherit;
 
-    background-image: url(../img/seneca-open-house-2019-newnham-2.jpg);
-    background-color: #333;
-    background-blend-mode: soft-light;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+  grid-column-start: first-line;
+  grid-column-end: last-line;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+
+  background-image: url(../img/seneca-open-house-2019-newnham-2.jpg);
+  background-color: #333;
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 
-.header-text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    justify-self: center;
-    align-self: center;
-    grid-column: 2/span 1;
-    grid-row: 2/span 1;
-    color: white;
-    font-size: 1.2rem;
-    height: 80%;
-    width: 80%;
-    align-self: center;
+.header-text {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  align-self: center;
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  color: white;
+  height: 50%;
+  width: 90%;
+  align-self: center;
+}
+.header-text h1 {
+    padding: 10px;
+  line-height: 1.1;
 }
 .header-text h3 {
-    padding: .5em;
-    width: 90%;
-    line-height: 1.1;
-}
-.header-text h5 {
-    padding: .5em;
-
-    width: 90%;
+  padding: 10px;
 }
 
-.header-social{
-    grid-column: 1/ span 1;
-    grid-row: 2/span 1;
+.header-social {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
 }
 /* Header styles end here */
 
 /* Navigation styles start here  */
 
 div.nav-bar-container {
-    background-color: rgb(255, 255, 255, 0.3);
-    display: grid;
-    grid-template-columns: [first-line] 8vh [line2] auto [line3] 8vh [last-line];
-    grid-template-rows: inherit;
-
-
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 7vh;
+  background-color: rgb(255, 255, 255, 0.3);
+  /* display: grid;
+    grid-template-columns: inherit; */
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 8vh;
 }
 
 nav.nav-bar {
-    background-color: rgb(255, 255, 255, 0.3);
-    position: absolute;
+  background-color: rgb(255, 255, 255, 0.3);
+  position: absolute;
   text-align: left;
   top: 100%;
   left: 0;
-    transform: scale(1, 0);
-    transform-origin: top;
+  right: 0;
+  transform: scale(1, 0);
+  transform-origin: top;
   transition: transform 400ms ease-in-out;
-    width: 100%;
 }
 
 nav ul {
-    display: flex;
-    flex-direction: column;
-    height: max-content;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%; 
-
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  width: 100%;
 }
+
+nav ul a {
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+    display: flex;
+    height: 5vh;
+  }
 
 nav ul li {
-    padding-bottom: 1em;
-    padding-left: 1em;
-}
-
-nav ul li a{
-    font-size: 1.2rem;
-    opacity: 0;
-  transition: opacity 150ms ease-in-out;
+    padding: 0 20px;
+  /* padding-bottom: 1em;
+  padding-left: 1em; */
 }
 
 .nav-toggle:checked ~ nav.nav-bar {
-    transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
 .nav-toggle:checked ~ nav a {
-    opacity: 1;
-    transition: opacity 250ms ease-in-out 50ms;
-  }
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 50ms;
+}
 
-.nav-toggle{
-    position: absolute !important;
-    display: none;
+.nav-toggle {
+  position: absolute !important;
+  display: none;
 }
 
 .nav-toggle-label {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-    display: block;
-    background: rgb(236, 235, 235);
-    width: 33px;
-    height: 4px;
-    border-radius: 3px;
-    position: relative;
-    /* The '::after' pseudo-selector won't work without this */
-    z-index: 1; 
+  display: block;
+  background: rgb(236, 235, 235);
+  width: 33px;
+  height: 4px;
+  border-radius: 3px;
+  position: relative;
+  /* The '::after' pseudo-selector won't work without this */
+  z-index: 1;
 }
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-    content: '';
-    position: absolute;
+  content: "";
+  position: absolute;
 }
 
-.nav-toggle-label span::before{
-    bottom: 7px;
+.nav-toggle-label span::before {
+  bottom: 7px;
 }
 
 .nav-toggle-label span::after {
-    top: 7px;
+  top: 7px;
 }
 
-.nav-headline{
-    grid-column: 3/span 1;
-    grid-row: 1/span 1;
-    height: 100%;
-    width: max-content;
-    display: flex;
-    justify-self: flex-end;
-    align-items: center;
-    color: rgb(236, 235, 235);
-    margin-right: 3vw;
+.nav-headline {
+  /* grid-column: 3/span 1;
+    grid-row: 1/span 1; */
+  height: 100%;
+  width: max-content;
+  display: flex;
+  /* justify-self: flex-end; */
+  align-items: center;
+  color: rgb(236, 235, 235);
 }
 
 /* Navigation styles end here  */
@@ -203,9 +204,9 @@ nav ul li a{
 /* Main content styles start here */
 
 main {
-    grid-column: first-line/last-line;
-    grid-row: 3/span 1;
-    background-color: #191919;
+  grid-column: first-line/last-line;
+  grid-row: 3 / span 1;
+  background-color: #191919;
 }
 
 div.skills {
@@ -239,69 +240,61 @@ div.projects {
 /* Footer styles start here */
 
 footer {
-    background-color: rgb(221, 199, 159);
-    grid-area: 4/first-line/span 1/last-line;
+  background-color: rgb(221, 199, 159);
+  grid-area: 4 / first-line/span 1 / last-line;
 }
 /* Footer styles end here */
 
-/* Responsive design start here */ 
+/* Responsive design start here */
 
 @media screen and (min-width: 800px) {
 
-    .header-text{
-        font-size: 1.5rem;
-    }
+  .nav-toggle-label {
+    display: none;
+  }
 
-    .nav-toggle-label {
-      display: none;
-    }
+  div.nav-bar-container {
+    padding: 10px 10vw;
+  }
 
-    .nav-bar-container {
-        display: grid;
-        grid-template-columns: [first-line] 15vh [line2] auto [line3] 15vh [last-line];
-    }
-    
-    nav.nav-bar {
-        grid-column: 2/span 1;
-        grid-row: 1/span 1;
-      /* the following lines are not from my video, but add Edge support */
-      position: relative;
-      text-align: left;
-      transition: none;
-      transform: scale(1,1);
-      background: none;
-      top: 0;
-      left: 0;
-      /* end Edge support stuff */
-      
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-    
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-items: flex-start;
-        align-items: center;
-        justify-content: flex-start;
-        height: 100%; 
+  nav.nav-bar {
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1, 1);
+    background: none;
+    top: 0;
+    left: 0;
+    /* end Edge support stuff */
 
-    }
-    
-    nav ul li {
-        padding-bottom: 0;
-        padding-left: 1em;
-    }
-    
-    nav ul li a{
-        opacity: 1;
-      transform: scale(1, 1);
-      transition: transform ease-in-out 250ms;
-      font-weight: 600;
-    }
-    
-    /* nav a::before {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  nav ul li {
+    padding-bottom: 0;
+    padding-left: 1em;
+  }
+
+  nav ul a {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    transform: scale(1, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  /* nav a::before {
       content: '';
       display: block;
       height: 5px;
@@ -310,23 +303,9 @@ footer {
       transform: scale(1, 1);
       transition: transform ease-in-out 250ms;
     } */
-    
-    /* nav a:hover::before {
+
+  /* nav a:hover::before {
       transform: scale(1,1);
     } */
-
-    .nav-headline{
-        grid-column: 3/span 1;
-        grid-row: 1/span 1;
-        height: 100%;
-        width: max-content;
-        display: flex;
-        justify-self: flex-end;
-        align-items: center;
-        color: rgb(236, 235, 235);
-        margin-right: 10vw;
-        font-weight: 100;
-
-    }
-}    
-/* Responsive design start here  */   
+}
+/* Responsive design start here  */
