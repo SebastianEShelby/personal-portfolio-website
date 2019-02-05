@@ -1,4 +1,4 @@
-@import url(../../node_modules/sanitize.css/sanitize.css);
+@import url(./sanitize.css);
 
 /* Global styles start here  */
 p,
@@ -87,9 +87,24 @@ header {
   grid-row: 2 / span 1;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  /* justify-items: center; */
+  justify-content: center;
   color: white;
+}
+
+.header-social a{
+  padding: 5px;
+}
+
+.header-social img {
+  /* padding: 10px;
+  border-radius: 50%; */
+  width: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: white;
 }
 /* Header styles end here */
 
