@@ -30,7 +30,7 @@ a:hover {
 
 /* Page structure styles start here */
 
-div.container {
+.container {
   /* container grid template */
   display: grid;
   height: 100%;
@@ -127,7 +127,7 @@ img.social-media-img {
 
 /* Navigation styles start here  */
 
-div.nav-bar-container {
+.nav-bar-container {
   background-color: rgba(97, 97, 97, 0.5);
   display: flex;
   padding: 0 20px;
@@ -237,9 +237,9 @@ main {
   display: grid;
   grid-template-columns: inherit;
   grid-template-rows: repeat(1fr);
-  /* grid-template-areas: "div.about-container"
-                       "div.skill-container"
-                       "div.projects"
+  /* grid-template-areas: ".about-container"
+                       ".skill-container"
+                       ".projects"
                        ; */
   grid-column: first-line/last-line;
   grid-row: 3 / span 1;
@@ -247,50 +247,74 @@ main {
 
 }
 
-div.about-container {
+.about-container {
+  display: grid;
+  grid-template-columns: inherit;
+
   grid-column: first-line/last-line;
-  display: flex;
-  height: 50vh;
+  
+  /* justify-content: center; */
+  height: 70vh;
   /* grid-column: 2/span 1; */
   background-color: #191919;
+
 }
 
-div.skill-container {
+.about-sub-container {
+  grid-column: 2/ span 1;
+  margin-top: 10vw;
+  margin-bottom: calc(10vw + 15vh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-container h1 {
+  padding: 10px;
+  color: white;
+line-height: 1.1;
+}
+.about-container h3 {
+padding: 10px;
+color: white;
+}
+
+.skill-container {
   grid-column: 2/span 1;
   display: flex;
   justify-content: center;
   justify-items: center;
   justify-self: center;
   flex-wrap: wrap;
-  padding: 
   background-color: white;
-  height: 100vh;
+  min-height: 80vh;
   width: 100%;
   margin-top: -15vh;
   /* margin: 0 8vw; */
   border-radius: 10px;
   /* border: 2px solid #E6ECF8; */
-
 }
 
-div.skill {
+.skill {
   /* padding: 10px; */
+  padding: 4vh 4vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  min-height: 80vh;
   background-color: antiquewhite;
   border: 1px solid #E6ECF8;
   border-radius: 10px;
 }
 
-div.skill-img {
+.skill-img {
   background-color: red;
   width: 5vw;
   height: 5vw;
 }
 
-div.projects {
+.projects {
   grid-column: 2/span 1;
   /* display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -303,7 +327,7 @@ div.projects {
   height: max-content;
 }
 
-.projects div {
+.projects  {
   /* display: flex; */
   margin: 1em;
   width: 40vw;
@@ -324,7 +348,7 @@ footer {
 
 @media screen and (min-width: 800px) {
 
-  div.container {
+  .container {
     grid-template-columns: [first-line] 9.5vw [line2] auto [line3] 9.5vw [last-line];
   }
 
@@ -332,7 +356,7 @@ footer {
     display: none;
   }
 
-  div.nav-bar-container {
+  .nav-bar-container {
     padding: 10px 10vw;
   }
 
@@ -403,7 +427,7 @@ footer {
     justify-self: center;
   }
 
-  div.skill {
+  .skill {
     width: 33.33%;
   }
 
