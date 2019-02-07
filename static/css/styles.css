@@ -19,7 +19,8 @@ ul, li {
 
 a {
   text-decoration: none;
-  color: white;
+  /* color: white; */
+  color: #293347;
   text-transform: capitalize;
 }
 
@@ -71,13 +72,13 @@ header {
   color: #293347;
   height: 100%;
   width: 100%;
-  padding-top: 5vh;
+  /* padding-top: 5vh; */
 }
 
 .header-img {
   /* align-self: center; */
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   background-image: url(../img/me-and-the-blackboard.jpg);
   background-color: rgba(99, 99, 99, 0.2);
   background-blend-mode: soft-light;
@@ -114,9 +115,7 @@ header {
   justify-content: center;
 }
 
-img.social-media-img {
-  /* padding: 10px;
-  border-radius: 50%; */
+.social-media-img {
   border-radius: 20%;
   width: 30px;
   height: 30px;
@@ -128,7 +127,7 @@ img.social-media-img {
 /* Navigation styles start here  */
 
 .nav-bar-container {
-  background-color: rgba(97, 97, 97, 0.5);
+  background-color: white;
   display: flex;
   padding: 0 20px;
   justify-content: space-between;
@@ -138,8 +137,8 @@ img.social-media-img {
   height: 8vh;
 }
 
-nav.nav-bar {
-  background-color: rgba(97, 97, 97, 0.5);
+.nav-bar {
+  background-color: white;
   position: absolute;
   text-align: left;
   top: 100%;
@@ -166,11 +165,9 @@ nav ul a {
 
 nav ul li {
     padding: 0 20px;
-  /* padding-bottom: 1em;
-  padding-left: 1em; */
 }
 
-.nav-toggle:checked ~ nav.nav-bar {
+.nav-toggle:checked ~ .nav-bar {
   transform: scale(1, 1);
 }
 
@@ -195,7 +192,7 @@ nav ul li {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   display: block;
-  background: white;
+  background: #293347;
   width: 33px;
   height: 4px;
   border-radius: 3px;
@@ -219,12 +216,9 @@ nav ul li {
 }
 
 .nav-headline {
-  /* grid-column: 3/span 1;
-    grid-row: 1/span 1; */
   height: 100%;
   width: max-content;
   display: flex;
-  /* justify-self: flex-end; */
   align-items: center;
   color: white;
 }
@@ -236,28 +230,20 @@ nav ul li {
 main {
   display: grid;
   grid-template-columns: inherit;
-  grid-template-rows: repeat(1fr);
   /* grid-template-areas: ".about-container"
                        ".skill-container"
                        ".projects"
                        ; */
   grid-column: first-line/last-line;
   grid-row: 3 / span 1;
-  /* background-color: #8C43FF; */
-
 }
 
 .about-container {
   display: grid;
   grid-template-columns: inherit;
-
   grid-column: first-line/last-line;
-  
-  /* justify-content: center; */
   height: 70vh;
-  /* grid-column: 2/span 1; */
   background-color: #191919;
-
 }
 
 .about-sub-container {
@@ -290,13 +276,10 @@ color: white;
   min-height: 80vh;
   width: 100%;
   margin-top: -15vh;
-  /* margin: 0 8vw; */
   border-radius: 10px;
-  /* border: 2px solid #E6ECF8; */
 }
 
 .skill {
-  /* padding: 10px; */
   padding: 4vh 4vh;
   display: flex;
   flex-direction: column;
@@ -316,19 +299,13 @@ color: white;
 
 .projects {
   grid-column: 2/span 1;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(1fr);
-  grid-gap: 1em; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* justify-items: center; */
   height: max-content;
 }
 
 .projects  {
-  /* display: flex; */
   margin: 1em;
   width: 40vw;
   height: 40vw;
@@ -357,10 +334,23 @@ footer {
   }
 
   .nav-bar-container {
+    top: 3vh;
     padding: 10px 10vw;
+    background-color: unset;
+    position: absolute;
   }
 
-  nav.nav-bar {
+  .sticky {
+    position: fixed;
+    top: 0;
+    background-color: white;
+  }
+
+  /* .sticky + .content {
+    padding-top: 60px;
+  } */
+
+  .nav-bar {
     /* the following lines are not from my video, but add Edge support */
     position: relative;
     text-align: left;
@@ -370,7 +360,6 @@ footer {
     top: 0;
     left: 0;
     /* end Edge support stuff */
-
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -417,8 +406,8 @@ footer {
   }
 
   .header-img {
-    width: 20vw;
-  height: 20vw;
+    width: 25vw;
+    height: 25vw;
   }
 
   .header-content {
