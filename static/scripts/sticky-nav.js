@@ -1,6 +1,6 @@
 if (window.matchMedia("(min-width: 800px)").matches) {
   // wait for the window to load and identify dom elements
-  window.onload = function() {
+  window.onload = () => {
     // Get the navbar
     const navbar = document.getElementById("nav-bar");
 
