@@ -133,6 +133,10 @@ header {
   transform-origin: top;
   transition: transform 400ms ease-in-out;
   border-bottom: .5px solid rgba(41, 51, 71, .5);
+<<<<<<< HEAD
+=======
+  height: 18vh;
+>>>>>>> 5483e22dd536b3099c0853c9705453e53463815c
 }
 
 nav ul {
