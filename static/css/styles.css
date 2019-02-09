@@ -38,7 +38,9 @@ a:hover {
   display: grid;
   height: 100%;
   grid-template-columns: [first-line] 8vh [line2] auto [line3] 8vh [last-line];
-  grid-template-rows: [first-row] 8vh [row2] minmax(92vh, auto) [row3] minmax(100vh, auto) [row4] minmax(20vh, auto) [last-row];
+  grid-template-rows:
+    [first-row] 8vh [row2] minmax(92vh, auto) [row3] minmax(100vh, auto)
+    [row4] minmax(20vh, auto) [last-row];
 }
 /* Page structure styles end here */
 
@@ -71,7 +73,6 @@ header {
   color: #293347;
   height: 100%;
   width: 100%;
-  font-size: large;
 }
 
 .header-img {
@@ -84,14 +85,13 @@ header {
   background-position-x: center;
   border-radius: 50%;
   border: 2px solid white;
-  margin: 20px;
-  margin-top: 40px;
+  margin: 1em;
+  margin-top: 2em;
 }
 
 .header-content p {
   text-align: center;
   display: flex;
-  font-size: x-large;
 }
 
 .contact-me {
@@ -102,7 +102,12 @@ header {
   margin: 1em;
   width: 30vh;
   height: 10vh;
-  background: linear-gradient(90deg, rgba(2, 0, 36, 1), rgba(41, 51, 71, 1), rgba(198, 57, 19, 1));
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1),
+    rgba(41, 51, 71, 1),
+    rgba(198, 57, 19, 1)
+  );
   background-position: 75% 0;
   background-size: 200% 100%;
   border-radius: 10px;
@@ -313,7 +318,7 @@ main {
 }
 
 .skill ul {
-  margin: 0.83em;
+  margin: 0.5em;
 }
 
 .list-title {
@@ -325,7 +330,7 @@ main {
   background-color: #8c43ff;
   width: 5em;
   height: 5em;
-  margin: 0.83em;
+  margin: 0.5em;
 }
 
 .projects {
@@ -434,15 +439,20 @@ footer {
   }
 
   .header-img {
-    width: 25vw;
-    height: 25vw;
-    margin-top: 40px;
+    width: 250px;
+    height: 250px;
+    /* margin-top: 40px; */
   }
 
   .header-content {
     grid-column: 2 / span 1;
     width: 80%;
     justify-self: center;
+    font-size: large;
+  }
+
+  .header-content p {
+    font-size: x-large;
   }
 
   .skill {
