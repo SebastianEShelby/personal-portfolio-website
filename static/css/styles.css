@@ -1,6 +1,8 @@
 /* External css files */
 @import url(./sanitize.css);
 @import url(./fonts.css);
+@import url(./devicon.css);
+@import url(./devicon-colors.css);
 
 /* Global styles start here  */
 p,
@@ -11,6 +13,8 @@ h4,
 h5,
 h6 {
   font-family: "Open Sans ", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 ul,
@@ -37,8 +41,10 @@ a:hover {
 .container {
   display: grid;
   height: 100%;
-  grid-template-columns: [first-line] 8vh [line2] auto [line3] 8vh [last-line];
-  grid-template-rows: [first-row] 8vh [row2] minmax(92vh, auto) [row3] minmax(100vh, auto) [row4] minmax(20vh, auto) [last-row];
+  grid-template-columns: [first-line] 5vh [line2] auto [line3] 5vh [last-line];
+  grid-template-rows:
+    [first-row] 8vh [row2] minmax(92vh, auto) [row3] minmax(100vh, auto)
+    [row4] minmax(20vh, auto) [last-row];
 }
 /* Page structure styles end here */
 
@@ -64,7 +70,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  /* justify-content: center; */
+  justify-content: space-between;
   align-self: center;
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
@@ -84,8 +90,8 @@ header {
   background-position-x: center;
   border-radius: 50%;
   border: 2px solid white;
-  margin: 20px;
-  margin-top: 40px;
+  /* margin: 20px; */
+  /* margin-top: 40px; */
 }
 
 .header-content p {
@@ -99,12 +105,19 @@ header {
   justify-items: center;
   justify-content: space-evenly;
   align-items: center;
-  margin: 1em;
+  /* margin: 1em; */
   width: 30vh;
   height: 10vh;
-  background: linear-gradient(90deg, rgba(2, 0, 36, 1), rgba(41, 51, 71, 1), rgba(198, 57, 19, 1));
-  background-position: 75% 0;
-  background-size: 200% 100%;
+  background: linear-gradient(
+    to right,
+    #7721ff,
+    #7e2dff,
+    #8438ff,
+    #8a41ff,
+    #904aff
+  );
+  /* background-position: 150% 0; */
+  /* background-size: 200% 100%; */
   border-radius: 10px;
   /* border: 1px solid #293347; */
 }
@@ -115,7 +128,7 @@ header {
 }
 
 .contact-me p {
-  margin: 0;
+  /* margin: 0; */
   color: white;
   /* font-family: "Lato", sans-serif; */
 }
@@ -257,10 +270,6 @@ nav ul li {
 main {
   display: grid;
   grid-template-columns: inherit;
-  /* grid-template-areas: ".about-container"
-                       ".skill-container"
-                       ".projects"
-                       ; */
   grid-column: first-line/last-line;
   grid-row: 3 / span 1;
 }
@@ -304,6 +313,7 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: space-around;
   width: 100%;
   min-height: 80vh;
   border: 1px solid #e6ecf8;
@@ -312,8 +322,15 @@ main {
   line-height: 1.5;
 }
 
-.skill ul {
-  margin: 0.83em;
+.skill-icon-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+.skill-icon-row {
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: row;
 }
 
 .list-title {
@@ -325,7 +342,7 @@ main {
   background-color: #8c43ff;
   width: 5em;
   height: 5em;
-  margin: 0.83em;
+  /* margin: 0.83em; */
 }
 
 .projects {
@@ -356,7 +373,7 @@ footer {
 
 @media screen and (min-width: 800px) {
   .container {
-    grid-template-columns: [first-line] 9.5vw [line2] auto [line3] 9.5vw [last-line];
+    grid-template-columns: [first-line] 5vw [line2] auto [line3] 5vw [last-line];
   }
 
   .nav-toggle-label {
@@ -436,7 +453,7 @@ footer {
   .header-img {
     width: 25vw;
     height: 25vw;
-    margin-top: 40px;
+    /* margin-top: 40px; */
   }
 
   .header-content {
@@ -450,3 +467,11 @@ footer {
   }
 }
 /* Responsive design ends here  */
+
+/* Svg styles start here */
+
+.devicon {
+  font-size: 4em;
+}
+
+/* Svg styles end here */
