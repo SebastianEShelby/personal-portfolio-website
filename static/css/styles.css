@@ -5,6 +5,9 @@
 @import url(./devicon-colors.css);
 
 /* Global styles start here  */
+body {
+  line-height: 1.5;
+}
 p,
 h1,
 h2,
@@ -32,7 +35,7 @@ a {
 }
 
 a:hover {
-  color: rgb(255, 100, 73);
+  color: #b4869f;
 }
 /* Global styles end here  */
 
@@ -41,7 +44,7 @@ a:hover {
 .container {
   display: grid;
   height: 100%;
-  grid-template-columns: [first-line] 7vh [line2] auto [line3] 7vh [last-line];
+  grid-template-columns: [first-column] 7vh [line2] auto [line3] 7vh [last-column];
   grid-template-rows:
     [first-row] 8vh [row2] minmax(92vh, auto) [row3] minmax(100vh, auto)
     [row4] minmax(20vh, auto) [last-row];
@@ -54,8 +57,8 @@ header {
   display: grid;
   grid-template-columns: inherit;
   grid-template-rows: inherit;
-  grid-column-start: first-line;
-  grid-column-end: last-line;
+  grid-column-start: first-column;
+  grid-column-end: last-column;
   grid-row-start: 1;
   grid-row-end: span 2;
   /* background-color: #191919; */
@@ -77,14 +80,14 @@ header {
   color: #293347;
   height: 100%;
   width: 100%;
-  font-size: 2vh;
+  /* font-size: 2vh; */
 }
 
 .header-img {
-  width: 180px;
-  height: 180px;
+  width: 30vh;
+  height: 30vh;
   background-image: url(../img/me-and-the-blackboard.jpg);
-  background-color: rgba(99, 99, 99, 0.2);
+  background-color: rgba(99, 99, 99, 0.4);
   background-blend-mode: soft-light;
   background-size: cover;
   background-position-x: center;
@@ -150,7 +153,7 @@ header {
   /* width: 30px;
   height: 30px; */
   border-radius: 20%;
-  background-color: rgba(41, 51, 71, 0.8);
+  background-color: rgba(46, 46, 46, 0.9);
 }
 
 .social-media-img {
@@ -270,26 +273,27 @@ nav ul li {
 main {
   display: grid;
   grid-template-columns: inherit;
-  grid-column: first-line/last-line;
+  grid-column: first-column/last-column;
   grid-row: 3 / span 1;
 }
 
 .about-container {
-  display: grid;
-  grid-template-columns: inherit;
-  grid-column: first-line/last-line;
+  grid-column: first-column/last-column;
   height: 70vh;
-  background-color: #191919;
+  background-color: #2e2e2e;
+  padding: 1em 5em;
 }
 
 .about-sub-container {
-  grid-column: 2 / span 1;
-  margin-top: 10vw;
-  margin-bottom: calc(10vw + 15vh);
+  /* margin-top: 10vw; */
+  /* margin-bottom: calc(10vw + 15vh); */
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: rgb(238, 238, 238);
+}
+.about-sub-container p {
+  font-size: 3vh;
 }
 
 .skill-container {
@@ -303,8 +307,8 @@ main {
   min-height: 50vh;
   /* width: 100%; */
   margin-top: -15vh;
-  margin-right: 5vw;
-  margin-left: 5vw;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
   border-radius: 10px;
 }
 
@@ -370,27 +374,31 @@ main {
   line-height: 3;
 }
 
-.projects {
-  grid-column: 2 / span 1;
+.project-container {
+  grid-column: first-column / last-column;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  height: max-content;
-}
-
-.projects {
-  margin: 1em;
-  width: 40vw;
-  height: 40vw;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  padding: 1em 5em;
+  /* width: 40vw; */
+  min-height: 80vh;
   background-color: rgb(75, 122, 161);
 }
+
+.project-sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Main content styles end here */
 
 /* Footer styles start here */
 
 footer {
   background-color: rgb(221, 199, 159);
-  grid-area: 4 / first-line/span 1 / last-line;
+  grid-area: 4 / first-column/span 1 / last-column;
 }
 /* Footer styles end here */
 
@@ -398,7 +406,7 @@ footer {
 
 @media screen and (min-width: 800px) {
   .container {
-    grid-template-columns: [first-line] 5vw [line2] auto [line3] 5vw [last-line];
+    grid-template-columns: [first-column] 5vw [line2] auto [line3] 5vw [last-column];
   }
 
   .nav-toggle-label {
@@ -461,7 +469,7 @@ footer {
     content: "";
     display: block;
     height: 4px;
-    background: rgb(255, 100, 73);
+    background: #b4869f;
     border-radius: 3px;
     position: absolute;
     top: -0.75em;
@@ -476,8 +484,8 @@ footer {
   }
 
   .header-img {
-    /* width: 25vw;
-    height: 25vw; */
+    width: 25vw;
+    height: 25vw;
     /* margin-top: 40px; */
   }
 
