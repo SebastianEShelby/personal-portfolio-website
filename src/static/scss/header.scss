@@ -1,0 +1,74 @@
+/* Header styles start here */
+
+header {
+  display: grid;
+  grid-template-columns: inherit;
+  grid-template-rows: inherit;
+  grid-column-start: first-column;
+  grid-column-end: last-column;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  /* background-color: #191919; */
+  /* background-blend-mode: soft-light; */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  text-transform: capitalize;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  /* justify-content: space-evenly; */
+  align-self: center;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  color: #293347;
+  height: 100%;
+  width: 100%;
+  /* font-size: 2vh; */
+}
+
+.header-img {
+  width: 30vh;
+  height: 30vh;
+  background-image: url('/static/images/me-and-the-blackboard.jpg');
+  background-color: rgba(99, 99, 99, 0.4);
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-position-x: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 20px;
+  /* margin-top: 40px; */
+}
+
+.header-content p {
+  text-align: center;
+  display: flex;
+  font-size: 3vh;
+}
+
+.header-social {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-social a {
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  /* width: 30px;
+  height: 30px; */
+  border-radius: 20%;
+  background-color: rgba(46, 46, 46, 0.9);
+}
+
+/* Header styles end here */

@@ -1,0 +1,149 @@
+/* Main content styles start here */
+
+main {
+  display: grid;
+  grid-template-columns: inherit;
+  grid-column: first-column/last-column;
+  grid-row: 3 / span 1;
+}
+
+.about-container {
+  grid-column: first-column/last-column;
+  height: 70vh;
+  background-color: #2e2e2e;
+  padding: 1em 5em;
+}
+
+.about-sub-container {
+  /* margin-top: 10vw; */
+  /* margin-bottom: calc(10vw + 15vh); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(238, 238, 238);
+}
+.about-sub-container p {
+  font-size: 3vh;
+}
+
+.skill-container {
+  grid-column: 1 / span 3;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  flex-wrap: wrap;
+  background-color: white;
+  min-height: 50vh;
+  /* width: 100%; */
+  margin-top: -15vh;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
+  border-radius: 10px;
+}
+
+.skill {
+  color: #293347;
+  padding: 2vh 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  text-align: center;
+  width: 100%;
+  /* min-height: inherit; */
+  border: 1px solid #e6ecf8;
+  border-radius: 10px;
+  line-height: 1.5;
+  /* font-size: 18px; */
+}
+
+.skill-img {
+  background-color: #8c43ff;
+  width: 4em;
+  height: 4em;
+  /* margin: 0.83em; */
+}
+
+.skill-headline {
+  /* margin: 0.8em; */
+  font-weight: 500;
+  font-size: larger;
+}
+
+.skill-row {
+  display: flex;
+  justify-content: center;
+  margin: 0.8em 0;
+}
+
+.skill-icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.skill-icon-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.skill-icon {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+  /* max-width: 4em; */
+}
+
+.skill-icon span {
+  font-weight: 500;
+  font-size: small;
+}
+
+.list-title {
+  color: #8c43ff;
+  line-height: 3;
+}
+
+.project-container {
+  grid-column: first-column / last-column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  padding: 1em 5em;
+  /* width: 40vw; */
+  min-height: 80vh;
+  /* background-color: rgb(75, 122, 161); */
+}
+
+.project-sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-items {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 100%; */
+}
+
+.project {
+  padding: 0.75em;
+  width: 50%;
+  /* padding: 0.75rem; */
+}
+
+.project-figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Main content styles end here */

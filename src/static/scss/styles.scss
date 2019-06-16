@@ -1,0 +1,76 @@
+/* External css files start here */
+@import './sanitize.scss';
+@import './fonts.scss';
+// @import './devicon.scss';
+// @import './devicon-colors.scss';
+@import './header.scss';
+@import './nav.scss';
+@import './main.scss';
+@import './footer.scss';
+@import './button.scss';
+@import './icon.scss';
+/* responsive designs */
+@import './responsive.scss';
+/* External css files end here */
+
+/* Global Varibales Start Here*/
+:root {
+  /* My Color Palette Start Here*/
+  --dark-red: #a63a50;
+  /* Color Palette Start Here*/
+
+  --link-color: var(--dark-red);
+}
+/* Global Varibales End Here*/
+
+/* Global styles start here  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #293347;
+  text-transform: capitalize;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  font-weight: 400;
+}
+
+a:hover {
+  color: var(--link-color);
+}
+/* Global styles end here  */
+
+/* Page structure styles start here */
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: [first-column] 7vh [line2] auto [line3] 7vh [last-column];
+  grid-template-rows:
+    [first-row] 8vh [row2] minmax(92vh, auto) [row3] minmax(100vh, auto)
+    [row4] minmax(20vh, auto) [last-row];
+}
+/* Page structure styles end here */
+
+/* Svg styles start here */
+
+.devicon {
+  font-size: 4em;
+}
+
+/* Svg styles end here */
