@@ -4,8 +4,8 @@
   "description": "My Personal portfolio Website 2019",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development /src/index.js --output /dist/main.js",
-    "build": "webpack --mode production /src/index.js --output /dist/main.js"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,14 @@
   },
   "homepage": "https://github.com/Alex-Samari/AlexSamari.github.io#readme",
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
     "browser-sync-webpack-plugin": "^2.2.2",
+    "file-loader": "^4.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "svg-inline-loader": "^0.8.0",
     "webpack": "^4.34.0",
     "webpack-cli": "^3.3.4"
   }
