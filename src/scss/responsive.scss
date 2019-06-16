@@ -65,7 +65,9 @@
     content: '';
     display: block;
     height: 4px;
-    background: var(--link-color);
+    @include theme() {
+      background-color: theme($linkTextHover);
+    }
     border-radius: 3px;
     position: absolute;
     top: -0.75em;
