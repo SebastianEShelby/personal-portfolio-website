@@ -4,7 +4,8 @@
   "description": "My Personal portfolio Website 2019",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "dev": "webpack --mode development /src/index.js --output /dist/main.js",
+    "build": "webpack --mode production /src/index.js --output /dist/main.js"
   },
   "repository": {
     "type": "git",
