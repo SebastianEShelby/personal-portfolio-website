@@ -14,5 +14,7 @@
     "url": "https://github.com/Alex-Samari/AlexSamari.github.io/issues"
   },
   "homepage": "https://github.com/Alex-Samari/AlexSamari.github.io#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "feather-icons": "^4.22.1"
+  }
 }

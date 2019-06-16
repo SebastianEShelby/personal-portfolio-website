@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <base href="/src" target="_blank" />
+    <base href="/src/" target="_blank" />
     <title>Alex Developer</title>
-    <link
-      rel="shortcut icon"
-      href="/src/static/images/me-and-the-blackboard.jpg"
-    />
-    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="shortcut icon" href="/src/images/me-and-the-blackboard.jpg" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="/src/index.js"></script>
+    <script>
+      feather.replace({ class: 'social-media-img' });
+    </script>
   </head>
 
   <body>
@@ -39,23 +40,14 @@
 
         <div class="header-social">
           <a href="https://github.com/Alex-Samari" target="_blank">
-            <img
-              class="social-media-img"
-              src="./static/svg/github.svg"
-              alt="github"
-          /></a>
-          <a href="https://twitter.com/AlexSamariM" target="_blank"
-            ><img
-              class="social-media-img"
-              src="./static/svg/twitter.svg"
-              alt="twitter"
-          /></a>
-          <a href="https://www.linkedin.com/in/alex-samari" target="_blank"
-            ><img
-              class="social-media-img"
-              src="./static/svg/linkedin.svg"
-              alt="linkedIn"
-          /></a>
+            <i data-feather="github"></i>
+          </a>
+          <a href="https://twitter.com/AlexSamariM" target="_blank">
+            <i data-feather="twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/alex-samari" target="_blank">
+            <i data-feather="linkedIn"></i>
+          </a>
         </div>
 
         <div class="header-content">
@@ -73,11 +65,7 @@
             class="contact-me"
             href="mailto:alexsamarim@gmail.com"
             target="_blank"
-            ><img
-              class="contact-me-img"
-              src="./static/svg/mail.svg"
-              alt="email"
-            />
+            ><img class="contact-me-img" src="./svg/mail.svg" alt="email" />
             <p>Get In Touch</p>
           </a>
         </div>
@@ -223,7 +211,7 @@
             <div class="project">
               <figure class="project-figure">
                 <img
-                  src="/src/static/images/employee-management-nodejs.JPG"
+                  src="/src/images/employee-management-nodejs.JPG"
                   alt="Employee Management App Written in Node.js"
                   class="project-img"
                 />
@@ -232,7 +220,7 @@
             <div class="project">
               <figure class="project-figure">
                 <img
-                  src="/src/static/images/employee-management-nodejs.JPG"
+                  src="/src/images/employee-management-nodejs.JPG"
                   alt="Employee Management App Written in Node.js"
                   class="project-img"
                 />
@@ -241,7 +229,7 @@
             <div class="project">
               <figure class="project-figure">
                 <img
-                  src="/src/static/images/employee-management-nodejs.JPG"
+                  src="/src/images/employee-management-nodejs.JPG"
                   alt="Employee Management App Written in Node.js"
                   class="project-img"
                 />
@@ -250,7 +238,7 @@
             <div class="project">
               <figure class="project-figure">
                 <img
-                  src="/src/static/images/employee-management-nodejs.JPG"
+                  src="/src/images/employee-management-nodejs.JPG"
                   alt="Employee Management App Written in Node.js"
                   class="project-img"
                 />
