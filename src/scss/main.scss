@@ -11,22 +11,30 @@ main {
   grid-column: first-column/last-column;
   grid-row: 3 / span 1;
 }
-.about-container {
-  grid-column: first-column/last-column;
-  background-color: $background_color_1;
-  padding: 1vh 4vh;
+/* Main Section Styles */
+.section-container {
+  padding: 0 4vh;
 }
-.about-sub-container {
+.section-sub-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: $color_1;
-  padding-bottom: calc(14vh);
-
-  p {
-    font-size: 3vh;
+  > * {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
+/* Main Section Styles End */
+
+#about-me {
+  grid-column: first-column/last-column;
+  background-color: $background_color_1;
+  .section-sub-container {
+    color: $color_1;
+    padding-bottom: calc(10vh + 20px * 3);
+  }
+}
+
 .skill-container {
   grid-column: 1 / span 3;
   display: flex;
@@ -36,7 +44,7 @@ main {
   flex-wrap: wrap;
   background-color: $background_color_2;
   min-height: 50vh;
-  margin-top: -15vh;
+  margin-top: -10vh;
   border-radius: 10px;
 }
 .skill {
@@ -87,19 +95,11 @@ main {
   color: $color_3;
   line-height: 3;
 }
-.project-container {
+
+#projects {
   grid-column: first-column / last-column;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1em 5em;
-  min-height: 80vh;
 }
-.project-sub-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .project-items {
   display: flex;
   flex-wrap: wrap;
