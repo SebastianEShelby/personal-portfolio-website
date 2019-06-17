@@ -82,8 +82,16 @@ a.button {
 
 .icon {
   align-items: center;
+  justify-items: center;
   display: inline-flex;
   justify-content: center;
+}
+.icon.is-large {
+  width: 100%;
+  height: 100%;
+  font-weight: 100;
+  font-size: 10%;
+  color: white;
 }
 
 a.button.is-round {
