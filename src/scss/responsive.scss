@@ -65,8 +65,8 @@
     content: '';
     display: block;
     height: 4px;
-    @include theme() {
-      background-color: theme($linkTextHover);
+    @include themify {
+      background-color: $color-linkTextHover;
     }
     border-radius: 3px;
     position: absolute;

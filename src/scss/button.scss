@@ -11,10 +11,8 @@ a.button {
   padding-top: calc(0.375em - 1px);
   text-align: center;
   white-space: nowrap;
-
-  font-family: 'Nunito';
+  font-family: 'Open Sans';
   font-weight: 600;
-
   display: flex;
   justify-items: center;
   justify-content: space-evenly;
@@ -47,10 +45,13 @@ a.button {
 
 .button.is-primary {
   /* background-color: #293347; */
-  @include theme() {
-    border-color: theme($linkTextHover);
-    color: theme($linkTextHover);
+  @include themify {
+    border-color: $color-linkTextHover;
+    color: $color-linkTextHover;
   }
+  // border-color: $darkRed;
+
+  // color: $darkRed;
 }
 
 .button.is-outlined {
@@ -70,9 +71,9 @@ a.button {
 
 .button.is-primary.is-outlined:hover,
 .button.is-primary.is-outlined:focus {
-  @include theme() {
-    background-color: theme($linkTextHover);
-    border-color: theme($linkTextHover);
+  @include themify {
+    background-color: $color-linkTextHover;
+    border-color: $color-linkTextHover;
   }
   color: #fff;
 }

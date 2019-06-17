@@ -1,42 +1,48 @@
-$themes: (
-  light: (
-    backGround: $white,
-    text: $black,
-    linkText: $darkRed,
-    linkTextHover: $darkRed
-  ),
-  dark: ()
-);
-
 /* Light Color Palete Starts Here*/
 $white: #fff;
 $black: #000;
 $darkRed: #a63a50;
+
+$white: 'white';
+$black: 'black';
+$darkRed: 'darkRed';
 /* Light Color Palete Ends Here*/
 
 /* Dark Color Palete Starts Here*/
 
 /* Dark Color Palete Ends Here*/
 
-@mixin themed() {
-  @each $theme, $map in $themes {
-    .theme--#{$theme} & {
-      $theme-map: () !global;
-      @each $key, $submap in $map {
-        $value: map-get(map-get($themes, $theme), '#{$key}');
-        $theme-map: map-merge(
-          $theme-map,
-          (
-            $key: $value
-          )
-        ) !global;
-      }
+$themes: (
+  'light': (
+    'backGround': $white,
+    'text': $black,
+    'linkText': $darkRed,
+    'linkTextHover': #a63a50
+  ),
+  'dark': ()
+) !default;
+
+// Initialize our variables as `null` so that when used outside of `themify`,
+// they actually output nothing.
+$color-linkTextHover: null;
+
+/// Themify mixin
+/// @author Hugo Giraudel
+/// @param {Map} $themes [$themes] - Map of themes to use
+@mixin themify($themes: $themes) {
+  // Iterate over the themes
+  @each $theme, $colors in $themes {
+    // Create a selector (e.g. `.media.theme-unicorn, .theme-unicorn .media`)
+    &.theme-#{$theme},
+    .theme-#{$theme} & {
+      // Set the theme variables with `!global`
+      $color-linkTextHover: map-get($colors, 'linkTextHover') !global;
+
+      // Output user content
       @content;
-      $theme-map: null !global;
+
+      // Unset the theme variables with `!global`
+      $color-linkTextHover: null !global;
     }
   }
-}
-
-@function theme($key) {
-  @return map-get($theme-map, $key);
 }

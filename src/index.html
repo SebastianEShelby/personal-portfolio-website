@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <base href="/src/" target="_blank" />
     <title>Alex Developer</title>
-    <link rel="shortcut icon" href="/src/images/me-and-the-blackboard.jpg" />
-    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="shortcut icon" href="images/me-and-the-blackboard.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
+    />
     <script src="https://unpkg.com/feather-icons"></script>
-    <script src="/src/index.js"></script>
-    <script>
-      feather.replace({ class: 'social-media-img' });
-    </script>
+    <script src="scripts/sticky-nav.js"></script>
+    <script src="index.js"></script>
   </head>
 
   <body>
@@ -46,7 +47,7 @@
             <i data-feather="twitter"></i>
           </a>
           <a href="https://www.linkedin.com/in/alex-samari" target="_blank">
-            <i data-feather="linkedIn"></i>
+            <i data-feather="linkedin"></i>
           </a>
         </div>
 
@@ -62,11 +63,11 @@
           </p>
 
           <a
-            class="contact-me"
+            class="button is-primary is-outlined is-rounded is-medium"
             href="mailto:alexsamarim@gmail.com"
             target="_blank"
-            ><img class="contact-me-img" src="./svg/mail.svg" alt="email" />
-            <p>Get In Touch</p>
+            ><i class="button-icon" data-feather="mail"></i>
+            <span>Get In Touch</span>
           </a>
         </div>
       </header>
@@ -211,7 +212,7 @@
             <div class="project">
               <figure class="project-figure">
                 <img
-                  src="/src/images/employee-management-nodejs.JPG"
+                  src="images/employee-management-nodejs.JPG"
                   alt="Employee Management App Written in Node.js"
                   class="project-img"
                 />
@@ -220,7 +221,7 @@
             <div class="project">
               <figure class="project-figure">
                 <img
-                  src="/src/images/employee-management-nodejs.JPG"
+                  src="images/employee-management-nodejs.JPG"
                   alt="Employee Management App Written in Node.js"
                   class="project-img"
                 />
@@ -229,7 +230,7 @@
             <div class="project">
               <figure class="project-figure">
                 <img
-                  src="/src/images/employee-management-nodejs.JPG"
+                  src="images/employee-management-nodejs.JPG"
                   alt="Employee Management App Written in Node.js"
                   class="project-img"
                 />
@@ -238,7 +239,7 @@
             <div class="project">
               <figure class="project-figure">
                 <img
-                  src="/src/images/employee-management-nodejs.JPG"
+                  src="images/employee-management-nodejs.JPG"
                   alt="Employee Management App Written in Node.js"
                   class="project-img"
                 />
@@ -252,5 +253,8 @@
         <h2>Your content would go here</h2>
       </footer>
     </div>
+    <script>
+      feather.replace({ class: 'social-media-img' });
+    </script>
   </body>
 </html>
