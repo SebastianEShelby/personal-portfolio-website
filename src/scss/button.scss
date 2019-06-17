@@ -1,8 +1,9 @@
 $color_1: #363636;
-$color_3: #fff;
+$white: #fff;
 $font_family_1: 'Open Sans';
-$background_color_1: transparent;
+$transparent: transparent;
 $border_color_1: #b5b5b5;
+$DarkBlue: rgba(99, 99, 99, 0.4);
 
 a.button {
   border-width: 1px;
@@ -28,7 +29,6 @@ a.button {
   }
 }
 .button.is-primary {
-  border-color: $darkRed;
   color: $darkRed;
   .icon {
     margin-right: 10px;
@@ -36,9 +36,18 @@ a.button {
   // border-color: $darkRed;
   // color: $darkRed;
 }
-.button.is-outlined {
+
+.button.is-filled {
   border-width: 2px;
-  background-color: $background_color_1;
+  // border-color: $DarkBlue;
+  background-color: $darkRed;
+  color: $white;
+}
+
+.button.is-outlined {
+  border-color: $darkRed;
+  border-width: 2px;
+  background-color: $transparent;
 }
 .is-rounded {
   border-radius: 290486px;
@@ -52,12 +61,25 @@ a.button {
   &:hover {
     background-color: $darkRed;
     border-color: $darkRed;
-    color: $color_3;
+    color: $white;
   }
   &:focus {
     background-color: $darkRed;
     border-color: $darkRed;
-    color: $color_3;
+    color: $white;
+  }
+}
+
+.button.is-primary.is-filled {
+  &:hover {
+    background-color: $white;
+    border-color: $darkRed;
+    color: $darkRed;
+  }
+  &:focus {
+    background-color: $white;
+    border-color: $darkRed;
+    color: $darkRed;
   }
 }
 
@@ -72,4 +94,17 @@ a.button {
 .icon.is-small {
   height: 1rem;
   width: 1rem;
+}
+
+a.button.is-round {
+  border-radius: 100%;
+  margin: 0.4rem 0;
+  width: 47px;
+  height: 47px;
+  .icon {
+    margin-right: 0;
+  }
+}
+a.button.is-medium.is-round {
+  font-size: 0.1rem;
 }

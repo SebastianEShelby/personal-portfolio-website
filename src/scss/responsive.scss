@@ -1,5 +1,5 @@
 $background_color_1: unset;
-$background_color_2: white;
+$background_color_2: #ffffff;
 
 /* Responsive design start here (Desktop Styles) */
 /* Responsive design ends here  */
@@ -87,6 +87,10 @@ $background_color_2: white;
     p {
       font-size: x-large;
     }
+  }
+  .skill-container {
+    margin-right: 4vh;
+    margin-left: 4vh;
   }
   .skill {
     width: 33.33%;
