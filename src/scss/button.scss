@@ -9,10 +9,6 @@ a.button {
   border-width: 1px;
   border-style: solid;
   cursor: pointer;
-  padding-bottom: calc(0.375em - 1px);
-  padding-left: 0.75em;
-  padding-right: 0.75em;
-  padding-top: calc(0.375em - 1px);
   text-align: center;
   white-space: nowrap;
   font-family: $font_family_1;
@@ -31,7 +27,7 @@ a.button {
 .button.is-primary {
   color: $darkRed;
   .icon {
-    margin-right: 10px;
+    margin-right: 0.5em;
   }
   // border-color: $darkRed;
   // color: $darkRed;
@@ -56,6 +52,7 @@ a.button {
 }
 .button.is-medium {
   font-size: 1.25rem;
+  padding: 0.8em 1.5em;
 }
 .button.is-primary.is-outlined {
   &:hover {
@@ -87,13 +84,6 @@ a.button {
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.icon.is-small {
-  height: 1rem;
-  width: 1rem;
 }
 
 a.button.is-round {
