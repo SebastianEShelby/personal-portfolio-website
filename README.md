@@ -1,2 +1,2 @@
 # Pure-CSS-Portfolio
-My first portfolio website using pure HTML/CSS
+2019 Portfolio website using HTML/SCSS/JavaScript
