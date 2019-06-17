@@ -1,3 +1,4 @@
+// const handleNavBar = () => {
 if (window.matchMedia('(min-width: 800px)').matches) {
   // wait for the window to load and identify dom elements
   window.onload = () => {
@@ -15,6 +16,7 @@ if (window.matchMedia('(min-width: 800px)').matches) {
     };
   };
 }
+// };
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function addSticky() {
@@ -24,3 +26,5 @@ function addSticky() {
     navbar.classList.remove('sticky');
   }
 }
+
+// export { handleNavBar };

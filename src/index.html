@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <base href="/src" target="_blank" />
+    <base href="/src/" target="_blank" />
     <title>Alex Developer</title>
+    <link rel="shortcut icon" href="images/me-and-the-blackboard.jpg" />
     <link
-      rel="shortcut icon"
-      href="/src/static/images/me-and-the-blackboard.jpg"
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
     />
-    <link rel="stylesheet" href="/static/css/styles.css" />
-    <script src="/src/scripts/sticky-nav.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="scripts/sticky-nav.js"></script>
+    <script src="index.js"></script>
   </head>
 
   <body>
@@ -38,55 +40,57 @@
         </div>
 
         <div class="header-social">
-          <a href="https://github.com/Alex-Samari" target="_blank">
-            <img
-              class="social-media-img"
-              src="./static/svg/github.svg"
-              alt="github"
-          /></a>
-          <a href="https://twitter.com/AlexSamariM" target="_blank"
-            ><img
-              class="social-media-img"
-              src="./static/svg/twitter.svg"
-              alt="twitter"
-          /></a>
-          <a href="https://www.linkedin.com/in/alex-samari" target="_blank"
-            ><img
-              class="social-media-img"
-              src="./static/svg/linkedin.svg"
-              alt="linkedIn"
-          /></a>
+          <a
+            class="button is-primary is-round is-filled is-medium"
+            href="https://github.com/Alex-Samari"
+            target="_blank"
+          >
+            <i class="icon" data-feather="github"></i>
+          </a>
+          <a
+            class="button is-primary is-round is-filled is-medium"
+            href="https://twitter.com/AlexSamariM"
+            target="_blank"
+          >
+            <i class="icon" data-feather="twitter"></i>
+          </a>
+          <a
+            class="button is-primary is-round is-filled is-medium"
+            href="https://www.linkedin.com/in/alex-samari"
+            target="_blank"
+          >
+            <i class="icon" data-feather="linkedin"></i>
+          </a>
         </div>
 
         <div class="header-content">
           <div class="header-img"></div>
-          <h1>Hey, I'm Alex</h1>
-          <p>
-            Software & Web Developer, DevOps enthusiast
-          </p>
-          <p>
-            Currently working on a dynamic web application using Angular
-            material design
-          </p>
+          <div class="header-text">
+            <h1>Hey, I'm Alex</h1>
+            <h2 class="subtitle">
+              Software & Web Developer, DevOps enthusiast
+            </h2>
+            <h3 class="subtitle">
+              Need a website designed? Looking for a new team member? Hit me up!
+            </h3>
 
-          <a
-            class="contact-me"
-            href="mailto:alexsamarim@gmail.com"
-            target="_blank"
-            ><img
-              class="contact-me-img"
-              src="./static/svg/mail.svg"
-              alt="email"
-            />
-            <p>Get In Touch</p>
-          </a>
+            <div>
+              <a
+                class="button is-primary is-outlined is-rounded is-medium"
+                href="mailto:alexsamarim@gmail.com"
+                target="_blank"
+                ><i class="icon" data-feather="mail"></i>
+                <span>Get In Touch</span>
+              </a>
+            </div>
+          </div>
         </div>
       </header>
 
       <main>
         <section class="about-container">
           <div class="about-sub-container">
-            <h1>My Work</h1>
+            <h2>Who am I?</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -213,7 +217,7 @@
 
         <section id="projects" class="project-container">
           <div class="project-sub-container">
-            <h1>My Work</h1>
+            <h1>Projects</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -223,7 +227,7 @@
             <div class="project">
               <figure class="project-figure">
                 <img
-                  src="/src/static/images/employee-management-nodejs.JPG"
+                  src="images/employee-management-nodejs.JPG"
                   alt="Employee Management App Written in Node.js"
                   class="project-img"
                 />
@@ -232,7 +236,7 @@
             <div class="project">
               <figure class="project-figure">
                 <img
-                  src="/src/static/images/employee-management-nodejs.JPG"
+                  src="images/employee-management-nodejs.JPG"
                   alt="Employee Management App Written in Node.js"
                   class="project-img"
                 />
@@ -241,7 +245,7 @@
             <div class="project">
               <figure class="project-figure">
                 <img
-                  src="/src/static/images/employee-management-nodejs.JPG"
+                  src="images/employee-management-nodejs.JPG"
                   alt="Employee Management App Written in Node.js"
                   class="project-img"
                 />
@@ -250,7 +254,7 @@
             <div class="project">
               <figure class="project-figure">
                 <img
-                  src="/src/static/images/employee-management-nodejs.JPG"
+                  src="images/employee-management-nodejs.JPG"
                   alt="Employee Management App Written in Node.js"
                   class="project-img"
                 />
@@ -264,5 +268,8 @@
         <h2>Your content would go here</h2>
       </footer>
     </div>
+    <script>
+      feather.replace({ class: 'social-media-img' });
+    </script>
   </body>
 </html>

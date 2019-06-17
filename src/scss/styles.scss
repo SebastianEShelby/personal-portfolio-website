@@ -1,27 +1,14 @@
 /* External css files start here */
 @import './sanitize.scss';
 @import './fonts.scss';
-// @import './devicon.scss';
-// @import './devicon-colors.scss';
-@import './header.scss';
+@import './themes.scss';
 @import './nav.scss';
+@import './header.scss';
 @import './main.scss';
 @import './footer.scss';
 @import './button.scss';
-@import './icon.scss';
-/* responsive designs */
 @import './responsive.scss';
 /* External css files end here */
-
-/* Global Varibales Start Here*/
-:root {
-  /* My Color Palette Start Here*/
-  --dark-red: #a63a50;
-  /* Color Palette Start Here*/
-
-  --link-color: var(--dark-red);
-}
-/* Global Varibales End Here*/
 
 /* Global styles start here  */
 p,
@@ -32,6 +19,11 @@ h4,
 h5,
 h6 {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
 }
 
 ul,
@@ -46,12 +38,11 @@ a {
   color: #293347;
   text-transform: capitalize;
   transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
   font-weight: 400;
-}
-
-a:hover {
-  color: var(--link-color);
+  &:hover {
+    // color: red;
+    color: $darkRed;
+  }
 }
 /* Global styles end here  */
 
