@@ -24,6 +24,9 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# Parcel cache
+.cache/*
+
 # misc
 /.sass-cache
 /connect.lock
@@ -38,6 +41,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-# Parcel cache
-.cache/*
