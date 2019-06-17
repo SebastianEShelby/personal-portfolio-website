@@ -33,13 +33,10 @@ a {
   color: #293347;
   text-transform: capitalize;
   transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
   font-weight: 400;
-}
-
-a:hover {
-  @include themify {
-    color: $color-linkTextHover;
+  &:hover {
+    // color: red;
+    color: $darkRed;
   }
 }
 /* Global styles end here  */

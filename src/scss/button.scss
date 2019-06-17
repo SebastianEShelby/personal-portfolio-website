@@ -1,9 +1,12 @@
+$color_1: #363636;
+$color_3: #fff;
+$font_family_1: 'Open Sans';
+$background_color_1: transparent;
+$border_color_1: #b5b5b5;
+
 a.button {
-  /* background-color: #fff; */
-  /* border-color: #dbdbdb; */
   border-width: 1px;
   border-style: solid;
-  /* color: #363636; */
   cursor: pointer;
   padding-bottom: calc(0.375em - 1px);
   padding-left: 0.75em;
@@ -11,78 +14,49 @@ a.button {
   padding-top: calc(0.375em - 1px);
   text-align: center;
   white-space: nowrap;
-  font-family: 'Open Sans';
+  font-family: $font_family_1;
   font-weight: 600;
   display: flex;
   justify-items: center;
   justify-content: space-evenly;
   align-items: center;
-  /* padding: 1.25em 2em; */
-  /* 
-  
-  margin: 1em;
-  
-  height: 10vh;
-  background: linear-gradient(
-    to right,
-    #7721ff,
-    #7e2dff,
-    #8438ff,
-    #8a41ff,
-    #904aff
-  );
-  border-radius: 12px; */
-
-  /* background-position: 150% 0; */
-  /* background-size: 200% 100%; */
-  /* border: 1px solid #293347; */
 }
-
-.button:hover {
-  border-color: #b5b5b5;
-  color: #363636;
-}
-
-.button.is-primary {
-  /* background-color: #293347; */
-  @include themify {
-    border-color: $color-linkTextHover;
-    color: $color-linkTextHover;
+.button {
+  &:hover {
+    border-color: $border_color_1;
+    color: $color_1;
   }
+  .button-icon {
+    margin-right: 10px;
+  }
+}
+.button.is-primary {
+  border-color: $darkRed;
+  color: $darkRed;
   // border-color: $darkRed;
-
   // color: $darkRed;
 }
-
 .button.is-outlined {
   border-width: 2px;
-  background-color: transparent;
+  background-color: $background_color_1;
 }
-
 .button.is-rounded {
   border-radius: 290486px;
   padding-left: 1em;
   padding-right: 1em;
 }
-
 .button.is-medium {
   font-size: 1.25rem;
 }
-
-.button.is-primary.is-outlined:hover,
-.button.is-primary.is-outlined:focus {
-  @include themify {
-    background-color: $color-linkTextHover;
-    border-color: $color-linkTextHover;
+.button.is-primary.is-outlined {
+  &:hover {
+    background-color: $darkRed;
+    border-color: $darkRed;
+    color: $color_3;
   }
-  color: #fff;
-}
-
-.button .button-icon {
-  margin-right: 10px;
-  /* justify-items: center; */
-  /* align-items: center; */
-  /* height: 1em; */
-  /* margin: 0; */
-  /* color: white; */
+  &:focus {
+    background-color: $darkRed;
+    border-color: $darkRed;
+    color: $color_3;
+  }
 }

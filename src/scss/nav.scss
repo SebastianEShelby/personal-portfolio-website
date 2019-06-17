@@ -1,7 +1,9 @@
-/* Navigation styles start here  */
+$background_color_1: rgba(255, 255, 255, 1);
 
+/* Navigation styles start here  */
+/* Navigation styles end here  */
 .nav-bar-container {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: $background_color_1;
   display: flex;
   padding: 0 20px;
   justify-content: space-between;
@@ -11,10 +13,9 @@
   height: 8vh;
   text-transform: capitalize;
 }
-
 .nav-bar {
   display: flex;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: $background_color_1;
   position: absolute;
   text-align: left;
   top: 100%;
@@ -25,80 +26,80 @@
   transition: transform 400ms ease-in-out;
   border-bottom: 0.5px solid rgba(41, 51, 71, 0.5);
 }
-
-nav ul {
-  display: flex;
-  flex-direction: column;
-  height: 18vh;
-  width: 100%;
+nav {
+  ul {
+    display: flex;
+    flex-direction: column;
+    height: 18vh;
+    width: 100%;
+    a {
+      opacity: 0;
+      transition: opacity 150ms ease-in-out;
+      display: flex;
+      height: 6vh;
+    }
+    li {
+      padding: 0 20px;
+    }
+  }
 }
-
 .nav-link {
   font-weight: 500;
 }
-
-nav ul a {
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
-  display: flex;
-  height: 6vh;
-}
-
-nav ul li {
-  padding: 0 20px;
-}
-
-.nav-toggle:checked ~ .nav-bar {
-  transform: scale(1, 1);
-}
-
-.nav-toggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 50ms;
-}
-
 .nav-toggle {
+  &:checked {
+    & ~ .nav-bar {
+      transform: scale(1, 1);
+    }
+    & ~ nav {
+      a {
+        opacity: 1;
+        transition: opacity 250ms ease-in-out 50ms;
+      }
+    }
+  }
   position: absolute !important;
   display: none;
 }
-
 .nav-toggle-label {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  span {
+    display: block;
+    background: #293347;
+    width: 33px;
+    height: 4px;
+    border-radius: 3px;
+    position: relative;
+    &::before {
+      display: block;
+      background: #293347;
+      width: 33px;
+      height: 4px;
+      border-radius: 3px;
+      position: relative;
+      content: '';
+      position: absolute;
+      bottom: 7px;
+    }
+    &::after {
+      display: block;
+      background: #293347;
+      width: 33px;
+      height: 4px;
+      border-radius: 3px;
+      position: relative;
+      content: '';
+      position: absolute;
+      top: 7px;
+    }
+  }
 }
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  display: block;
-  background: #293347;
-  width: 33px;
-  height: 4px;
-  border-radius: 3px;
-  position: relative;
-}
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  content: '';
-  position: absolute;
-}
-
-.nav-toggle-label span::before {
-  bottom: 7px;
-}
-
-.nav-toggle-label span::after {
-  top: 7px;
-}
-
 .nav-headline {
   height: 100%;
   width: max-content;
   display: flex;
   align-items: center;
 }
-
-/* Navigation styles end here  */
