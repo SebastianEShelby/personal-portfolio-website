@@ -3,7 +3,6 @@ $white: #fff;
 $font_family_1: 'Open Sans';
 $transparent: transparent;
 $border_color_1: #b5b5b5;
-$DarkBlue: rgba(99, 99, 99, 0.4);
 
 a.button {
   border-width: 1px;
@@ -35,7 +34,7 @@ a.button {
 
 .button.is-filled {
   border-width: 2px;
-  // border-color: $DarkBlue;
+  // border-color: $darkBlue;
   background-color: $darkRed;
   color: $white;
 }
@@ -85,13 +84,6 @@ a.button {
   justify-items: center;
   display: inline-flex;
   justify-content: center;
-}
-.icon.is-large {
-  width: 100%;
-  height: 100%;
-  font-weight: 100;
-  font-size: 10%;
-  color: white;
 }
 
 a.button.is-round {
