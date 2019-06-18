@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <base href="/src/" target="_blank" />
     <title>Alex Developer</title>
-    <link rel="shortcut icon" href="images/me-and-the-blackboard.jpg" />
+    <link rel="shortcut icon" href="src/images/me-and-the-blackboard.jpg" />
     <link
       rel="stylesheet"
       href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
     />
     <script src="https://unpkg.com/feather-icons"></script>
-    <script src="scripts/sticky-nav.js"></script>
-    <script src="index.js"></script>
+    <script src="src/scripts/sticky-nav.js"></script>
+    <script src="src/index.js"></script>
   </head>
 
   <body>
@@ -106,7 +105,7 @@
         <section id="skills" class="skill-container">
           <div class="skill">
             <div class="skill-img-container skill-row">
-              <i class="icon skill-img" data-feather="globe"></i>
+              <i class="icon skill-img" data-feather="code"></i>
             </div>
             <span class="skill-row skill-headline">Languages</span>
 
@@ -184,21 +183,11 @@
 
           <div class="skill">
             <div class="skill-img-container skill-row">
-              <i class="icon skill-img" data-feather="codesandbox"></i>
+              <i class="icon skill-img" data-feather="package"></i>
             </div>
             <span class="skill-row skill-headline">Database & Tools</span>
 
             <div class="skill-icon-container skill-row">
-              <div class="skill-icon">
-                <i class="devicon-git-plain colored devicon"></i>
-                <span>Git</span>
-              </div>
-
-              <div class="skill-icon">
-                <i class="devicon-github-plain colored devicon"></i>
-                <span>GitHub</span>
-              </div>
-
               <div class="skill-icon">
                 <i class="devicon-postgresql-plain colored devicon"></i>
                 <span>PostgreSQL</span>
@@ -207,6 +196,21 @@
               <div class="skill-icon">
                 <i class="devicon-mongodb-plain colored devicon"></i>
                 <span>MongoDB</span>
+              </div>
+
+              <div class="skill-icon">
+                <i class="devicon-oracle-plain colored devicon"></i>
+                <span>Oracle</span>
+              </div>
+
+              <div class="skill-icon">
+                <i class="devicon-git-plain colored devicon"></i>
+                <span>Git</span>
+              </div>
+
+              <div class="skill-icon">
+                <i class="devicon-github-plain colored devicon"></i>
+                <span>GitHub</span>
               </div>
 
               <div class="skill-icon">
@@ -238,15 +242,18 @@
                   class="project-img"
                 />
                 <figcaption>
-                  <h3 class="figcaption-text sub-headline">Some Text About the Picture</h3>
-                  <a
-                    class="button is-primary is-outlined is-rounded is-medium"
-                    href="mailto:alexsamarim@gmail.com"
-                    target="_blank"
-                    ><i class="icon" data-feather="search"></i>
-                    <span>View Website</span>
-                  </a>
+                  <h3 class="figcaption-text sub-headline">
+                    Some Text About the Picture
+                  </h3>
                 </figcaption>
+                <a href="#projects"></a>
+                <!-- <a
+                  class="button is-primary is-outlined is-rounded is-medium"
+                  href="mailto:alexsamarim@gmail.com"
+                  target="_blank"
+                  ><i class="icon" data-feather="search"></i>
+                  <span>View Website</span>
+                </a> -->
               </figure>
             </div>
             <div class="project">
