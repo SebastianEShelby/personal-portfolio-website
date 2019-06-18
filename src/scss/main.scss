@@ -62,15 +62,26 @@ main {
   border-radius: 10px;
   line-height: 1.5;
 }
-.skill-img {
-  background-color: $background_color_3;
+.skill-img-container {
   width: 4em;
   height: 4em;
+  .feather {
+    stroke-width: 1px;
+    stroke: $darkRed;
+    width: 100%;
+    height: 100%;
+    font-weight: 100;
+  }
+  .feather-book {
+    transform: rotate(-20deg);
+  }
 }
+
 .skill-headline {
   font-weight: 500;
   font-size: larger;
 }
+
 .skill-row {
   display: flex;
   justify-content: center;
@@ -100,24 +111,33 @@ main {
 }
 
 #projects {
+  background-color: lightskyblue;
   grid-column: first-column / last-column;
+  padding: 5em 0;
+  text-align: center;
 }
 
 .project-items {
   display: flex;
   flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
 }
 .project {
   padding: 0.75em;
-  width: 50%;
+  width: 33.3333%;
 }
-.project-figure {
+figure.project-figure {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
-  margin: 0;
-}
-.project-img {
-  width: 100%;
-  height: 100%;
+  border-radius: 12px;
+
+  img.project-img {
+  }
+  figcaption {
+    .figcaption-text {
+      color: #fff;
+    }
+  }
 }
