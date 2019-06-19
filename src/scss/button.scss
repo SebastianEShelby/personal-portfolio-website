@@ -1,59 +1,68 @@
-$color_1: #363636;
 $white: #fff;
-$font_family_1: 'Open Sans';
-$transparent: transparent;
-$border_color_1: #b5b5b5;
+$buttonFont: 'Open Sans';
 
 a.button {
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
   cursor: pointer;
   text-align: center;
   white-space: nowrap;
-  font-family: $font_family_1;
+  font-family: $buttonFont;
   font-weight: 600;
   display: flex;
   justify-items: center;
   justify-content: center;
   align-items: center;
 }
-.button {
-  &:hover {
-    border-color: $border_color_1;
-    color: $color_1;
-  }
-}
-.button.is-primary {
+
+.is-primary {
   color: $darkRed;
   .icon {
     margin-right: 0.5em;
   }
-  // border-color: $darkRed;
-  // color: $darkRed;
 }
 
-.button.is-filled {
-  border-width: 2px;
-  // border-color: $darkBlue;
+.is-secondary {
+  .icon {
+    margin-right: 0.5em;
+  }
+  color: $darkRed;
+  &:hover {
+    background-color: $darkRed;
+    border-color: $darkRed;
+    color: antiquewhite;
+  }
+  &:focus {
+    background-color: $darkRed;
+    border-color: $darkRed;
+    color: antiquewhite;
+  }
+}
+
+.is-filled {
   background-color: $darkRed;
   color: $white;
 }
 
-.button.is-outlined {
-  border-color: $darkRed;
-  border-width: 2px;
-  background-color: $transparent;
+.is-outlined {
+  background-color: transparent;
 }
 .is-rounded {
   border-radius: 290486px;
   padding-left: 1em;
   padding-right: 1em;
 }
-.button.is-medium {
+.is-medium {
   font-size: 1.25rem;
   padding: 0.8em 1.5em;
 }
-.button.is-primary.is-outlined {
+
+.is-small {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+}
+
+.is-primary.is-outlined {
   &:hover {
     background-color: $darkRed;
     border-color: $darkRed;
@@ -66,7 +75,7 @@ a.button {
   }
 }
 
-.button.is-primary.is-filled {
+.is-primary.is-filled {
   &:hover {
     background-color: $white;
     border-color: $darkRed;
@@ -86,7 +95,7 @@ a.button {
   justify-content: center;
 }
 
-a.button.is-round {
+a.is-round {
   border-radius: 100%;
   margin: 0.4rem 0;
   width: 47px;
@@ -95,6 +104,6 @@ a.button.is-round {
     margin-right: 0;
   }
 }
-a.button.is-medium.is-round {
+a.is-medium.is-round {
   font-size: 0.1rem;
 }
