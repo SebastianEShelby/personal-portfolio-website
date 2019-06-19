@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Alex Developer</title>
-    <link rel="shortcut icon" href="src/images/me-and-the-blackboard.jpg" />
+    <link rel="shortcut icon" href="./images/me-and-the-blackboard.jpg" />
     <link
       rel="stylesheet"
       href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
     />
     <script src="https://unpkg.com/feather-icons"></script>
-    <script src="src/scripts/sticky-nav.js"></script>
-    <script src="src/index.js"></script>
+    <script src="./scripts/sticky-nav.js"></script>
+    <script src="./index.js"></script>
   </head>
 
   <body>
@@ -233,54 +233,30 @@
               Here's a list of my recent projects.
             </h2>
           </div>
-          <div class="project-items">
+          <div id="project-items" class="project-items">
             <div class="project">
-              <figure class="project-figure">
+              <figure>
                 <img
                   src="images/employee-management-nodejs.JPG"
-                  alt="Employee Management App Written in Node.js"
-                  class="project-img"
+                  alt="employee-management-nodejs"
                 />
                 <figcaption>
-                  <h3 class="figcaption-text sub-headline">
-                    Some Text About the Picture
-                  </h3>
+                  <div class="figcaption-text">
+                    <h2 class="sub-headline">Employee Management</h2>
+                    <p>
+                      Technologies: Node.js, Express, PostgreSQL, Bootstrap,
+                      HTML/CSS/JS
+                    </p>
+                  </div>
+                  <a
+                    class="button is-secondary is-outlined is-rounded is-small"
+                    href="#projects"
+                    target="_blank"
+                    ><i class="icon" data-feather="globe"></i>
+                    <span>See Website</span>
+                  </a>
                 </figcaption>
-                <a href="#projects"></a>
-                <!-- <a
-                  class="button is-primary is-outlined is-rounded is-medium"
-                  href="mailto:alexsamarim@gmail.com"
-                  target="_blank"
-                  ><i class="icon" data-feather="search"></i>
-                  <span>View Website</span>
-                </a> -->
-              </figure>
-            </div>
-            <div class="project">
-              <figure class="project-figure">
-                <img
-                  src="images/employee-management-nodejs.JPG"
-                  alt="Employee Management App Written in Node.js"
-                  class="project-img"
-                />
-              </figure>
-            </div>
-            <div class="project">
-              <figure class="project-figure">
-                <img
-                  src="images/employee-management-nodejs.JPG"
-                  alt="Employee Management App Written in Node.js"
-                  class="project-img"
-                />
-              </figure>
-            </div>
-            <div class="project">
-              <figure class="project-figure">
-                <img
-                  src="images/employee-management-nodejs.JPG"
-                  alt="Employee Management App Written in Node.js"
-                  class="project-img"
-                />
+                <div class="overlay"></div>
               </figure>
             </div>
           </div>
