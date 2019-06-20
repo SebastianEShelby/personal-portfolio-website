@@ -1,5 +1,4 @@
-$white: #fff;
-$buttonFont: 'Open Sans';
+$white: antiquewhite;
 
 a.button {
   border-width: 2px;
@@ -27,21 +26,18 @@ a.button {
     margin-right: 0.5em;
   }
   color: $darkRed;
-  &:hover {
-    background-color: $darkRed;
-    border-color: $darkRed;
-    color: antiquewhite;
-  }
+  &:hover,
   &:focus {
     background-color: $darkRed;
     border-color: $darkRed;
-    color: antiquewhite;
+    color: $white;
   }
 }
 
 .is-filled {
   background-color: $darkRed;
   color: $white;
+  border-color: $darkRed;
 }
 
 .is-outlined {
@@ -53,38 +49,29 @@ a.button {
   padding-right: 1em;
 }
 .is-medium {
-  font-size: 1.25rem;
-  padding: 0.8em 1.5em;
+  // font-size: 1.25rem;
+  padding: 2em;
 }
 
 .is-small {
-  font-size: 1rem;
+  // font-size: 1rem;
   padding: 0.5em 1em;
 }
 
-.is-primary.is-outlined {
-  &:hover {
-    background-color: $darkRed;
-    border-color: $darkRed;
-    color: $white;
-  }
-  &:focus {
-    background-color: $darkRed;
-    border-color: $darkRed;
-    color: $white;
-  }
+.is-primary.is-outlined:hover,
+.is-primary.is-outlined:focus {
+  background-color: $darkRed;
+  border-color: $darkRed;
+  color: $white;
 }
 
-.is-primary.is-filled {
-  &:hover {
-    background-color: $white;
-    border-color: $darkRed;
-    color: $darkRed;
-  }
-  &:focus {
-    background-color: $white;
-    border-color: $darkRed;
-    color: $darkRed;
+.is-primary.is-filled:hover,
+.is-primary.is-filled:focus {
+  background-color: $white;
+  border-color: $darkRed;
+  color: $darkRed;
+  svg.feather {
+    fill: $darkRed;
   }
 }
 
@@ -97,9 +84,6 @@ a.button {
 
 a.is-round {
   border-radius: 100%;
-  margin: 0.4rem 0;
-  width: 47px;
-  height: 47px;
   .icon {
     margin-right: 0;
   }
