@@ -158,6 +158,12 @@ figure figcaption {
   height: 100%;
   opacity: 0;
   text-transform: capitalize;
+  .figcaption-link {
+    display: flex;
+    a {
+      margin-right: $buttonIconMargin;
+    }
+  }
 }
 
 figure:hover {

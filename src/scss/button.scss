@@ -18,7 +18,7 @@ a.button {
 .is-primary {
   color: $darkRed;
   .icon {
-    margin-right: 0.5em;
+    margin-right: $buttonIconMargin;
   }
 }
 
