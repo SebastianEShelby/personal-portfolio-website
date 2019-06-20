@@ -5,12 +5,12 @@ $background_color_1: rgba(255, 255, 255, 1);
 .nav-bar-container {
   background-color: $background_color_1;
   display: flex;
-  padding: 0 20px;
+  padding: 0 $navContainerPadding;
   justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100%;
-  height: 8vh;
+  height: $firstGridRow;
   text-transform: capitalize;
 }
 .nav-bar {
@@ -25,28 +25,42 @@ $background_color_1: rgba(255, 255, 255, 1);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
   border-bottom: 0.5px solid rgba(41, 51, 71, 0.5);
+  padding-right: $navContainerPadding;
+  padding-left: $navContainerPadding;
+  padding-bottom: calc(#{$navContainerPadding}/ 4);
 }
 
 .nav-bar-container ul li {
   padding: 0 20px;
 }
+
 nav {
   ul {
     display: flex;
     flex-direction: column;
-    height: 18vh;
     width: 100%;
+    li {
+      height: $firstGridRow;
+      display: flex;
+      align-items: center;
+    }
     a {
       opacity: 0;
       transition: opacity 150ms ease-in-out;
       display: flex;
-      height: 6vh;
     }
   }
 }
+.nav-headline {
+  height: 100%;
+  width: max-content;
+  display: flex;
+  align-items: center;
+}
+
 .nav-link {
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: large;
 }
 .nav-toggle {
   &:checked {
@@ -98,10 +112,4 @@ nav {
       top: 7px;
     }
   }
-}
-.nav-headline {
-  height: 100%;
-  width: max-content;
-  display: flex;
-  align-items: center;
 }
