@@ -13,12 +13,13 @@ main {
   grid-row: 3 / span 1;
 }
 /* Main Section Styles */
+
 .section-container {
-  padding: 0 7vh;
+  grid-column: 2 / span 1;
 }
+
 .section-sub-container {
   padding-top: calc(3 * 20px);
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,14 +35,18 @@ main {
 #about-me {
   grid-column: 1 / span 3;
   background-color: $background_color_1;
-  .section-sub-container {
+  #about-me-sub-container {
     color: $color_1;
     padding-bottom: calc(10vh + 20px * 3);
+    margin: 0 $bodyGridPadding;
   }
 }
 
+#skills {
+  // grid-column: 1 / span 3;
+}
+
 .skill-container {
-  grid-column: 1 / span 3;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -81,7 +86,6 @@ main {
 
 .skill-headline {
   font-weight: 500;
-  font-size: larger;
 }
 
 .skill-row {
@@ -113,7 +117,6 @@ main {
 }
 
 #projects {
-  grid-column: first-column / last-column;
   text-align: center;
 }
 
@@ -158,6 +161,7 @@ figure figcaption {
   height: 100%;
   opacity: 0;
   text-transform: capitalize;
+  font-size: small;
   .figcaption-link {
     display: flex;
     a {

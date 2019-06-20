@@ -3,7 +3,7 @@ $background_color_2: #ffffff;
 
 /* Responsive design start here (Desktop Styles) */
 /* Responsive design ends here  */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .container {
     grid-template-columns: [first-column] 5vw [line2] auto [line3] 5vw [last-column];
   }
@@ -75,13 +75,19 @@ $background_color_2: #ffffff;
       }
     }
   }
-  .header-img {
-    width: 25vw;
-    height: 25vw;
+  .header-img-container {
+    // flex: 1;
+    // min-width: 10vw;
+    // min-height: 10vw;
+    // max-width: 25vw;
+    // max-height: 25vw;
+    // width: 25vw;
+    // height: 25vw;
+    // width: 100%;
   }
   .header-content {
-    grid-column: 2 / span 1;
-    width: 80%;
+    // grid-column: 2 / span 1;
+    padding: 2vw 1vw;
     justify-self: center;
     font-size: large;
     p {
@@ -89,11 +95,19 @@ $background_color_2: #ffffff;
     }
   }
   .skill-container {
-    margin-right: 4vh;
-    margin-left: 4vh;
+    margin: inherit $bodyGridPadding;
   }
   .skill {
     width: 33.33%;
+  }
+  // make the small buttons bigger on desktop screens
+  .is-small {
+    font-size: 1.25rem;
+    padding: 0.8em 1.5em;
+  }
+
+  figure figcaption {
+    font-size: medium;
   }
 
   #projects {

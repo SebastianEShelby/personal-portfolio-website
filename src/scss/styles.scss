@@ -1,6 +1,7 @@
 /* Start Global Variables */
 
 $buttonIconMargin: 15px;
+$bodyGridPadding: 5vw;
 
 /* End Global Variables */
 
@@ -64,7 +65,7 @@ a {
 .container {
   display: grid;
   height: 100%;
-  grid-template-columns: [first-column] 7vh [line2] auto [line3] 7vh [last-column];
+  grid-template-columns: [first-column] $bodyGridPadding [line2] auto [line3] $bodyGridPadding [last-column];
   grid-template-rows:
     [first-row] 8vh [row2] minmax(92vh, auto) [row3] minmax(100vh, auto)
     [row4] minmax(20vh, auto) [last-row];
