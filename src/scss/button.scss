@@ -91,3 +91,12 @@ a.is-round {
 a.is-medium.is-round {
   font-size: 0.1rem;
 }
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a.button {
+    margin-right: $buttonIconMargin;
+  }
+}

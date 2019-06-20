@@ -3,4 +3,8 @@ $background_color_1: rgb(221, 199, 159);
 footer {
   background-color: $background_color_1;
   grid-area: 4 / first-column/span 1 / last-column;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
