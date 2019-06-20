@@ -8,23 +8,23 @@ if (window.matchMedia('(min-width: 800px)').matches) {
     sticky = navbar.offsetTop;
 
     // Call the sticky function on window load
-    addSticky();
+    toggleSticky();
 
     // When the user scrolls the page, execute myFunction
     window.onscroll = function() {
-      addSticky();
+      toggleSticky();
     };
   };
 }
 // };
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function addSticky() {
+const toggleSticky = () => {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add('sticky');
   } else {
     navbar.classList.remove('sticky');
   }
-}
+};
 
 // export { handleNavBar };
