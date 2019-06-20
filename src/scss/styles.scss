@@ -1,7 +1,9 @@
 /* Start Global Variables */
-
+$firstGridRow: 10vh;
 $buttonIconMargin: 15px;
 $bodyGridPadding: 5vw;
+$navContainerPadding: 20px;
+$buttonFont: 'Niramit', sans-serif;
 
 /* End Global Variables */
 
@@ -14,10 +16,17 @@ $bodyGridPadding: 5vw;
 @import './main.scss';
 @import './footer.scss';
 @import './button.scss';
-@import './responsive.scss';
 /* External css files end here */
 
 /* Global styles start here  */
+
+body {
+  font-family: 'Niramit', sans-serif;
+  font-size: medium; // default
+  color: $darkBlue;
+  line-height: 1.5;
+}
+
 p,
 h1,
 h2,
@@ -26,7 +35,6 @@ h4,
 h5,
 h6,
 figure {
-  font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
 
@@ -37,12 +45,7 @@ h4,
 h5,
 h6 {
   text-transform: capitalize;
-}
-
-body {
-  font-size: 16px;
-  color: $darkBlue;
-  line-height: 1.5;
+  text-align: center;
 }
 
 ul,
@@ -54,7 +57,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #293347;
+  color: $darkBlue;
   text-transform: capitalize;
   transition: all 0.2s ease-in-out;
   font-weight: 400;
@@ -76,7 +79,10 @@ a {
   height: 100%;
   grid-template-columns: [first-column] $bodyGridPadding [line2] auto [line3] $bodyGridPadding [last-column];
   grid-template-rows:
-    [first-row] 8vh [row2] minmax(92vh, auto) [row3] minmax(100vh, auto)
+    [first-row] $firstGridRow [row2] minmax(92vh, auto) [row3] minmax(
+      100vh,
+      auto
+    )
     [row4] minmax(20vh, auto) [last-row];
 }
 /* Page structure styles end here */
@@ -88,3 +94,5 @@ a {
 }
 
 /* Svg styles end here */
+
+@import './responsive.scss';
