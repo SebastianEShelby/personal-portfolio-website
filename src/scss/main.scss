@@ -5,6 +5,7 @@ $background_color_1: #2e2e2e;
 $background_color_2: #ffffff;
 $background_color_3: #8c43ff;
 $projectText: antiquewhite;
+$darkBlue: rgb(39, 51, 77);
 
 main {
   display: grid;
@@ -128,7 +129,6 @@ main {
 }
 
 .project {
-  border: 1px solid #e6ecf8;
   padding: 0.75em;
   width: 100%;
 }
@@ -141,6 +141,9 @@ figure {
   overflow: hidden;
   text-align: center;
   cursor: pointer;
+
+  // border: 1px solid #e6ecf8;
+  border: 1px solid rgb(39, 51, 77, 0.1);
   border-radius: 12px;
 }
 
