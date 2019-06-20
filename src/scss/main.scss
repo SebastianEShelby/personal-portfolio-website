@@ -53,7 +53,6 @@ main {
   justify-items: center;
   justify-self: center;
   flex-wrap: wrap;
-  background-color: $background_color_2;
   min-height: 40vh;
   margin-top: -10vh;
   border-radius: 10px;
@@ -69,6 +68,7 @@ main {
   border: 1px solid #e6ecf8;
   border-radius: 10px;
   line-height: 1.5;
+  background-color: $white;
 }
 .skill-img-container {
   width: 4em;
@@ -106,9 +106,20 @@ main {
 .skill-icon {
   display: flex;
   flex-direction: column;
-  margin: 0.5em;
+  margin-bottom: 1.2rem;
+  // based on maximum text width which is visual studio here
+  width: 5.2rem;
+  white-space: nowrap;
+  overflow: initial;
+  font-size: 14px;
+  font-weight: 600;
+
+  // word-wrap: normal;
   span {
-    font-weight: 500;
+    width: 100%;
+    // overflow: initial;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
   }
 }
 .list-title {
