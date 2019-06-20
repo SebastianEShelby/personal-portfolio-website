@@ -3,7 +3,7 @@ $background_color_2: #ffffff;
 $firstGridRow: 8vh;
 /* Responsive design start here (Desktop Styles) */
 /* Responsive design ends here  */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   body {
     header,
     main,
@@ -89,26 +89,16 @@ $firstGridRow: 8vh;
       }
     }
   }
-  .header-img-container {
-    // flex: 1;
-    // min-width: 10vw;
-    // min-height: 10vw;
-    // max-width: 25vw;
-    // max-height: 25vw;
-    // width: 25vw;
-    // height: 25vw;
-    // width: 100%;
-    // width: 25vw;
-    // height: 25vw;
-  }
+
   .header-content {
     // grid-column: 2 / span 1;
     padding: 2vw 1vw;
     justify-self: center;
-    font-size: larger;
+    font-size: large;
   }
   .skill-container {
     margin: inherit $bodyGridPadding;
+    font-size: medium;
   }
   .skill {
     width: 33.33%;
