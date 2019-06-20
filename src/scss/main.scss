@@ -1,7 +1,6 @@
 $color_1: #eeeeee;
 $color_2: #293347;
 $color_3: #8c43ff;
-$background_color_1: #2e2e2e;
 $background_color_2: #ffffff;
 $background_color_3: #8c43ff;
 $projectText: antiquewhite;
@@ -35,7 +34,7 @@ main {
 
 #about-me {
   grid-column: 1 / span 3;
-  background-color: $background_color_1;
+  background-color: $softBlack;
   #about-me-sub-container {
     color: $color_1;
     padding-bottom: calc(10vh + 20px * 3);

@@ -1,5 +1,4 @@
 $headerImageBackground: rgba(99, 99, 99, 0.4);
-
 header {
   display: grid;
   grid-template-columns: inherit;
@@ -54,6 +53,6 @@ header {
   justify-items: center;
   margin: 3vw 0;
   > * {
-    margin: 1vh;
+    margin: $headerDivMargin;
   }
 }
