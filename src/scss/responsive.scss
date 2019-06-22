@@ -28,7 +28,7 @@ $firstGridRow: 8vh;
     padding: 10px 5vw;
     background-color: $background_color_1;
     position: absolute;
-    height: $firstGridRow;
+    // height: $firstGridRow;
   }
   .sticky {
     position: fixed;
@@ -112,7 +112,7 @@ $firstGridRow: 8vh;
       width: 33.33%;
     }
     .project-items {
-      margin: 0;
+      // margin: 0;
     }
   }
 
