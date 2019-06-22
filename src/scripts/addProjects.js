@@ -1,19 +1,12 @@
-const div = document.createElement("div");
-const figure = document.createElement("figure");
-const img = document.createElement("img");
-const figcaption = document.createElement("figcaption");
-const headline = document.createElement("h3");
-const paragraph = document.createElement("p");
-const anchor = document.createElement("a");
-const icon = document.createElement("i");
-
-import imageURL from "../images/employee-management-nodejs.JPG";
+import empMangImgUrl from "../images/employee-management-nodejs.JPG";
+import petShopImgUrl from "../images/petshop.JPG";
+import IAPImgUrl from "../images/iap-website.png";
 
 const myProjects = [
   {
     projectName: "Employee Management",
     projectText: "Written using NodeJS, Express, MongoDB",
-    imgSource: imageURL,
+    imgSource: empMangImgUrl,
     imgAlt: "employee-management-nodejs",
     iconTypes: {
       website: "globe",
@@ -23,17 +16,34 @@ const myProjects = [
       website: "https://floating-woodland-29394.herokuapp.com",
       sourceCode: "https://github.com/Alex-Samari/web322-app"
     }
+  },
+  {
+    projectName: "Pet Shop",
+    projectText: "Written using pure HTML, CSS, JavaScript",
+    imgSource: petShopImgUrl,
+    imgAlt: "pet-shop",
+    iconTypes: {
+      website: null,
+      sourceCode: "git-branch"
+    },
+    links: {
+      sourceCode:
+        "https://github.com/Alex-Samari/WEB222/tree/master/Assignment%204"
+    }
   }
-  // {
-  //   projectName: 'Pet Shop',
-  //   projectText: 'Written using HTML, CSS, JavaScript',
-  //   imgSource: 'images/petshop.JPG',
-  //   imgAlt: 'pet-shop',
-  //   iconTypes: {
-  //     website: null,
-  //     sourceCode: 'git-branch'
+  //   {
+  //     projectName: "Seneca International Student Application",
+  //     projectText: "Written using Angular, NodeJs",
+  //     imgSource: IAPImgUrl,
+  //     imgAlt: "Seneca-International-Student-Application",
+  //     iconTypes: {
+  //       website: null,
+  //       sourceCode: "null"
+  //     },
+  //     links: {
+  //       website: null
+  //     }
   //   }
-  // }
 ];
 
 const projectElements = {
@@ -72,7 +82,7 @@ const generateProject = projectElements => {
     });
     projectElements.appendChild(projectElements.project);
 
-    projectElements.figure = figure;
+    projectElements.figure = document.createElement("figure");
     projectElements.project.appendChild(projectElements.figure);
 
     projectElements.img = setMultipleAttributes("img", {
@@ -81,7 +91,7 @@ const generateProject = projectElements => {
     });
     projectElements.figure.appendChild(projectElements.img);
 
-    projectElements.figcaption = figcaption;
+    projectElements.figcaption = document.createElement("figcaption");
     projectElements.figure.appendChild(projectElements.figcaption);
 
     projectElements.figcaptionText = setMultipleAttributes("div", {
@@ -115,22 +125,32 @@ const generateProject = projectElements => {
     });
     projectElements.figcaption.appendChild(projectElements.figcaptionLink);
 
-    for (let key in myProjects[i].iconTypes) {
-      const newLink = setMultipleAttributes("a", {
-        class: "button is-secondary is-outlined is-round is-medium",
-        href: myProjects[i].links[key],
-        target: "_blank"
-      });
+    Object.entries(myProjects[i].iconTypes).forEach(icon => {
+      const key = icon[0];
+      const value = icon[1];
+      if (value) {
+        const newLink = setMultipleAttributes("a", {
+          class: "button is-secondary is-outlined is-round is-medium",
+          href: myProjects[i].links[key],
+          target: "_blank"
+        });
 
-      const newLinkIcon = setMultipleAttributes("i", {
-        class: "icon",
-        "data-feather": myProjects[i].iconTypes[key]
-      });
-      //   projectElements.links.push({ newLink, newLinkIcon });
+        const newLinkIcon = setMultipleAttributes("i", {
+          class: "icon",
+          "data-feather": myProjects[i].iconTypes[key]
+        });
+        //   projectElements.links.push({ newLink, newLinkIcon });
 
-      projectElements.figcaptionLink.appendChild(newLink);
-      newLink.appendChild(newLinkIcon);
-    }
+        projectElements.figcaptionLink.appendChild(newLink);
+        newLink.appendChild(newLinkIcon);
+      }
+    });
+
+    // for (let key in myProjects[i].iconTypes) {
+    //   if (key.valueOf(!null)) {
+
+    //   }
+    // }
 
     projectElements.overlay = setMultipleAttributes("div", {
       class: "overlay"
