@@ -75,12 +75,14 @@ function setMultipleAttributes(elementType, attributes) {
   return element;
 }
 
-const generateProject = projectElements => {
+const generateProject = () => {
+  const projectItems = document.getElementById("project-items");
+
   for (let i = 0; i < myProjects.length; i++) {
     projectElements.project = setMultipleAttributes("div", {
       class: "project"
     });
-    projectElements.appendChild(projectElements.project);
+    projectItems.appendChild(projectElements.project);
 
     projectElements.figure = document.createElement("figure");
     projectElements.project.appendChild(projectElements.figure);
