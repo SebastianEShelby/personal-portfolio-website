@@ -11,7 +11,6 @@
       href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
     />
     <script src="https://unpkg.com/feather-icons"></script>
-    <script src="./scripts/sticky-nav.js"></script>
     <script src="./index.js"></script>
   </head>
 
@@ -21,7 +20,9 @@
         <div id="nav-bar" class="nav-bar-container">
           <div class="nav-headline">
             <ul>
-              <a class="nav-link" href="#home"><li>Alex</li></a>
+              <a class="nav-link" href="#home">
+                <li>Alex</li>
+              </a>
             </ul>
           </div>
 
@@ -87,10 +88,10 @@
 
         <section id="skills" class="section-container skill-container">
           <div class="skill">
-            <div class="skill-img-container skill-row">
+            <div class="skill-row skill-img-container">
               <i class="icon skill-img" data-feather="code"></i>
+              <span class="skill-headline">Languages</span>
             </div>
-            <span class="skill-row skill-headline">Languages</span>
 
             <div class="skill-icon-container skill-row">
               <div class="skill-icon">
@@ -138,8 +139,8 @@
           <div class="skill">
             <div class="skill-img-container skill-row">
               <i class="icon skill-img" data-feather="book-open"></i>
+              <span class="skill-headline">Libraries & Frameworks</span>
             </div>
-            <span class="skill-row skill-headline">Libraries & Frameworks</span>
 
             <div class="skill-icon-container skill-row">
               <div class="skill-icon">
@@ -167,8 +168,8 @@
           <div class="skill">
             <div class="skill-img-container skill-row">
               <i class="icon skill-img" data-feather="package"></i>
+              <span class="skill-headline">Database & Tools</span>
             </div>
-            <span class="skill-row skill-headline">Database & Tools</span>
 
             <div class="skill-icon-container skill-row">
               <div class="skill-icon">
@@ -249,8 +250,5 @@
         </div>
       </footer>
     </div>
-    <script>
-      feather.replace({ class: 'social-media-img' });
-    </script>
   </body>
 </html>
