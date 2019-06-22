@@ -1,7 +1,7 @@
 // import { handleNavBar } from './scripts/sticky-nav';
 import './scss/styles.scss';
 
-// handleNavBar();
+import { handleNavBar } from './scripts/sticky-nav'
 
 const myProjects = [
   {
@@ -140,7 +140,11 @@ const generateProject = projectElements => {
   console.log('projectElements', projectElements);
 };
 
+// wait for the window to load and identify dom elements
 window.onload = () => {
+
+  handleNavBar();
+
   const projectElements = document.getElementById('project-items');
   generateProject(projectElements);
 };
