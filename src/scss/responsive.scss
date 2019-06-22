@@ -71,7 +71,7 @@ $firstGridRow: 8vh;
     transition: transform ease-in-out 250ms;
     height: initial;
     &::before {
-      content: '';
+      content: "";
       display: block;
       height: 4px;
       background-color: $darkRed;
@@ -91,7 +91,6 @@ $firstGridRow: 8vh;
   }
 
   .header-content {
-    // grid-column: 2 / span 1;
     padding: 2vw 1vw;
     justify-self: center;
     font-size: large;
@@ -120,9 +119,4 @@ $firstGridRow: 8vh;
   figure figcaption .figcaption-text {
     font-size: 1.2vw;
   }
-
-  // svg.feather {
-  //   width: 5em;
-  //   height: 5em;
-  // }
 }

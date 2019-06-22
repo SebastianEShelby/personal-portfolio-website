@@ -1,10 +1,6 @@
-$color_1: #eeeeee;
-$color_2: #293347;
-$color_3: #8c43ff;
-$background_color_2: #ffffff;
-$background_color_3: #8c43ff;
 $projectText: antiquewhite;
 $darkBlue: rgb(39, 51, 77);
+$projectSectionsPadding: 4vh;
 
 main {
   display: grid;
@@ -19,7 +15,7 @@ main {
 }
 
 .section-sub-container {
-  padding-top: calc(3 * 20px);
+  padding-top: $projectSectionsPadding;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +32,7 @@ main {
   grid-column: 1 / span 3;
   background-color: $softBlack;
   #about-me-sub-container {
-    color: $color_1;
+    color: $lightBrown;
     padding-bottom: calc(10vh + 20px * 3);
     margin: 0 $bodyGridPadding;
   }
@@ -57,7 +53,7 @@ main {
   border-radius: 10px;
 }
 .skill {
-  color: $color_2;
+  color: $darkBlue;
   padding: 2vh 2vh;
   display: flex;
   flex-direction: column;
@@ -121,35 +117,30 @@ main {
   font-size: 14px;
   font-weight: 600;
 
-  // word-wrap: normal;
   span {
     width: 100%;
-    // overflow: initial;
-    // text-overflow: ellipsis;
-    // white-space: nowrap;
   }
-}
-.list-title {
-  color: $color_3;
-  line-height: 3;
 }
 
 #projects {
-  // grid-column: 1 / span 3;
   text-align: center;
+  > div {
+    margin-bottom: $projectSectionsPadding;
+  }
 }
 
 .project-items {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-right: -$bodyGridPadding;
   margin-left: -$bodyGridPadding;
+  padding: 0;
 }
 
 .project {
   padding: 0.75em;
   width: 100%;
-  // height: 100%;
 }
 figure {
   display: flex;
@@ -162,7 +153,6 @@ figure {
   cursor: pointer;
   height: 100%;
   width: 100%;
-  // border: 1px solid #e6ecf8;
   border: 1px solid rgb(39, 51, 77, 0.1);
   border-radius: 12px;
 }
@@ -199,15 +189,14 @@ figure figcaption {
 figure:hover {
   figcaption {
     opacity: 1;
-    transition: 0.45s ease-in-out;
-    transition: 0.45s ease-in-out;
+    transition: 1s ease-in-out;
     transition-property: all;
     transition-duration: 0.45s;
     transition-timing-function: ease-in-out;
     transition-delay: 0s;
   }
   img {
-    transition: 0.25s ease-in-out;
+    transition: 1s ease-in-out;
     transition-property: all;
     transition-duration: 0.25s;
     transition-timing-function: ease-in-out;
