@@ -18,6 +18,10 @@ const myProjects = [
     iconTypes: {
       website: "globe",
       sourceCode: "git-branch"
+    },
+    links: {
+      website: "https://floating-woodland-29394.herokuapp.com",
+      sourceCode: "https://github.com/Alex-Samari/web322-app"
     }
   }
   // {
@@ -62,7 +66,6 @@ function setMultipleAttributes(elementType, attributes) {
 }
 
 const generateProject = projectElements => {
-  console.log(imageURL);
   for (let i = 0; i < myProjects.length; i++) {
     projectElements.project = setMultipleAttributes("div", {
       class: "project"
@@ -115,7 +118,8 @@ const generateProject = projectElements => {
     for (let key in myProjects[i].iconTypes) {
       const newLink = setMultipleAttributes("a", {
         class: "button is-secondary is-outlined is-round is-medium",
-        href: "#projects"
+        href: myProjects[i].links[key],
+        target: "_blank"
       });
 
       const newLinkIcon = setMultipleAttributes("i", {
