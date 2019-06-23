@@ -4,16 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <base href="/src/" target="_blank" />
     <title>Alex Developer</title>
-    <link rel="shortcut icon" href="images/me-and-the-blackboard.jpg" />
+    <link rel="shortcut icon" href="./images/me-and-the-blackboard.jpg" />
     <link
       rel="stylesheet"
       href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
     />
     <script src="https://unpkg.com/feather-icons"></script>
-    <script src="scripts/sticky-nav.js"></script>
-    <script src="index.js"></script>
+    <script src="./index.js"></script>
   </head>
 
   <body>
@@ -21,7 +19,11 @@
       <header>
         <div id="nav-bar" class="nav-bar-container">
           <div class="nav-headline">
-            <a class="nav-link" href="#home"><li>Alex</li></a>
+            <ul>
+              <a class="nav-link" href="#home">
+                <li>Alex Samari</li>
+              </a>
+            </ul>
           </div>
 
           <label class="nav-toggle-label" for="nav-toggle">
@@ -32,80 +34,89 @@
 
           <nav class="nav-bar">
             <ul class="nav-ul">
-              <a class="nav-link" href="#skills"><li>Skills</li></a>
-              <a class="nav-link" href="#projects"><li>Projects</li></a>
-              <a class="nav-link" href="#contact"><li>Contact Me</li></a>
+              <li><a class="nav-link" href="#about-me">About</a></li>
+              <li><a class="nav-link" href="#skills">Skills</a></li>
+              <li><a class="nav-link" href="#projects">Projects</a></li>
+              <li><a class="nav-link" href="#footer">Social Media</a></li>
             </ul>
           </nav>
         </div>
 
-        <div class="header-social">
-          <a
-            class="button is-primary is-round is-filled is-medium"
-            href="https://github.com/Alex-Samari"
-            target="_blank"
-          >
-            <i class="icon" data-feather="github"></i>
-          </a>
-          <a
-            class="button is-primary is-round is-filled is-medium"
-            href="https://twitter.com/AlexSamariM"
-            target="_blank"
-          >
-            <i class="icon" data-feather="twitter"></i>
-          </a>
-          <a
-            class="button is-primary is-round is-filled is-medium"
-            href="https://www.linkedin.com/in/alex-samari"
-            target="_blank"
-          >
-            <i class="icon" data-feather="linkedin"></i>
-          </a>
-        </div>
-
         <div class="header-content">
-          <div class="header-img"></div>
-          <div class="header-text">
+          <div class="header-img-container"></div>
+          <div class="header-info">
             <h1>Hey, I'm Alex</h1>
-            <h2 class="subtitle">
+            <h2 class="sub-headline">
               Software & Web Developer, DevOps enthusiast
             </h2>
-            <h3 class="subtitle">
-              Need a website designed? Looking for a new team member? Hit me up!
+            <h3 class="sub-headline">
+              Always open to discuss product design work or partnership
+              opportunities.
             </h3>
-
-            <div>
-              <a
-                class="button is-primary is-outlined is-rounded is-medium"
-                href="mailto:alexsamarim@gmail.com"
-                target="_blank"
-                ><i class="icon" data-feather="mail"></i>
-                <span>Get In Touch</span>
-              </a>
-            </div>
+          </div>
+          <div>
+            <a
+              class="button is-primary is-outlined is-rounded is-small"
+              href="mailto:alexsamarim@gmail.com"
+              target="_blank"
+              ><i class="icon" data-feather="mail"></i>
+              <span>Get In Touch</span>
+            </a>
           </div>
         </div>
       </header>
 
       <main>
-        <section class="about-container">
-          <div class="about-sub-container">
-            <h2>Who am I?</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+        <section id="about-me" class="section-container">
+          <div id="about-me-sub-container" class="section-sub-container">
+            <h2>Who am I &amp; what do i do?</h2>
+            <p class="section-text">
+              Hello World! My name is Alex and I
+              <strike>approve this message</strike>
+              am a curious one! Since I was younger I've been always fascinated
+              by puzzles, problems and of course computers! Since my teenage
+              years I have always dreamt about becoming a
+              <strike>Pro Gamer</strike> Programmer and I believe after some
+              years of <strike>turning coffee into code</strike> hard work I can
+              finally call myself one. Having said that, I still think I have a
+              lot to learn and a long way to grow. &copy;Never Settle!
             </p>
+
+            <h2>Tell me about this portfolio!</h2>
+
+            <div class="section-text">
+              <p>
+                After learning the basic web skills (HTML/CSS/JavaScript) I
+                wanted to create my portfolio using those skills to showcase my
+                fundamental knowledge of programming. It took me longer than it
+                should have because I got busy learning Angular and its
+                libraries (Including Material Design and the controvertial
+                Flex-layout API). But I didn't forget about my goal and started
+                working on this website as soon as I had some free chance. The
+                results? A beautiful, simple and user-friendly (If I say so
+                myself!) portfolio website that everyone dreams to have!
+              </p>
+            </div>
+
+            <!-- <div class="section-text">
+                <h3>Portfolio Roadmap</h3>
+
+                <ul>
+                  <li>Scroll Effects</li>
+                  <li>Text Animations</li>
+                  <li>More Projects</li>
+                  <li></li>
+                </ul>
+              </div> -->
           </div>
         </section>
 
-        <section id="skills" class="skill-container">
+        <section id="skills" class="section-container skill-container">
           <div class="skill">
-            <div class="skill-img skill-row"></div>
-            <span class="skill-row skill-headline">Languages</span>
+            <div class="skill-row skill-img-container">
+              <i class="icon skill-img" data-feather="code"></i>
+              <span class="skill-headline">Languages</span>
+            </div>
 
             <div class="skill-icon-container skill-row">
               <div class="skill-icon">
@@ -151,8 +162,10 @@
           </div>
 
           <div class="skill">
-            <div class="skill-img skill-row"></div>
-            <span class="skill-row skill-headline">Libraries & Frameworks</span>
+            <div class="skill-img-container skill-row">
+              <i class="icon skill-img" data-feather="book-open"></i>
+              <span class="skill-headline">Libraries & Frameworks</span>
+            </div>
 
             <div class="skill-icon-container skill-row">
               <div class="skill-icon">
@@ -178,20 +191,12 @@
           </div>
 
           <div class="skill">
-            <div class="skill-img skill-row"></div>
-            <span class="skill-row skill-headline">Database & Tools</span>
+            <div class="skill-img-container skill-row">
+              <i class="icon skill-img" data-feather="package"></i>
+              <span class="skill-headline">Database & Tools</span>
+            </div>
 
             <div class="skill-icon-container skill-row">
-              <div class="skill-icon">
-                <i class="devicon-git-plain colored devicon"></i>
-                <span>Git</span>
-              </div>
-
-              <div class="skill-icon">
-                <i class="devicon-github-plain colored devicon"></i>
-                <span>GitHub</span>
-              </div>
-
               <div class="skill-icon">
                 <i class="devicon-postgresql-plain colored devicon"></i>
                 <span>PostgreSQL</span>
@@ -200,6 +205,21 @@
               <div class="skill-icon">
                 <i class="devicon-mongodb-plain colored devicon"></i>
                 <span>MongoDB</span>
+              </div>
+
+              <div class="skill-icon">
+                <i class="devicon-oracle-plain colored devicon"></i>
+                <span>Oracle</span>
+              </div>
+
+              <div class="skill-icon">
+                <i class="devicon-git-plain colored devicon"></i>
+                <span>Git</span>
+              </div>
+
+              <div class="skill-icon">
+                <i class="devicon-github-plain colored devicon"></i>
+                <span>GitHub</span>
               </div>
 
               <div class="skill-icon">
@@ -215,61 +235,51 @@
           </div>
         </section>
 
-        <section id="projects" class="project-container">
-          <div class="project-sub-container">
-            <h1>Projects</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+        <section id="projects" class="section-container">
+          <div class="section-sub-container">
+            <h2>Projects</h2>
+            <h3 class="sub-headline">
+              Here's a list of my recent projects.
+            </h3>
           </div>
-          <div class="project-items">
-            <div class="project">
-              <figure class="project-figure">
-                <img
-                  src="images/employee-management-nodejs.JPG"
-                  alt="Employee Management App Written in Node.js"
-                  class="project-img"
-                />
-              </figure>
-            </div>
-            <div class="project">
-              <figure class="project-figure">
-                <img
-                  src="images/employee-management-nodejs.JPG"
-                  alt="Employee Management App Written in Node.js"
-                  class="project-img"
-                />
-              </figure>
-            </div>
-            <div class="project">
-              <figure class="project-figure">
-                <img
-                  src="images/employee-management-nodejs.JPG"
-                  alt="Employee Management App Written in Node.js"
-                  class="project-img"
-                />
-              </figure>
-            </div>
-            <div class="project">
-              <figure class="project-figure">
-                <img
-                  src="images/employee-management-nodejs.JPG"
-                  alt="Employee Management App Written in Node.js"
-                  class="project-img"
-                />
-              </figure>
-            </div>
-          </div>
+          <div id="project-items" class="project-items"></div>
         </section>
       </main>
 
-      <footer>
-        <h2>Your content would go here</h2>
+      <footer id="footer">
+        <div class="footer-text">
+          <h2>Stay Connected</h2>
+        </div>
+        <div class="social-media">
+          <a
+            class="button is-primary is-round is-filled is-medium"
+            href="https://github.com/Alex-Samari"
+            target="_blank"
+          >
+            <i class="icon" data-feather="github"></i>
+          </a>
+          <a
+            class="button is-primary is-round is-filled is-medium"
+            href="https://twitter.com/AlexSamariM"
+            target="_blank"
+          >
+            <i class="icon" data-feather="twitter"></i>
+          </a>
+          <a
+            class="button is-primary is-round is-filled is-medium"
+            href="https://www.linkedin.com/in/alex-samari"
+            target="_blank"
+          >
+            <i class="icon" data-feather="linkedin"></i>
+          </a>
+        </div>
+
+        <div class="footer-text">
+          <h4 class="sub-headline">
+            Written with passion &amp; love &copy; 2019 Alex Samari
+          </h4>
+        </div>
       </footer>
     </div>
-    <script>
-      feather.replace({ class: 'social-media-img' });
-    </script>
   </body>
 </html>
