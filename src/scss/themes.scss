@@ -1,9 +1,16 @@
-/* Light Color Palete Starts Here*/
-$white: #fff;
+/* Start Light Color Palete*/
+$white: white;
+$antiquewhite: antiquewhite;
 $black: #000;
+$softBlack: #2e2e2e;
 $darkRed: #a63a50;
+$darkBlue: rgb(39, 51, 77);
+$lightBrown: #f0e7d8;
+$a: rgb(39, 51, 77, 0);
+// $darkBlue: #094074;
+// $darkBlue: rgba(99, 99, 99, 0.4);
 
-/* Light Color Palete Ends Here*/
+/* End Light Color Palete/
 
 /* Dark Color Palete Starts Here*/
 
@@ -31,7 +38,7 @@ $themes: (
     .theme-#{$theme} & {
       $theme-map: () !global;
       @each $key, $submap in $map {
-        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $value: map-get(map-get($themes, $theme), "#{$key}");
         $theme-map: map-merge(
           $theme-map,
           (

@@ -1,9 +1,6 @@
-$color_1: #eeeeee;
-$color_2: #293347;
-$color_3: #8c43ff;
-$background_color_1: #2e2e2e;
-$background_color_2: #ffffff;
-$background_color_3: #8c43ff;
+$projectText: antiquewhite;
+$darkBlue: rgb(39, 51, 77);
+$projectSectionsPadding: 4vh;
 
 main {
   display: grid;
@@ -11,36 +8,52 @@ main {
   grid-column: first-column/last-column;
   grid-row: 3 / span 1;
 }
-.about-container {
-  grid-column: first-column/last-column;
-  background-color: $background_color_1;
-  padding: 1vh 4vh;
+/* Main Section Styles */
+
+.section-container {
+  grid-column: 2 / span 1;
 }
-.about-sub-container {
+
+.section-sub-container {
+  padding-top: $projectSectionsPadding;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: $color_1;
-  padding-bottom: calc(14vh);
-
-  p {
-    font-size: 3vh;
+  > * {
+    margin-bottom: 15px;
+  }
+  .section-text {
+    font-size: 1.17em;
   }
 }
-.skill-container {
+/* Main Section Styles End */
+
+#about-me {
   grid-column: 1 / span 3;
+  background-color: $softBlack;
+  #about-me-sub-container {
+    color: $lightBrown;
+    padding-bottom: calc(10vh + 20px * 3);
+    margin: 0 $bodyGridPadding;
+  }
+}
+
+#skills {
+  // grid-column: 1 / span 3;
+}
+
+.skill-container {
   display: flex;
   justify-content: center;
   justify-items: center;
   justify-self: center;
   flex-wrap: wrap;
-  background-color: $background_color_2;
-  min-height: 50vh;
-  margin-top: -15vh;
+  min-height: 40vh;
+  margin-top: -10vh;
   border-radius: 10px;
 }
 .skill {
-  color: $color_2;
+  color: $darkBlue;
   padding: 2vh 2vh;
   display: flex;
   flex-direction: column;
@@ -50,21 +63,40 @@ main {
   border: 1px solid #e6ecf8;
   border-radius: 10px;
   line-height: 1.5;
+  background-color: $white;
 }
-.skill-img {
-  background-color: $background_color_3;
-  width: 4em;
-  height: 4em;
-}
-.skill-headline {
-  font-weight: 500;
-  font-size: larger;
-}
+
 .skill-row {
   display: flex;
   justify-content: center;
-  margin: 0.8em 0;
+  align-items: center;
+  // margin: 10px 0;
 }
+
+.skill-img-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3vh;
+  svg.feather {
+    stroke-width: 1px;
+    stroke: $darkRed;
+    width: 4em;
+    height: 4em;
+    font-weight: 100;
+  }
+  svg.feather-book {
+    transform: rotate(-20deg);
+  }
+  .feather,
+  .skill-headline {
+    margin: 10px 0;
+  }
+}
+
+.skill-headline {
+  font-weight: 500;
+}
+
 .skill-icon-container {
   display: flex;
   flex-wrap: wrap;
@@ -77,44 +109,143 @@ main {
 .skill-icon {
   display: flex;
   flex-direction: column;
-  margin: 0.5em;
+  margin-bottom: 1.2rem;
+  // based on maximum text width which is visual studio here
+  width: 5.2rem;
+  white-space: nowrap;
+  overflow: initial;
+  font-size: 14px;
+  font-weight: 600;
+
   span {
-    font-weight: 500;
-    font-size: small;
+    width: 100%;
   }
 }
-.list-title {
-  color: $color_3;
-  line-height: 3;
+
+#projects {
+  text-align: center;
+  > div {
+    margin-bottom: $projectSectionsPadding;
+  }
 }
-.project-container {
-  grid-column: first-column / last-column;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1em 5em;
-  min-height: 80vh;
-}
-.project-sub-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .project-items {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-right: -$bodyGridPadding;
+  margin-left: -$bodyGridPadding;
+  margin-bottom: 4vh;
+  padding: 0;
 }
+
 .project {
   padding: 0.75em;
-  width: 50%;
+  width: 100%;
 }
-.project-figure {
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
-  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgb(39, 51, 77, 0.1);
+  border-radius: 12px;
 }
-.project-img {
+
+figure img {
+  position: relative;
   width: 100%;
   height: 100%;
+  display: block;
+}
+
+figure figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  opacity: 0;
+  text-transform: capitalize;
+  .figcaption-link {
+    display: flex;
+    a {
+      margin-right: $buttonIconMargin;
+    }
+  }
+}
+
+figure:hover {
+  figcaption {
+    opacity: 1;
+    transition: 1s ease-in-out;
+    transition-property: all;
+    transition-duration: 0.45s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+  }
+  img {
+    transition: 1s ease-in-out;
+    transition-property: all;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+  }
+  p,
+  .figcaption-headline,
+  a {
+    color: $projectText;
+  }
+}
+
+figure .overlay::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(41, 51, 71, 0.9);
+  content: "";
+  opacity: 0;
+}
+
+figure .overlay::before,
+figure p,
+figure .figcaption-headline,
+figure a {
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure .figcaption-headline,
+figure p,
+figure a {
+  z-index: 1;
+}
+
+figure .figcaption-headline {
+  font-weight: 700;
+  margin-bottom: 1vw;
+}
+figure p {
+  font-weight: 300;
+}
+
+figure:hover .overlay::before,
+figure:hover p,
+figure:hover a,
+figure:hover .figcaption-headline {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }

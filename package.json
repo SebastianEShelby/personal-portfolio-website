@@ -25,6 +25,7 @@
     "sass": "^1.21.0"
   },
   "dependencies": {
-    "@datorama/themify": "^1.0.5"
+    "@datorama/themify": "^1.0.5",
+    "images": "^3.0.2"
   }
 }
