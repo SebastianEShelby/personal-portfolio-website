@@ -1,5 +1,3 @@
 module.exports = {
-  plugins: [require('autoprefixer')]
+  plugins: [require('autoprefixer')({ grid: 'true', flexbox: 'true' })]
 };
-
-autoprefixer({ grid: 'true', flexbox: 'true' });
