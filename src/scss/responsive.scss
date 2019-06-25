@@ -71,7 +71,7 @@ $firstGridRow: 8vh;
     transition: transform ease-in-out 250ms;
     height: initial;
     &::before {
-      content: "";
+      content: '';
       display: block;
       height: 4px;
       background-color: $darkRed;
@@ -109,7 +109,7 @@ $firstGridRow: 8vh;
 
   #projects {
     .project {
-      width: 33.33%;
+      width: 33.3%;
     }
     .project-items {
       // margin: 0;

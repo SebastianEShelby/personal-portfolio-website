@@ -1,34 +1,34 @@
-import empMangImgUrl from "../images/employee-management-nodejs.JPG";
-import petShopImgUrl from "../images/petshop.JPG";
-import IAPImgUrl from "../images/iap-website.png";
+import empMangImgUrl from '../images/employee-management-nodejs.png';
+import petShopImgUrl from '../images/petshop.JPG';
+import IAPImgUrl from '../images/iap-website.png';
 
 const myProjects = [
   {
-    projectName: "Employee Management",
-    projectText: "Written using NodeJS, Express, MongoDB",
+    projectName: 'Employee Management',
+    projectText: 'Written using NodeJS, Express, MongoDB',
     imgSource: empMangImgUrl,
-    imgAlt: "employee-management-nodejs",
+    imgAlt: 'employee-management-nodejs',
     iconTypes: {
-      website: "globe",
-      sourceCode: "git-branch"
+      website: 'globe',
+      sourceCode: 'git-branch'
     },
     links: {
-      website: "https://floating-woodland-29394.herokuapp.com",
-      sourceCode: "https://github.com/Alex-Samari/web322-app"
+      website: 'https://employee-management-2019.herokuapp.com',
+      sourceCode: 'https://github.com/Alex-Samari/web322-app'
     }
   },
   {
-    projectName: "Pet Shop",
-    projectText: "Written using pure HTML, CSS, JavaScript",
+    projectName: 'Pet Shop',
+    projectText: 'Written using pure HTML, CSS, JavaScript',
     imgSource: petShopImgUrl,
-    imgAlt: "pet-shop",
+    imgAlt: 'pet-shop',
     iconTypes: {
       website: null,
-      sourceCode: "git-branch"
+      sourceCode: 'git-branch'
     },
     links: {
       sourceCode:
-        "https://github.com/Alex-Samari/WEB222/tree/master/Assignment%204"
+        'https://github.com/Alex-Samari/WEB222/tree/master/Assignment%204'
     }
   }
   //   {
@@ -76,34 +76,34 @@ function setMultipleAttributes(elementType, attributes) {
 }
 
 const generateProject = () => {
-  const projectItems = document.getElementById("project-items");
+  const projectItems = document.getElementById('project-items');
 
   for (let i = 0; i < myProjects.length; i++) {
-    projectElements.project = setMultipleAttributes("div", {
-      class: "project"
+    projectElements.project = setMultipleAttributes('div', {
+      class: 'project'
     });
     projectItems.appendChild(projectElements.project);
 
-    projectElements.figure = document.createElement("figure");
+    projectElements.figure = document.createElement('figure');
     projectElements.project.appendChild(projectElements.figure);
 
-    projectElements.img = setMultipleAttributes("img", {
+    projectElements.img = setMultipleAttributes('img', {
       src: myProjects[i].imgSource,
       alt: myProjects[i].imgAlt
     });
     projectElements.figure.appendChild(projectElements.img);
 
-    projectElements.figcaption = document.createElement("figcaption");
+    projectElements.figcaption = document.createElement('figcaption');
     projectElements.figure.appendChild(projectElements.figcaption);
 
-    projectElements.figcaptionText = setMultipleAttributes("div", {
-      class: "figcaption-text"
+    projectElements.figcaptionText = setMultipleAttributes('div', {
+      class: 'figcaption-text'
     });
 
     projectElements.figcaption.appendChild(projectElements.figcaptionText);
 
-    projectElements.headline = setMultipleAttributes("h", {
-      class: "figcaption-headline"
+    projectElements.headline = setMultipleAttributes('h', {
+      class: 'figcaption-headline'
     });
     projectInfo.projectName = document.createTextNode(
       myProjects[i].projectName
@@ -111,8 +111,8 @@ const generateProject = () => {
 
     projectElements.headline.appendChild(projectInfo.projectName);
 
-    projectElements.paragraph = setMultipleAttributes("p", {
-      class: "figcaption-paragraph"
+    projectElements.paragraph = setMultipleAttributes('p', {
+      class: 'figcaption-paragraph'
     });
     projectInfo.projectText = document.createTextNode(
       myProjects[i].projectText
@@ -122,8 +122,8 @@ const generateProject = () => {
     projectElements.figcaptionText.appendChild(projectElements.headline);
     projectElements.figcaptionText.appendChild(projectElements.paragraph);
 
-    projectElements.figcaptionLink = setMultipleAttributes("div", {
-      class: "figcaption-link"
+    projectElements.figcaptionLink = setMultipleAttributes('div', {
+      class: 'figcaption-link'
     });
     projectElements.figcaption.appendChild(projectElements.figcaptionLink);
 
@@ -131,15 +131,15 @@ const generateProject = () => {
       const key = icon[0];
       const value = icon[1];
       if (value) {
-        const newLink = setMultipleAttributes("a", {
-          class: "button is-secondary is-outlined is-round is-medium",
+        const newLink = setMultipleAttributes('a', {
+          class: 'button is-secondary is-outlined is-round is-medium',
           href: myProjects[i].links[key],
-          target: "_blank"
+          target: '_blank'
         });
 
-        const newLinkIcon = setMultipleAttributes("i", {
-          class: "icon",
-          "data-feather": myProjects[i].iconTypes[key]
+        const newLinkIcon = setMultipleAttributes('i', {
+          class: 'icon',
+          'data-feather': myProjects[i].iconTypes[key]
         });
         //   projectElements.links.push({ newLink, newLinkIcon });
 
@@ -154,8 +154,8 @@ const generateProject = () => {
     //   }
     // }
 
-    projectElements.overlay = setMultipleAttributes("div", {
-      class: "overlay"
+    projectElements.overlay = setMultipleAttributes('div', {
+      class: 'overlay'
     });
     projectElements.figure.appendChild(projectElements.overlay);
   }
