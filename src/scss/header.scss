@@ -55,3 +55,11 @@ header {
     margin: $headerDivMargin;
   }
 }
+
+.header-button-container {
+  display: flex;
+  justify-content: center;
+  > *:not(:last-child) {
+    margin-right: 30px;
+  }
+}
