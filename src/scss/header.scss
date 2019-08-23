@@ -10,7 +10,6 @@ header {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  text-transform: capitalize;
 }
 .header-content {
   font-size: small; // important for mobile responsiveness
@@ -30,17 +29,17 @@ header {
 .header-img-container {
   width: 50vw;
   height: 50vw;
-  max-height: 350px;
-  max-width: 350px;
+  max-height: 340px;
+  max-width: 340px;
 
-  background-image: url('/images/me-and-the-blackboard.jpg');
+  background-image: url('/images/professional-photo-2-edited.jpg');
 
   background-color: $headerImageBackground;
   background-blend-mode: soft-light;
   background-size: cover;
   background-position-x: center;
 
-  margin: 20px;
+  margin: 10px;
   border-radius: 50%;
   border: 2px solid white;
 }
@@ -51,8 +50,16 @@ header {
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  margin: 3vw 0;
+  margin: 10px 0;
   > * {
     margin: $headerDivMargin;
+  }
+}
+
+.header-button-container {
+  display: flex;
+  justify-content: center;
+  > *:not(:last-child) {
+    margin-right: 30px;
   }
 }

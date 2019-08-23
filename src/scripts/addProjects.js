@@ -30,20 +30,20 @@ const myProjects = [
       sourceCode:
         'https://github.com/Alex-Samari/WEB222/tree/master/Assignment%204'
     }
+  },
+  {
+    projectName: "Seneca International Student Application",
+    projectText: "Written using Angular, NodeJs",
+    imgSource: IAPImgUrl,
+    imgAlt: "Seneca-International-Student-Application",
+    iconTypes: {
+      website: 'globe',
+      sourceCode: null
+    },
+    links: {
+      website: "https://imgur.com/gallery/LVQCysn"
+    }
   }
-  //   {
-  //     projectName: "Seneca International Student Application",
-  //     projectText: "Written using Angular, NodeJs",
-  //     imgSource: IAPImgUrl,
-  //     imgAlt: "Seneca-International-Student-Application",
-  //     iconTypes: {
-  //       website: null,
-  //       sourceCode: "null"
-  //     },
-  //     links: {
-  //       website: null
-  //     }
-  //   }
 ];
 
 const projectElements = {
