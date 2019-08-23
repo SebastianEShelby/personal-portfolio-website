@@ -24,6 +24,7 @@ main {
   }
   .section-text {
     font-size: 1.17em;
+    margin-bottom: 50px;
   }
 }
 /* Main Section Styles End */
@@ -34,7 +35,7 @@ main {
   #about-me-sub-container {
     color: $lightBrown;
     padding-bottom: calc(10vh + 20px * 3);
-    margin: 0 $bodyGridPadding;
+    margin: 0 10vw;
   }
 }
 
