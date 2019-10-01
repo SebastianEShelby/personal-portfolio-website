@@ -4,6 +4,19 @@ import IAPImgUrl from '../images/iap-website.png';
 
 const myProjects = [
   {
+    projectName: 'Seneca International Student Application',
+    projectText: 'Written using Angular, NodeJs',
+    imgSource: IAPImgUrl,
+    imgAlt: 'Seneca-International-Student-Application',
+    iconTypes: {
+      website: 'globe',
+      sourceCode: null
+    },
+    links: {
+      website: 'https://apps.senecacollege.ca/iwasene/startiwa.jsp'
+    }
+  },
+  {
     projectName: 'Employee Management',
     projectText: 'Written using NodeJS, Express, MongoDB',
     imgSource: empMangImgUrl,
@@ -29,19 +42,6 @@ const myProjects = [
     links: {
       sourceCode:
         'https://github.com/Alex-Samari/WEB222/tree/master/Assignment%204'
-    }
-  },
-  {
-    projectName: "Seneca International Student Application",
-    projectText: "Written using Angular, NodeJs",
-    imgSource: IAPImgUrl,
-    imgAlt: "Seneca-International-Student-Application",
-    iconTypes: {
-      website: 'globe',
-      sourceCode: null
-    },
-    links: {
-      website: "https://imgur.com/gallery/LVQCysn"
     }
   }
 ];
