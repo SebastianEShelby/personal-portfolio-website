@@ -13,7 +13,7 @@ const myProjects = [
       sourceCode: null
     },
     links: {
-      website: 'https://apps.senecacollege.ca/iwasene/startiwa.jsp'
+      website: 'https://intl.senecacollege.ca/'
     }
   },
   {
