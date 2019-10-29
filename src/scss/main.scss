@@ -20,7 +20,7 @@ main {
   flex-direction: column;
   align-items: center;
   > * {
-    margin-bottom: 15px;
+    margin-bottom: 4vh;
   }
   .section-text {
     font-size: 1.17em;
@@ -127,6 +127,12 @@ main {
   text-align: center;
   > div {
     margin-bottom: $projectSectionsPadding;
+  }
+  h2 {
+    margin-bottom: 6vh;
+  }
+  #projects-sub-container {
+    margin: 0 10vw;
   }
 }
 
