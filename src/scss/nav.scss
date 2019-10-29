@@ -12,6 +12,7 @@ $background_color_1: rgba(255, 255, 255, 1);
   width: 100%;
   height: $firstGridRow;
   text-transform: capitalize;
+  z-index: 999; // make sure the navbar is always on top
 }
 .nav-bar {
   display: flex;
