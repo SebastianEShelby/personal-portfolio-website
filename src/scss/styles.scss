@@ -10,6 +10,7 @@ $footerDivMargin: 2vh;
 /* End Global Variables */
 
 /* External css files start here */
+@import './utils.scss';
 @import './sanitize.scss';
 @import './fonts.scss';
 @import './themes.scss';
@@ -48,6 +49,7 @@ h2 {
 
 ul,
 li {
+  list-style-position: inside;
   list-style-type: none;
   margin: 0;
   padding: 0;

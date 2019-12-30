@@ -109,16 +109,7 @@ $firstGridRow: 8vh;
     padding: 0.8em 1.5em;
   }
 
-  #projects {
-    .project {
-      width: 50%;
-    }
-    .project-items {
-      // margin: 0;
-    }
-  }
-
-  figure figcaption .figcaption-text {
-    font-size: 1.2vw;
+  #projects-sub-container {
+    margin: 0 8vw;
   }
 }

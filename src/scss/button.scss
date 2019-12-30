@@ -48,9 +48,19 @@ a.button {
   padding-left: 1em;
   padding-right: 1em;
 }
+
+.is-large {
+  padding: 2em;
+  &.is-round {
+    font-size: 0.5rem;
+  }
+}
 .is-medium {
   // font-size: 1.25rem;
   padding: 2em;
+  &.is-round {
+    font-size: 0.1rem;
+  }
 }
 
 .is-small {
@@ -87,9 +97,6 @@ a.is-round {
   .icon {
     margin-right: 0;
   }
-}
-a.is-medium.is-round {
-  font-size: 0.1rem;
 }
 
 .social-media {
