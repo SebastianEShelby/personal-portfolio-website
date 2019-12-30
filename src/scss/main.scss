@@ -1,4 +1,4 @@
-$projectText: antiquewhite;
+$darkBackgroundText: antiquewhite;
 $darkBlue: rgb(39, 51, 77);
 $projectSectionsPadding: 4vh;
 
@@ -33,12 +33,12 @@ main {
   grid-column: 1 / span 3;
   background-color: $softBlack;
   #about-me-sub-container {
-    color: $lightBrown;
+    color: $darkBackgroundText;
     padding-bottom: calc(10vh + 20px * 3);
     margin: 0 10vw;
   }
   a {
-    color: $lightBrown;
+    color: $darkBackgroundText;
   }
 }
 
@@ -217,7 +217,7 @@ figure:hover {
   p,
   .figcaption-headline,
   a {
-    color: $projectText;
+    color: $darkBackgroundText;
   }
 }
 
