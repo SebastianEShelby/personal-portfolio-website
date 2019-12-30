@@ -1,5 +1,4 @@
 import empMangImgUrl from '../images/employee-management-nodejs.png';
-import petShopImgUrl from '../images/petshop.JPG';
 import IAPImgUrl from '../images/iap-website.png';
 
 const myProjects = [
