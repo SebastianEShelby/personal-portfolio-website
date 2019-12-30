@@ -6,7 +6,7 @@ const myProjects = [
     projectName: 'Seneca International Student Application',
     projectText: 'Written using Angular, NodeJs',
     imgSource: IAPImgUrl,
-    imgAlt: 'Seneca-International-Student-Application',
+    imgAlt: 'Seneca International Student Application',
     iconTypes: {
       website: 'globe',
       sourceCode: null
@@ -19,7 +19,7 @@ const myProjects = [
     projectName: 'Employee Management',
     projectText: 'Written using NodeJS, Express, MongoDB',
     imgSource: empMangImgUrl,
-    imgAlt: 'employee-management-nodejs',
+    imgAlt: 'Employee Management System',
     iconTypes: {
       website: 'globe',
       sourceCode: 'git-branch'
