@@ -132,7 +132,7 @@ const generateProject = () => {
       const value = icon[1];
       if (value) {
         const newLink = setMultipleAttributes('a', {
-          class: 'button is-secondary is-outlined is-round is-medium',
+          class: 'button is-secondary is-outlined is-round is-large ',
           href: myProjects[i].links[key],
           target: '_blank'
         });
