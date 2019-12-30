@@ -29,20 +29,6 @@ const myProjects = [
       website: 'https://employee-management-2019.herokuapp.com',
       sourceCode: 'https://github.com/Alex-Samari/web322-app'
     }
-  },
-  {
-    projectName: 'Pet Shop',
-    projectText: 'Written using pure HTML, CSS, JavaScript',
-    imgSource: petShopImgUrl,
-    imgAlt: 'pet-shop',
-    iconTypes: {
-      website: null,
-      sourceCode: 'git-branch'
-    },
-    links: {
-      sourceCode:
-        'https://github.com/Alex-Samari/WEB222/tree/master/Assignment%204'
-    }
   }
 ];
 
