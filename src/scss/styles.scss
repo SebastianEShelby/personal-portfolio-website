@@ -23,6 +23,10 @@ $footerDivMargin: 2vh;
 
 /* Global styles start here  */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Niramit', sans-serif;
   font-size: medium; // default
