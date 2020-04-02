@@ -27,8 +27,8 @@ header {
 }
 
 .header-img-container {
-  width: 50vw;
-  height: 50vw;
+  width: 50vh;
+  height: 50vh;
   max-height: 340px;
   max-width: 340px;
 
@@ -37,7 +37,7 @@ header {
   background-color: $headerImageBackground;
   background-blend-mode: soft-light;
   background-size: cover;
-  background-position-x: center;
+  background-position: center 10%;
 
   margin: 10px;
   border-radius: 50%;
