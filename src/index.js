@@ -1,6 +1,6 @@
 // import fs from 'fs'
 import { handleNavBar } from './scripts/sticky-nav';
-import { generateProject } from './scripts/addProjects';
+// import { generateProject } from './scripts/addProjects';
 import './scss/styles.scss';
 import { preventScrollOverFlow } from './scripts/scrollEffects';
 
