@@ -28,10 +28,11 @@ $background_color_1: rgba(255, 255, 255, 1);
   border-bottom: 0.5px solid rgba(41, 51, 71, 0.5);
   padding-right: $navContainerPadding;
   padding-left: $navContainerPadding;
-  padding-bottom: calc(#{$navContainerPadding}/ 4);
+  // padding-bottom: calc(#{$navContainerPadding}/ 4);
 }
 
-.nav-bar-container ul li {
+.nav-ul > *,
+.nav-headline > * {
   padding: 0 20px;
 }
 
