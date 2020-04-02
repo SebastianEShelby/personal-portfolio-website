@@ -14,6 +14,8 @@
       content="hcIRJUEiqXByv6qTm2Pzs9znUMXtM5V-Xpj5ovd0FfU"
     />
     <title>Alex, Web Developer</title>
+    <!-- responsive favicon images  -->
+    <link rel="manifest" href="./favicon/site.webmanifest" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -31,12 +33,6 @@
       sizes="16x16"
       href="./favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="./favicon/site.webmanifest" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
-    />
-    <!-- <script src="https://unpkg.com/feather-icons"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="./index.js"></script>
   </head>
@@ -46,11 +42,9 @@
       <header>
         <div id="nav-bar" class="nav-bar-container">
           <div class="nav-headline">
-            <ul>
-              <a class="nav-link" href="#home">
-                <li>Alex</li>
-              </a>
-            </ul>
+            <a class="nav-link" href="#home">
+              Alex
+            </a>
           </div>
 
           <label class="nav-toggle-label" for="nav-toggle">
@@ -85,6 +79,7 @@
             <a
               class="button is-primary is-outlined is-rounded is-small"
               href="mailto:alexsamarim@gmail.com"
+              rel="noopener"
               target="_blank"
               ><i class="icon" data-feather="mail"></i>
               <span>Get In Touch</span>
@@ -92,6 +87,7 @@
             <a
               class="button is-primary is-outlined is-rounded is-small"
               href="./files/web-developer-resume.pdf"
+              rel="noopener"
               target="_blank"
               ><i class="icon" data-feather="briefcase"></i>
               <span>View Resume</span>
@@ -103,17 +99,6 @@
       <main>
         <section id="about-me" class="section-container">
           <div id="about-me-sub-container" class="section-sub-container">
-            <!-- <h2>About Me</h2>
-            <p class="section-text">
-              Hello World! My name is Alex and I'm a Developer! Since I was
-              younger I've been always fascinated by puzzles, problems and of
-              course computers! I have always dreamt of becoming a Programmer
-              and after a few years of
-              <strike>turning coffee into code</strike> hard work I can finally
-              call myself one. Having said that, I still think I have a lot to
-              learn and a long way to go. &copy;Never Settle!
-            </p> -->
-
             <h2>About Me</h2>
 
             <div class="section-text">
@@ -121,6 +106,7 @@
                 I have been working on multiple web projects recently such as
                 <a
                   href="https://www.senecacollege.ca/international/agency-information/registered-seneca-agent.html"
+                  rel="noopener"
                   target="_blank"
                   >"Seneca College's International Student Application
                   Website"</a
@@ -135,17 +121,6 @@
                 follow me on <a href="#footer">Social Media</a>.
               </p>
             </div>
-
-            <!-- <div class="section-text">
-                <h3>Portfolio Roadmap</h3>
-
-                <ul>
-                  <li>Scroll Effects</li>
-                  <li>Text Animations</li>
-                  <li>More Projects</li>
-                  <li></li>
-                </ul>
-              </div> -->
           </div>
         </section>
 
@@ -281,12 +256,21 @@
                 <a
                   href="https://intl.senecacollege.ca/
                 "
+                  rel="noopener"
                   target="_blank"
                 >
                   <img
-                    src="./images/iap-website.png"
+                    sizes="(max-width: 1400px) 100vw, 1400px"
+                    srcset="
+                      ./images/iap-website/200.jpg   200w,
+                      ./images/iap-website/613.jpg   613w,
+                      ./images/iap-website/931.jpg   931w,
+                      ./images/iap-website/1171.jpg 1171w,
+                      ./images/iap-website/1400.jpg 1400w
+                    "
                     alt="Seneca International Student Application"
-                /></a>
+                  />
+                </a>
                 <h3>Seneca International Student Application</h3>
                 <div class="project-information">
                   <p>
@@ -306,6 +290,7 @@
                   <a
                     class="button is-primary is-outlined is-rounded is-small"
                     href="https://intl.senecacollege.ca/"
+                    rel="noopener"
                     target="_blank"
                     ><i class="icon" data-feather="globe"></i>
                     <span>Website</span>
@@ -315,10 +300,18 @@
               <div class="project">
                 <a
                   href="https://employee-management-2019.herokuapp.com"
+                  rel="noopener"
                   target="_blank"
                 >
                   <img
-                    src="./images/employee-management-nodejs.png"
+                    sizes="(max-width: 1400px) 100vw, 1400px"
+                    srcset="
+                      ./images/employee-management-nodejs/200.jpg   200w,
+                      ./images/employee-management-nodejs/646.jpg   646w,
+                      ./images/employee-management-nodejs/937.jpg   937w,
+                      ./images/employee-management-nodejs/1219.jpg 1219w,
+                      ./images/employee-management-nodejs/1400.jpg 1400w
+                    "
                     alt="Human Recources System"
                   />
                 </a>
@@ -345,6 +338,7 @@
                   <a
                     class="button is-primary is-outlined is-rounded is-small"
                     href="https://employee-management-2019.herokuapp.com"
+                    rel="noopener"
                     target="_blank"
                     ><i class="icon" data-feather="globe"></i>
                     <span>Website</span>
@@ -352,6 +346,7 @@
                   <a
                     class="button is-primary is-outlined is-rounded is-small"
                     href="https://github.com/Alex-Samari/web322-app"
+                    rel="noopener"
                     target="_blank"
                     ><i class="icon" data-feather="git-branch"></i>
                     <span>Source Code</span>
@@ -371,21 +366,27 @@
           <a
             class="button is-primary is-round is-filled is-medium"
             href="https://github.com/Alex-Samari"
+            rel="noopener"
             target="_blank"
+            aria-label="Github"
           >
             <i class="icon" data-feather="github"></i>
           </a>
           <a
             class="button is-primary is-round is-filled is-medium"
             href="https://twitter.com/AlexSamariM"
+            rel="noopener"
             target="_blank"
+            aria-label="Twitter"
           >
             <i class="icon" data-feather="twitter"></i>
           </a>
           <a
             class="button is-primary is-round is-filled is-medium"
             href="https://www.linkedin.com/in/alex-samari"
+            rel="noopener"
             target="_blank"
+            aria-label="LinkedIn"
           >
             <i class="icon" data-feather="linkedin"></i>
           </a>
