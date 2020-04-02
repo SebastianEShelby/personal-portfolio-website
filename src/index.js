@@ -6,9 +6,9 @@ import { preventScrollOverFlow } from './scripts/scrollEffects';
 
 // wait for the window to load and identify dom elements
 window.onload = () => {
+  feather.replace();
   handleNavBar();
   preventScrollOverFlow();
   // generateProject();
   // make sure to call this function at the end to replace feather icons with svg images
-  feather.replace();
 };
