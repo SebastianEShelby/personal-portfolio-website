@@ -1,5 +1,5 @@
-import empMangImgUrl from '../images/employee-management-nodejs.png';
-import IAPImgUrl from '../images/iap-website.png';
+import empMangImgUrl from '../images/employee-management-nodejs.jpg';
+import IAPImgUrl from '../images/iap-website.jpg';
 
 const myProjects = [
   {
