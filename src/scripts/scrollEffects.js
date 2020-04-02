@@ -14,7 +14,7 @@ const preventScrollOverFlow = () => {
         // console.log(navbar);
         navbar = document.getElementById("nav-bar");
         navbarheight = parseInt(window.getComputedStyle(navbar).height, 10);
-        // show 5 pixels of previous section just for illustration purposes
+        // show 50 pixels of previous section just for illustration purposes
         scrollHeight =
           document.querySelector(e.target.hash).offsetTop - navbarheight - 50;
         /* scrolling to the element taking the height of the static bar into account*/
