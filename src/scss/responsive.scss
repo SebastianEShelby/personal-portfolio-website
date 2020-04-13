@@ -96,7 +96,8 @@ $firstGridRow: 8vh;
     font-size: large;
   }
   .skill-container {
-    margin: inherit $bodyGridPadding;
+    margin-right: calc(10vw - 2vh);
+    margin-left: calc(10vw - 2vh);
     font-size: medium;
   }
   .skill {

@@ -1,6 +1,6 @@
-$darkBackgroundText: antiquewhite;
+$darkBackgroundText: rgb(215, 218, 220);
 $darkBlue: rgb(39, 51, 77);
-$projectSectionsPadding: 4vh;
+$projectSectionsPadding: 50px;
 
 main {
   display: grid;
@@ -20,21 +20,24 @@ main {
   flex-direction: column;
   align-items: center;
   > * {
-    margin-bottom: 4vh;
+    margin-bottom: $projectSectionsPadding;
   }
   .section-text {
     font-size: 1.17em;
-    margin-bottom: 50px;
+    margin-bottom: $projectSectionsPadding;
+    > * {
+      margin-bottom: 4vh;
+    }
   }
 }
 /* Main Section Styles End */
 
 #about-me {
   grid-column: 1 / span 3;
-  background-color: $softBlack;
+  background-color: $darkBackGround;
   #about-me-sub-container {
     color: $darkBackgroundText;
-    padding-bottom: calc(10vh + 20px * 3);
+    padding-bottom: calc(#{$projectSectionsPadding} + 20px * 3);
     margin: 0 10vw;
   }
   a {
@@ -43,7 +46,7 @@ main {
 }
 
 #skills {
-  // grid-column: 1 / span 3;
+  grid-column: 1 / span 3;
 }
 
 .skill-container {
@@ -64,7 +67,7 @@ main {
   align-items: center;
   text-align: center;
   width: 100%;
-  border: 1px solid #e6ecf8;
+  border: 1px solid rgba(46, 46, 46, 0.1);
   border-radius: 10px;
   line-height: 1.5;
   background-color: $white;
@@ -132,7 +135,7 @@ main {
     margin-bottom: $projectSectionsPadding;
   }
   h2 {
-    margin-bottom: 6vh;
+    margin: $projectSectionsPadding 0;
   }
 }
 

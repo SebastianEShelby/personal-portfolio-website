@@ -1,4 +1,4 @@
-$lightBrown: antiquewhite;
+$lightTextColor: antiquewhite;
 
 a.button {
   border-width: 2px;
@@ -30,13 +30,13 @@ a.button {
   &:focus {
     background-color: $darkRed;
     border-color: $darkRed;
-    color: $lightBrown;
+    color: $lightTextColor;
   }
 }
 
 .is-filled {
   background-color: $darkRed;
-  color: $lightBrown;
+  color: $lightTextColor;
   border-color: $darkRed;
 }
 
@@ -72,12 +72,12 @@ a.button {
 .is-primary.is-outlined:focus {
   background-color: $darkRed;
   border-color: $darkRed;
-  color: $lightBrown;
+  color: $lightTextColor;
 }
 
 .is-primary.is-filled:hover,
 .is-primary.is-filled:focus {
-  background-color: $lightBrown;
+  background-color: $lightTextColor;
   border-color: $darkRed;
   color: $darkRed;
   svg.feather {

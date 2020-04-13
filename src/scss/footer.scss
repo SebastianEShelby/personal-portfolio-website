@@ -1,5 +1,5 @@
 footer {
-  background-color: $softBlack;
+  background-color: $darkBackGround;
   grid-area: 4 / first-column/span 1 / last-column;
 
   display: flex;
@@ -7,7 +7,7 @@ footer {
   justify-content: center;
   align-items: center;
   justify-items: center;
-  color: $lightBrown;
+  color: $lightTextColor;
   div {
     margin-bottom: $footerDivMargin;
     margin-top: $footerDivMargin;
