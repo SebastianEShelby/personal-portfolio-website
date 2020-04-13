@@ -7,3 +7,10 @@ ul.reset-list-styles {
 .flex-spacer {
   flex-grow: 1;
 }
+
+ul.list-style-plus {
+  li:before {
+    content: '+';
+    margin-right: 4px;
+  }
+}
