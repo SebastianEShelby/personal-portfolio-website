@@ -2,10 +2,10 @@
 $white: white;
 $antiquewhite: antiquewhite;
 $black: #000;
-$softBlack: #2e2e2e;
+$darkBackGround: rgb(46, 46, 46);
 $darkRed: #a63a50;
 $darkBlue: rgb(39, 51, 77);
-$lightBrown: #f0e7d8;
+$lightTextColor: rgb(215, 218, 220);
 $a: rgb(39, 51, 77, 0);
 // $darkBlue: #094074;
 // $darkBlue: rgba(99, 99, 99, 0.4);
@@ -21,9 +21,9 @@ $themes: (
     // backGround: $white,
       // text: $black,
       // linkText: $darkRed,
-      linkTextHover: #a63a50
+      linkTextHover: #a63a50,
   ),
-  dark: ()
+  dark: (),
 ) !default;
 
 // Initialize our variables as `null` so that when used outside of `themify`,
@@ -38,11 +38,11 @@ $themes: (
     .theme-#{$theme} & {
       $theme-map: () !global;
       @each $key, $submap in $map {
-        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $value: map-get(map-get($themes, $theme), '#{$key}');
         $theme-map: map-merge(
           $theme-map,
           (
-            $key: $value
+            $key: $value,
           )
         ) !global;
       }
