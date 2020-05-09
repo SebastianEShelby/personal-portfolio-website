@@ -4,8 +4,9 @@
   "description": "My Personal portfolio Website 2019",
   "main": "index.js",
   "scripts": {
+    "prebuild": "rd dist /s /q",
     "dev": "parcel src/index.html",
-    "build:prod": "parcel build src/index.html"
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
