@@ -61,7 +61,15 @@ nav {
 }
 
 .main-logo {
-  width: 2.2em;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  > *:not(:first-child) {
+    margin-left: 1vh;
+  }
+  img {
+    width: 2.2em;
+  }
 }
 
 .nav-link {
