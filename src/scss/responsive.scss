@@ -20,6 +20,11 @@ $firstGridRow: 8vh;
       )
       [row4] minmax(20vh, auto) [last-row];
   }
+
+  .main-logo {
+    width: 2.5em;
+  }
+
   .nav-toggle-label {
     display: none;
   }
@@ -91,7 +96,7 @@ $firstGridRow: 8vh;
   }
 
   .header-content {
-    padding: 2vw 1vw;
+    padding: 4vw 1vw;
     justify-self: center;
     font-size: large;
   }
@@ -112,5 +117,11 @@ $firstGridRow: 8vh;
 
   #projects-sub-container {
     margin: 0 8vw;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  h3.sub-headline {
+    display: initial !important;
   }
 }
