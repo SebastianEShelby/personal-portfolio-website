@@ -1,6 +1,8 @@
 import { handleNavBar } from './scripts/sticky-nav';
 import './scss/styles.scss';
 import { preventScrollOverFlow } from './scripts/scrollEffects';
+import { handleHamburgerMenu } from './scripts/hamburger-menu';
+
 
 // wait for the window to load and identify dom elements
 window.onload = () => {
@@ -8,4 +10,5 @@ window.onload = () => {
   feather.replace();
   handleNavBar();
   preventScrollOverFlow();
+  handleHamburgerMenu();
 };
