@@ -60,6 +60,8 @@ li {
 }
 
 a {
+  -webkit-tap-highlight-color: transparent;
+
   &:active {
     color: $darkRed;
   }
