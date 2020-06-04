@@ -7,6 +7,12 @@ const handleHamburgerMenu = () => {
 				document.getElementById('nav-toggle').checked = false;
 			})
 		})
+
+		document.querySelectorAll('a.main-logo').forEach(navLink => {
+			navLink.addEventListener('click', event => {
+				document.getElementById('nav-toggle').checked = false;
+			})
+		})
 	}
 };
 
