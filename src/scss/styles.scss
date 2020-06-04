@@ -60,16 +60,15 @@ li {
 }
 
 a {
+  &:active {
+    color: $darkRed;
+  }
   text-decoration: none;
   color: $darkBlue;
   text-transform: capitalize;
   // Makes clicking on fab links more visual
   transition: all 0.2s ease-in-out;
   font-weight: 400;
-  &:hover {
-    // color: red;
-    color: $darkRed;
-  }
 }
 
 .sub-headline {

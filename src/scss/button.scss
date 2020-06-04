@@ -26,8 +26,7 @@ a.button {
     margin-right: 0.5em;
   }
   color: $darkRed;
-  &:hover,
-  &:focus {
+  &:active {
     background-color: $darkRed;
     border-color: $darkRed;
     color: $lightTextColor;
@@ -68,21 +67,22 @@ a.button {
   padding: 0.5em 1em;
 }
 
-.is-primary.is-outlined:hover,
-.is-primary.is-outlined:focus {
+.is-primary.is-outlined:active {
   background-color: $darkRed;
   border-color: $darkRed;
   color: $lightTextColor;
 }
 
-.is-primary.is-filled:hover,
-.is-primary.is-filled:focus {
-  background-color: $lightTextColor;
-  border-color: $darkRed;
-  color: $darkRed;
+.is-primary.is-filled {
   svg.feather {
     fill: $darkRed;
   }
+}
+
+.is-primary.is-filled:active {
+  background-color: $lightTextColor;
+  border-color: $darkRed;
+  color: $darkRed;
 }
 
 .icon {

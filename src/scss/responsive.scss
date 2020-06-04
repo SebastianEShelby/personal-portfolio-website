@@ -116,8 +116,36 @@ $firstGridRow: 8vh;
   }
 }
 
-@media screen and (min-width: 500px) {
+/* Hiding sub headline text on mobile */
+@media screen and (min-width: 350px) {
   h3.sub-headline {
     display: initial !important;
+  }
+}
+
+/* Hover Query for devices with hover support */
+@media (any-hover: hover) {
+  a:hover {
+    color: $darkRed;
+  }
+
+  .is-secondary {
+    &:hover {
+      background-color: $darkRed;
+      border-color: $darkRed;
+      color: $lightTextColor;
+    }
+  }
+
+  .is-primary.is-outlined:hover {
+    background-color: $darkRed;
+    border-color: $darkRed;
+    color: $lightTextColor;
+  }
+
+  .is-primary.is-filled:hover {
+    background-color: $lightTextColor;
+    border-color: $darkRed;
+    color: $darkRed;
   }
 }
