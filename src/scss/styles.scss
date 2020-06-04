@@ -10,9 +10,9 @@ $footerDivMargin: 2vh;
 /* End Global Variables */
 
 /* External css files start here */
+@import './fonts.scss';
 @import './utils.scss';
 @import './sanitize.scss';
-@import './fonts.scss';
 @import './themes.scss';
 @import './nav.scss';
 @import './header.scss';
