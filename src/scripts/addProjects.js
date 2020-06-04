@@ -1,3 +1,6 @@
+/**
+ * This file is outdated. Archived in src for reference
+ */
 import empMangImgUrl from '../images/employee-management-nodejs.jpg';
 import IAPImgUrl from '../images/iap-website.jpg';
 
