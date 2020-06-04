@@ -18,14 +18,14 @@
   },
   "homepage": "https://github.com/Alex-Samari/AlexSamari.github.io#readme",
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^9.8.0",
     "feather-icons": "^4.28.0",
     "parcel-bundler": "^1.12.4",
     "postcss-modules": "^1.5.0",
-    "sass": "^1.26.5"
+    "sass": "^1.26.7"
   },
   "dependencies": {
     "@datorama/themify": "^1.0.5",
-    "images": "^3.0.2"
+    "images": "^3.2.2"
   }
 }
