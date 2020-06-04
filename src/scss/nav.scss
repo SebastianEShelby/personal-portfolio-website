@@ -76,7 +76,7 @@ nav {
   font-weight: 600;
   font-size: large;
 }
-.nav-toggle {
+#nav-toggle {
   &:checked {
     & ~ .nav-bar {
       transform: scale(1, 1);
