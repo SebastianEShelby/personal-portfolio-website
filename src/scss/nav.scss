@@ -5,7 +5,7 @@ $background_color_1: rgba(255, 255, 255, 1);
 .nav-bar-container {
   background-color: $background_color_1;
   display: flex;
-  padding: 0 $navContainerPadding;
+  padding-right: $navContainerPadding;
   justify-content: space-between;
   position: fixed;
   top: 0;
@@ -26,12 +26,9 @@ $background_color_1: rgba(255, 255, 255, 1);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
   border-bottom: 0.5px solid rgba(41, 51, 71, 0.5);
-  padding-right: $navContainerPadding;
-  padding-left: $navContainerPadding;
-  // padding-bottom: calc(#{$navContainerPadding}/ 4);
 }
 
-.nav-ul > *,
+.nav-ul li > *,
 .nav-headline > * {
   padding: 0 20px;
 }
@@ -75,6 +72,7 @@ nav {
 .nav-link {
   font-weight: 600;
   font-size: large;
+  width: 100%;
 }
 #nav-toggle {
   &:checked {
