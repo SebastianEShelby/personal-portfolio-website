@@ -118,7 +118,7 @@ $firstGridRow: 8vh;
 
 /* Hiding sub headline text on mobile */
 @media screen and (min-width: 350px) {
-  h3.sub-headline {
+  .header-info h3.sub-headline {
     display: initial !important;
   }
 }
