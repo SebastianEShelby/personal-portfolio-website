@@ -57,12 +57,17 @@ nav {
   align-items: center;
 }
 
+.main-logo,
+.nav-link {
+  font-weight: 600;
+  font-size: large;
+}
+
 .main-logo {
   display: flex;
   align-items: center;
-  font-weight: 600;
   > *:not(:first-child) {
-    margin-left: 1vh;
+    margin-left: 20px;
   }
   img {
     width: 2.2em;
@@ -70,8 +75,6 @@ nav {
 }
 
 .nav-link {
-  font-weight: 600;
-  font-size: large;
   width: 100%;
 }
 
