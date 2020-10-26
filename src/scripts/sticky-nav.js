@@ -4,7 +4,7 @@ let sticky = null;
 const handleNavBar = () => {
   if (window.matchMedia("(min-width: 1000px)").matches) {
     // Get the navbar
-    navbar = document.getElementById("nav-bar");
+    navbar = document.getElementById("nav-bar-container");
     // Get the offset position of the navbar
     sticky = navbar.offsetTop;
     // Call the sticky function on window load

@@ -74,19 +74,7 @@ nav {
   font-size: large;
   width: 100%;
 }
-#nav-toggle {
-  &:active {
-    & ~ .nav-bar {
-      transform: scale(1, 1);
-    }
-    & ~ nav {
-      a {
-        opacity: 1;
-        transition: opacity 250ms ease-in-out 50ms;
-      }
-    }
-  }
-}
+
 .nav-toggle {
   height: 100%;
   display: flex;

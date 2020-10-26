@@ -21,7 +21,7 @@ $firstGridRow: 8vh;
       [row4] minmax(20vh, auto) [last-row];
   }
 
-  .nav-toggle {
+  #nav-toggle {
     display: none;
   }
   .nav-bar-container {
@@ -39,13 +39,11 @@ $firstGridRow: 8vh;
   }
   .nav-bar {
     position: relative;
-    text-align: left;
     transition: none;
     transform: scale(1, 1);
     background: none;
     top: 0;
     left: 0;
-    display: flex;
     justify-content: flex-end;
     align-items: center;
     border-bottom: unset;
