@@ -75,7 +75,7 @@ nav {
   width: 100%;
 }
 #nav-toggle {
-  &:checked {
+  &:active {
     & ~ .nav-bar {
       transform: scale(1, 1);
     }
@@ -86,42 +86,37 @@ nav {
       }
     }
   }
-  position: absolute !important;
-  display: none;
 }
-.nav-toggle-label {
+.nav-toggle {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  span {
+
+  span.hamburger-bar {
     display: block;
     background: #293347;
     width: 33px;
     height: 4px;
     border-radius: 3px;
     position: relative;
-    &::before {
-      display: block;
-      background: #293347;
-      width: 33px;
-      height: 4px;
-      border-radius: 3px;
-      position: relative;
-      content: '';
-      position: absolute;
-      bottom: 7px;
-    }
+
+    &::before,
     &::after {
       display: block;
       background: #293347;
       width: 33px;
       height: 4px;
       border-radius: 3px;
-      position: relative;
-      content: '';
       position: absolute;
+      content: '';
+    }
+
+    &::before {
       top: 7px;
+    }
+    &::after {
+      bottom: 7px;
     }
   }
 }
