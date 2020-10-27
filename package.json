@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alex-Samari/AlexSamari.github.io.git"
+    "url": "https://github.com/Alex-Samari/personal-portfolio-website"
   },
   "author": "Alex Samari",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Alex-Samari/AlexSamari.github.io/issues"
+    "url": "https://github.com/Alex-Samari/personal-portfolio-website/issues"
   },
-  "homepage": "https://github.com/Alex-Samari/AlexSamari.github.io#readme",
+  "homepage": "https://github.com/Alex-Samari/personal-portfolio-website#readme",
   "devDependencies": {
     "autoprefixer": "^9.8.0",
     "feather-icons": "^4.28.0",
