@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "My Personal portfolio Website 2019",
   "main": "index.js",
+  "targets": {
+    "main": false
+  },
   "scripts": {
     "dev": "parcel serve src/index.html",
     "build": "parcel build src/index.html"
