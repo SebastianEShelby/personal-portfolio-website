@@ -26,6 +26,7 @@
 
 # Parcel cache
 .cache/*
+.parcel-cache/*
 
 # misc
 /.sass-cache

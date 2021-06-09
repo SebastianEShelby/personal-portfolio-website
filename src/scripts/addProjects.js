@@ -1,8 +1,8 @@
 /**
  * This file is outdated. Archived in src for reference
  */
-import empMangImgUrl from '../images/employee-management-nodejs.jpg';
-import IAPImgUrl from '../images/iap-website.jpg';
+import empMangImgUrl from 'url:../images/employee-management-nodejs.jpg';
+import IAPImgUrl from 'url:../images/iap-website.jpg';
 
 const myProjects = [
   {
@@ -12,11 +12,11 @@ const myProjects = [
     imgAlt: 'Seneca International Student Application',
     iconTypes: {
       website: 'globe',
-      sourceCode: null
+      sourceCode: null,
     },
     links: {
-      website: 'https://intl.senecacollege.ca/'
-    }
+      website: 'https://intl.senecacollege.ca/',
+    },
   },
   {
     projectName: 'Employee Management',
@@ -25,13 +25,13 @@ const myProjects = [
     imgAlt: 'Employee Management System',
     iconTypes: {
       website: 'globe',
-      sourceCode: 'git-branch'
+      sourceCode: 'git-branch',
     },
     links: {
       website: 'https://employee-management-2019.herokuapp.com',
-      sourceCode: 'https://github.com/Alex-Samari/web322-app'
-    }
-  }
+      sourceCode: 'https://github.com/Alex-Samari/web322-app',
+    },
+  },
 ];
 
 const projectElements = {
@@ -45,14 +45,14 @@ const projectElements = {
   figcaptionLink: null,
   //   links: [{ anchor, icon }],
   links: [],
-  overlay: null
+  overlay: null,
 };
 
 let projectInfo = {
   projectName: null,
   projectText: null,
   imgSource: null,
-  imgAlt: null
+  imgAlt: null,
 };
 
 function setMultipleAttributes(elementType, attributes) {
@@ -68,7 +68,7 @@ const generateProject = () => {
 
   for (let i = 0; i < myProjects.length; i++) {
     projectElements.project = setMultipleAttributes('div', {
-      class: 'project'
+      class: 'project',
     });
     projectItems.appendChild(projectElements.project);
 
@@ -77,7 +77,7 @@ const generateProject = () => {
 
     projectElements.img = setMultipleAttributes('img', {
       src: myProjects[i].imgSource,
-      alt: myProjects[i].imgAlt
+      alt: myProjects[i].imgAlt,
     });
     projectElements.figure.appendChild(projectElements.img);
 
@@ -85,13 +85,13 @@ const generateProject = () => {
     projectElements.figure.appendChild(projectElements.figcaption);
 
     projectElements.figcaptionText = setMultipleAttributes('div', {
-      class: 'figcaption-text'
+      class: 'figcaption-text',
     });
 
     projectElements.figcaption.appendChild(projectElements.figcaptionText);
 
     projectElements.headline = setMultipleAttributes('h', {
-      class: 'figcaption-headline'
+      class: 'figcaption-headline',
     });
     projectInfo.projectName = document.createTextNode(
       myProjects[i].projectName
@@ -100,7 +100,7 @@ const generateProject = () => {
     projectElements.headline.appendChild(projectInfo.projectName);
 
     projectElements.paragraph = setMultipleAttributes('p', {
-      class: 'figcaption-paragraph'
+      class: 'figcaption-paragraph',
     });
     projectInfo.projectText = document.createTextNode(
       myProjects[i].projectText
@@ -111,23 +111,23 @@ const generateProject = () => {
     projectElements.figcaptionText.appendChild(projectElements.paragraph);
 
     projectElements.figcaptionLink = setMultipleAttributes('div', {
-      class: 'figcaption-link'
+      class: 'figcaption-link',
     });
     projectElements.figcaption.appendChild(projectElements.figcaptionLink);
 
-    Object.entries(myProjects[i].iconTypes).forEach(icon => {
+    Object.entries(myProjects[i].iconTypes).forEach((icon) => {
       const key = icon[0];
       const value = icon[1];
       if (value) {
         const newLink = setMultipleAttributes('a', {
           class: 'button is-secondary is-outlined is-round is-large ',
           href: myProjects[i].links[key],
-          target: '_blank'
+          target: '_blank',
         });
 
         const newLinkIcon = setMultipleAttributes('i', {
           class: 'icon',
-          'data-feather': myProjects[i].iconTypes[key]
+          'data-feather': myProjects[i].iconTypes[key],
         });
         //   projectElements.links.push({ newLink, newLinkIcon });
 
@@ -143,7 +143,7 @@ const generateProject = () => {
     // }
 
     projectElements.overlay = setMultipleAttributes('div', {
-      class: 'overlay'
+      class: 'overlay',
     });
     projectElements.figure.appendChild(projectElements.overlay);
   }
