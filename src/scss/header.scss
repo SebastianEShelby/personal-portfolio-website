@@ -1,4 +1,4 @@
-$headerImageBackground: rgba(99, 99, 99, 0.4);
+$headerImageBackground: rgba(255, 255, 255, 0.06);
 header {
   display: grid;
   grid-template-columns: inherit;
@@ -33,7 +33,7 @@ header {
   background-image: url('../images/professional-photo.jpg');
 
   background-color: $headerImageBackground;
-  background-blend-mode: soft-light;
+  background-blend-mode: saturation;
   background-size: cover;
   background-position: center;
 
