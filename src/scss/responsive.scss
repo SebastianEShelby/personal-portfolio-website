@@ -29,13 +29,11 @@ $firstGridRow: 8vh;
     padding: 10px 5vw;
     background-color: $background_color_1;
     position: absolute;
-    // height: $firstGridRow;
   }
   .sticky {
     position: fixed;
     top: 0;
     background-color: $background_color_2;
-    // border-bottom: 0.5px solid rgba(41, 51, 71, 0.5);
   }
   .nav-bar {
     position: relative;
@@ -102,7 +100,6 @@ $firstGridRow: 8vh;
     font-size: medium;
   }
   .skill {
-    // width: 33.33%;
     margin: 1vh 1vh;
     width: 31.5%;
   }

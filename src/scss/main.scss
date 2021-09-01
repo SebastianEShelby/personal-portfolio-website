@@ -78,7 +78,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  // margin: 10px 0;
 }
 
 .skill-img-container {
@@ -118,8 +117,7 @@ main {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.2rem;
-  // based on maximum text width which is visual studio here
-  width: 5.2rem;
+  width: 5.2rem; // based on maximum icon text width (visual studio)
   white-space: nowrap;
   overflow: initial;
   font-size: 14px;
