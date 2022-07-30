@@ -2,9 +2,9 @@ let navbar = null;
 let sticky = null;
 
 const handleNavBar = () => {
-  if (window.matchMedia("(min-width: 1000px)").matches) {
+  if (window.matchMedia('(min-width: 1000px)').matches) {
     // Get the navbar
-    navbar = document.getElementById("nav-bar");
+    navbar = document.getElementById('nav-bar');
     // Get the offset position of the navbar
     sticky = navbar.offsetTop;
     // Call the sticky function on window load
@@ -19,10 +19,12 @@ const handleNavBar = () => {
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 const toggleSticky = () => {
+  console.log('window.pageYOffset', window.pageYOffset);
+  console.log('sticky', sticky);
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
+    navbar.classList.add('sticky');
   } else {
-    navbar.classList.remove("sticky");
+    navbar.classList.remove('sticky');
   }
 };
 
