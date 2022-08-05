@@ -3,7 +3,6 @@ import './scss/styles.scss';
 import { preventScrollOverFlow } from './scripts/scrollEffects';
 import { handleHamburgerMenu } from './scripts/hamburger-menu';
 
-
 // wait for the window to load and identify dom elements
 window.onload = () => {
   // function replaces feather icon tags with svg images
