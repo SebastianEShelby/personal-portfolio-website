@@ -1,0 +1,149 @@
+$background_color_1: unset;
+$background_color_2: #ffffff;
+$firstGridRow: 8vh;
+/* Responsive design start here (Desktop Styles) */
+/* Responsive design ends here  */
+@media screen and (min-width: 1000px) {
+  body {
+    header,
+    main,
+    footer {
+      font-size: large;
+    }
+  }
+  .container {
+    grid-template-columns: [first-column] 5vw [line2] auto [line3] 5vw [last-column];
+    grid-template-rows:
+      [first-row] $firstGridRow [row2] minmax(92vh, auto) [row3] minmax(
+        100vh,
+        auto
+      )
+      [row4] minmax(20vh, auto) [last-row];
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+  .nav-bar-container {
+    top: 2vh;
+    padding: 10px 5vw;
+    background-color: $background_color_1;
+    position: absolute;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    background-color: $background_color_2;
+  }
+  .nav-bar {
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1, 1);
+    background: none;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: unset;
+    margin: 0;
+  }
+  nav {
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100%;
+      li {
+        padding-bottom: 0;
+        padding-left: 1em;
+      }
+    }
+  }
+  .nav-link {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    transform: scale(1, 1);
+    transition: transform ease-in-out 250ms;
+    height: initial;
+    &::before {
+      content: '';
+      display: block;
+      height: 4px;
+      background-color: $darkRed;
+      border-radius: 3px;
+      position: absolute;
+      top: -0.75em;
+      left: 0;
+      right: 0;
+      transform: scale(0, 1);
+      transition: transform ease-in-out 250ms;
+    }
+    &:hover {
+      &::before {
+        transform: scale(1, 1);
+      }
+    }
+  }
+
+  .header-content {
+    padding: 4vw 1vw;
+    justify-self: center;
+    font-size: large;
+  }
+  .skill-container {
+    margin-right: calc(10vw - 2vh);
+    margin-left: calc(10vw - 2vh);
+    font-size: medium;
+  }
+  .skill {
+    margin: 1vh 1vh;
+    width: 31.5%;
+    max-width: 320px;
+  }
+  // make the small buttons bigger on desktop screens
+  .is-small {
+    padding: 0.8em 1.5em;
+  }
+
+  #projects-sub-container {
+    margin: 0 8vw;
+  }
+}
+
+/* Hiding sub headline text on mobile */
+@media screen and (min-width: 350px) {
+  .header-info h3.sub-headline {
+    display: initial !important;
+  }
+}
+
+/* Hover Query for devices with hover support */
+@media (any-hover: hover) {
+  a:hover {
+    color: $darkRed;
+  }
+
+  .is-secondary {
+    &:hover {
+      background-color: $darkRed;
+      border-color: $darkRed;
+      color: $lightTextColor;
+    }
+  }
+
+  .is-primary.is-outlined:hover {
+    background-color: $darkRed;
+    border-color: $darkRed;
+    color: $lightTextColor;
+  }
+
+  .is-primary.is-filled:hover {
+    background-color: $lightTextColor;
+    border-color: $darkRed;
+    color: $darkRed;
+  }
+}

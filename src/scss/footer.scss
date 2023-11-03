@@ -1,0 +1,15 @@
+footer {
+  background-color: $darkBackGround;
+  grid-area: 4 / first-column/span 1 / last-column;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  color: $lightTextColor;
+  div {
+    margin-bottom: $footerDivMargin;
+    margin-top: $footerDivMargin;
+  }
+}

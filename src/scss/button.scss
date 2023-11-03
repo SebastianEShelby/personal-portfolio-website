@@ -1,0 +1,107 @@
+$lightTextColor: antiquewhite;
+
+a.button {
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  font-family: $buttonFont;
+  font-weight: 600;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-primary {
+  color: $darkRed;
+  .icon {
+    margin-right: $buttonIconMargin;
+  }
+}
+
+.is-secondary {
+  .icon {
+    margin-right: 0.5em;
+  }
+  color: $darkRed;
+  &:active {
+    background-color: $darkRed;
+    border-color: $darkRed;
+    color: $lightTextColor;
+  }
+}
+
+.is-filled {
+  background-color: $darkRed;
+  color: $lightTextColor;
+  border-color: $darkRed;
+}
+
+.is-outlined {
+  background-color: transparent;
+}
+.is-rounded {
+  border-radius: 290486px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.is-large {
+  padding: 2em;
+  &.is-round {
+    font-size: 0.5rem;
+  }
+}
+.is-medium {
+  padding: 5em;
+  &.is-round {
+    font-size: 0.1rem;
+  }
+}
+
+.is-small {
+  padding: 0.5em 1em;
+}
+
+.is-primary.is-outlined:active {
+  background-color: $darkRed;
+  border-color: $darkRed;
+  color: $lightTextColor;
+}
+
+.is-primary.is-filled {
+  svg.feather {
+    fill: $darkRed;
+  }
+}
+
+.is-primary.is-filled:active {
+  background-color: $lightTextColor;
+  border-color: $darkRed;
+  color: $darkRed;
+}
+
+.icon {
+  align-items: center;
+  justify-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
+a.is-round {
+  border-radius: 100%;
+  .icon {
+    margin-right: 0;
+  }
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a.button {
+    margin: 0 calc(#{$buttonIconMargin}/ 2);
+  }
+}

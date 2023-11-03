@@ -1,0 +1,108 @@
+/* Start Global Variables */
+$firstGridRow: 10vh;
+$buttonIconMargin: 15px;
+$bodyGridPadding: 5vw;
+$navContainerPadding: 20px;
+$buttonFont: 'Niramit', sans-serif;
+$headerDivMargin: 1vh;
+$footerDivMargin: 2vh;
+
+/* End Global Variables */
+
+/* External css files start here */
+@import './fonts.scss';
+@import './utils.scss';
+@import './sanitize.scss';
+@import './themes.scss';
+@import './nav.scss';
+@import './header.scss';
+@import './main.scss';
+@import './footer.scss';
+@import './button.scss';
+/* External css files end here */
+
+/* Global styles start here  */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Niramit', sans-serif;
+  font-size: medium; // default
+  color: $darkBlue;
+  line-height: 1.5;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure {
+  margin: 0;
+}
+
+h1,
+h2 {
+  text-transform: capitalize;
+}
+
+ul,
+li {
+  list-style-position: inside;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    color: $darkRed;
+  }
+  text-decoration: none;
+  color: $darkBlue;
+  text-transform: capitalize;
+  transition: all 0.2s ease-in-out;
+  font-weight: 400;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.sub-headline {
+  font-weight: 400;
+}
+/* Global styles end here  */
+
+/* Page structure styles start here */
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: [first-column] $bodyGridPadding [line2] auto [line3] $bodyGridPadding [last-column];
+  grid-template-rows:
+    [first-row] $firstGridRow [row2] minmax(92vh, auto) [row3] minmax(
+      100vh,
+      auto
+    )
+    [row4] minmax(20vh, auto) [last-row];
+}
+/* Page structure styles end here */
+
+/* Svg styles start here */
+
+.devicon {
+  font-size: 4em;
+}
+
+/* Svg styles end here */
+
+@import './responsive.scss';

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="application-name" content="Sebastian Shelby Portfolio Website" />
+  <meta name="author" content="Sebastian Shelby" />
+  <meta name="description" content="Sebastian Shelby is a software developer in Toronto, Canada" />
+  <title>Sebastian Shelby</title>
+  <!-- open graph -->
+  <meta property="og:title" content="Sebastian Shelby, Software Developer in Toronto, Canada" />
+  <meta property="og:image" content="./images/website-thumbnail.jpg" />
+  <meta property="og:description" content="Sebastian Shelby is a software developer in Toronto, Canada" />
+  <meta property="og:url" content="https://sebastianshelby.com/" />
+
+  <!-- search engine verifications -->
+  <meta name="google-site-verification" content="hcIRJUEiqXByv6qTm2Pzs9znUMXtM5V-Xpj5ovd0FfU" />
+  <meta name="google-site-verification" content="ZC5pMC-SVwTSFVYoSMlV85PhdcgSOeXNHXTCd8TRceo" />
+  <!-- responsive favicon images  -->
+  <link rel="manifest" href="./favicon/site.webmanifest" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script type="module" src="./index.js"></script>
+</head>
+
+<body>
+  <div class="container" id="home">
+    <header>
+      <div id="nav-bar" class="nav-bar-container">
+        <div class="nav-headline">
+          <a class="main-logo" href="#home">
+            <img src="./favicon/android-chrome-192x192.png" alt="website logo" />
+            <p>Sebastian Shelby</p>
+          </a>
+        </div>
+
+        <label class="nav-toggle-label" for="nav-toggle">
+          <span></span>
+        </label>
+
+        <input id="nav-toggle" type="checkbox" />
+
+        <nav class="nav-bar">
+          <ul class="nav-ul">
+            <li><a class="nav-link" href="#about-me">About</a></li>
+            <li><a class="nav-link" href="#skills">Skills</a></li>
+            <li><a class="nav-link" href="#projects">Experience</a></li>
+            <li><a class="nav-link" href="#footer">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-content">
+        <div class="header-img-container"></div>
+        <div class="header-info">
+          <h1>Hi, I'm Sebastian</h1>
+          <h2 class="sub-headline">
+            Software Developer in Web
+          </h2>
+        </div>
+        <div class="header-button-container">
+
+          <a class="button is-primary is-outlined is-rounded is-small" href="mailto:sebastianeshelby@gmail.com"
+            rel="noopener" target="_blank"><i class="icon" data-feather="mail"></i>
+            <span>sebastianEshelby@gmail.com</span>
+          </a>
+
+
+          <div class="social-media">
+            <a class="button is-primary is-round is-filled is-medium" href="https://github.com/SebastianEShelby"
+              rel="noopener" target="_blank" aria-label="Github">
+              <i class="icon" data-feather="github"></i>
+            </a>
+
+            <a class="button is-primary is-round is-filled is-medium"
+              href="https://www.linkedin.com/in/sebastianshelby/" rel="noopener" target="_blank" aria-label="LinkedIn">
+              <i class="icon" data-feather="linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about-me" class="section-container">
+        <div id="about-me-sub-container" class="section-sub-container">
+          <h2>About Me</h2>
+
+          <div class="section-text">
+            <p>
+              Software developer with years of experience in crafting high-impact B2B web applications,
+              utilized by thousands of users and generating over $2M in revenue. Demonstrated proficiency in mentoring
+              developers, optimizing workflows, and delivering high quality software solutions.
+            </p>
+
+            <ul class="list-style-plus">
+              <li>Web Application Development</li>
+              <li>Responsive Design</li>
+              <li>Automated QA and testing</li>
+              <li>Excellent communication skills</li>
+              <li>Leadership with a proactive approach</li>
+            </ul>
+            <p>
+              When I’m off the screen, I like to exercise, go for walks, dance, socialize and learn new skills.
+              <a href="#footer"> <u>Stay Connected</u></a> to learn more about what I do these days.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section-container skill-container">
+        <div class="skill">
+          <div class="skill-row skill-img-container">
+            <i class="icon skill-img" data-feather="code"></i>
+            <span class="skill-headline">Languages</span>
+          </div>
+
+          <div class="skill-icon-container skill-row">
+            <div class="skill-icon">
+              <i class="devicon-html5-plain colored devicon"></i>
+              <span>HTML5</span>
+            </div>
+
+            <div class="skill-icon">
+              <i class="devicon-css3-plain colored devicon"></i>
+              <span>CSS3</span>
+            </div>
+
+            <div class="skill-icon">
+              <i class="devicon-javascript-plain colored devicon"></i>
+              <span>JavaScript</span>
+            </div>
+
+            <div class="skill-icon">
+              <i class="devicon-typescript-plain colored devicon"></i>
+              <span>TypeScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-img-container skill-row">
+            <i class="icon skill-img" data-feather="book-open"></i>
+            <span class="skill-headline">Libraries & Frameworks</span>
+          </div>
+
+          <div class="skill-icon-container skill-row">
+            <div class="skill-icon">
+              <i class="devicon-angularjs-plain colored devicon"></i>
+              <span>Angular</span>
+            </div>
+
+            <div class="skill-icon">
+              <i class="devicon-react-original colored devicon"></i>
+              <span>React</span>
+            </div>
+
+            <div class="skill-icon">
+              <i class="devicon-nodejs-plain colored devicon"></i>
+              <span>Node.js</span>
+            </div>
+
+            <div class="skill-icon">
+              <div>
+                <svg width="4em" height="4em" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Cypress</title>
+                  <path
+                    d="M11.998 0C5.366 0 0 5.367 0 12a11.992 11.992 0 0 0 12 12c6.633 0 12-5.367 12-12-.001-6.633-5.412-12-12.002-12zM6.37 14.575c.392.523.916.742 1.657.742.35 0 .699-.044 1.004-.175.306-.13.655-.306 1.09-.567l1.223 1.745c-1.003.83-2.138 1.222-3.447 1.222-1.048 0-1.92-.218-2.705-.654a4.393 4.393 0 0 1-1.746-1.92c-.392-.83-.611-1.79-.611-2.925 0-1.09.219-2.094.61-2.923a4.623 4.623 0 0 1 1.748-2.007c.741-.48 1.657-.698 2.661-.698.699 0 1.353.087 1.877.305a5.64 5.64 0 0 1 1.614.96l-1.222 1.658A4.786 4.786 0 0 0 9.12 8.77c-.305-.13-.698-.174-1.048-.174-1.483 0-2.225 1.134-2.225 3.446-.043 1.18.175 2.008.524 2.532H6.37zm12 2.705c-.436 1.353-1.091 2.357-2.008 3.098-.916.743-2.138 1.135-3.665 1.266l-.305-2.05c1.003-.132 1.745-.35 2.225-.7.174-.13.524-.523.524-.523L11.519 6.764h3.01l2.095 8.683 2.226-8.683h2.923L18.37 17.28z" />
+                </svg>
+              </div>
+
+              <span>Cypress</span>
+            </div>
+
+            <div class="skill-icon">
+              <i class="devicon-sass-plain colored devicon"></i>
+              <span>Sass</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill">
+
+          <div class="skill-img-container skill-row">
+            <i class="icon skill-img" data-feather="package"></i>
+            <span class="skill-headline">Database & Tools</span>
+          </div>
+
+          <div class="skill-icon-container skill-row">
+
+            <div class="skill-icon">
+              <i class="devicon-git-plain colored devicon"></i>
+              <span>Git</span>
+            </div>
+
+            <div class="skill-icon">
+              <i class="devicon-github-plain colored devicon"></i>
+              <span>GitHub</span>
+            </div>
+
+            <div class="skill-icon">
+              <i class="devicon-jira-plain colored devicon"></i>
+              <span>Jira</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section-container">
+        <div id="projects-sub-container" class="section-sub-container">
+          <h2>Work Experience</h2>
+          <div id="project-items" class="project-items">
+
+            <div class="project">
+              <a href="https://savvyy.ai/" rel="noopener" target="_blank">
+                <img src="./images/savvyy.png" alt="Savvyy Mortgage Underwriting Platform" />
+              </a>
+              <h3>Savvyy Mortgage Underwriting Platform</h3>
+              <div class="project-information">
+                <ul class="reset-list-styles">
+                  <li>Mentored developers in Nrwl monorepo, Angular, Domain Driven Design (DDD) and other software
+                    engineering concepts.</li>
+                  <li>Co-managed retrospective meetings with the product owner, maintaining the team's top performance
+                    status through comprehensive review of each sprint and continuous workflow improvement.
+                  </li>
+                  <li>Successfully implemented the planning poker method, which led to over 90% accuracy in project
+                    estimations.
+                  </li>
+                  <li>Authored and maintained clear and concise product and technical documentation, improving
+                    cross-team collaboration and increasing organization-wide productivity.
+                  </li>
+                  <li>Contributed to major features in front-end development by designing and implementing scalable
+                    solutions.
+                  </li>
+                  <li>Optimized the implementation of user permissions and authentication using Okta SDK, eliminating
+                    unexpected behavior while using the product.
+                  </li>
+                  <li>Doubled end-to-end (E2E) testing speeds and reduced test flakiness by 25% after implementing a
+                    standard testing architecture and training the Quality Assurance (QA) team.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="header-button-container">
+                <a class="button is-primary is-outlined is-rounded is-small" href="https://savvyy.ai/" rel="noopener"
+                  target="_blank"><i class="icon" data-feather="globe"></i>
+                  <span>Website</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="project">
+              <a href="http://artintech.ca/supply-chain-management/" rel="noopener" target="_blank">
+                <img src="./images/procepax.png" alt="ProcePax Supply Chain Management System" />
+              </a>
+              <h3>ProcePax Supply Chain Management System</h3>
+              <div class="project-information">
+                <ul class="reset-list-styles">
+                  <li>Reduced supply chain costs by 20% by eliminating manual data input and human errors.
+                  </li>
+                  <li>Designed an electronic data input system using reactive forms, which increased engineer
+                    productivity by 25%.
+                  </li>
+                  <li>Optimized a product tree algorithm, resulting in over a 100% increase in the product search
+                    responsiveness.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="header-button-container">
+                <a class="button is-primary is-outlined is-rounded is-small"
+                  href="http://artintech.ca/supply-chain-management/" rel="noopener" target="_blank"><i class="icon"
+                    data-feather="globe"></i>
+                  <span>Website</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="project">
+              <a href="https://fireprotection.senecacollege.ca/student/fire-protection" rel="noopener" target="_blank">
+                <img src="./images/fire-protection-services.png" alt="Fire Protection Services" />
+              </a>
+              <h3>Seneca Fire Protection Services</h3>
+
+              <div class="project-information">
+                <ul class="reset-list-styles">
+                  <li>Lead the front-end development team by implementing best practices and modern technologies such as
+                    Angular.
+                  </li>
+                  <li>Created a brand-new Content Management System (CMS) for the faculty to manage courses and class
+                    schedules for students, resulting in a 75% increase in satisfaction rates compared to the legacy
+                    system.
+                  </li>
+                  <li>Designed a scalable relational database in SQL Server with over 12 data tables capable of handling
+                    complex data queries resulting in near instant response times.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="header-button-container">
+                <a class="button is-primary is-outlined is-rounded is-small"
+                  href="https://fireprotection.senecacollege.ca/student/fire-protection" rel="noopener"
+                  target="_blank"><i class="icon" data-feather="globe"></i>
+                  <span>Website</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="project">
+              <a href="https://intl.senecacollege.ca/" rel="noopener" target="_blank">
+                <img src="./images/iap-website.png" alt="Seneca International Student Application" />
+              </a>
+              <h3>Seneca International Student Application</h3>
+              <div class="project-information">
+                <ul class="reset-list-styles">
+                  <li>Built a brand-new Single Page Application (SPA) to replace the legacy version of Seneca’s
+                    “International Student Web Application" and simplified the application flow resulting in 60% faster
+                    processing times.
+                  </li>
+                  <li>Improved Node.js REST API with a new algorithm, increasing document upload speeds by more than
+                    100%.
+                  </li>
+                  <li>Configured a beta version of MSAL (Microsoft’s Authentication Library) and eliminated
+                    authentication failures.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="header-button-container">
+                <a class="button is-primary is-outlined is-rounded is-small" href="https://intl.senecacollege.ca/"
+                  rel="noopener" target="_blank"><i class="icon" data-feather="globe"></i>
+                  <span>Website</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="footer-text">
+        <h2>Stay Connected</h2>
+      </div>
+      <div class="social-media">
+        <a class="button is-primary is-round is-filled is-medium" href="mailto:sebastianeshelby@gmail.com"
+          rel="noopener" target="_blank" aria-label="Email">
+          <i class="icon" data-feather="mail"></i>
+        </a>
+        <a class="button is-primary is-round is-filled is-medium" href="https://github.com/SebastianEShelby"
+          rel="noopener" target="_blank" aria-label="Github">
+          <i class="icon" data-feather="github"></i>
+        </a>
+        <a class="button is-primary is-round is-filled is-medium" href="https://www.linkedin.com/in/sebastianshelby/"
+          rel="noopener" target="_blank" aria-label="LinkedIn">
+          <i class="icon" data-feather="linkedin"></i>
+        </a>
+      </div>
+
+      <div class="footer-text">
+        <p>Designed by &copy; 2019 Sebastian Shelby</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+$headerImageBackground: rgba(255, 255, 255, 0.06);
+
+header {
+  display: grid;
+  grid-template-columns: inherit;
+  grid-template-rows: inherit;
+  grid-column-start: first-column;
+  grid-column-end: last-column;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  align-self: center;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  color: $darkBlue;
+  height: 100%;
+  width: 100%;
+}
+
+.header-img-container {
+  width: 40vh;
+  height: 40vh;
+  max-height: 340px;
+  max-width: 340px;
+
+  background-image: url('../images/professional-photo.jpg');
+
+  background-color: $headerImageBackground;
+  background-blend-mode: saturation;
+  background-size: cover;
+  background-position: center;
+
+  margin: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.header-info {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 3vh 0;
+
+  >* {
+    margin: $headerDivMargin;
+  }
+
+  h3.sub-headline {
+    display: none;
+  }
+}
+
+.header-button-container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+
+  a.button {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+
+    text-transform: none;
+  }
+
+  >*:not(:last-child) {
+    margin: 3vh 0;
+  }
+}
