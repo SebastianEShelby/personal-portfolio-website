@@ -8,6 +8,7 @@ main {
   grid-column: first-column/last-column;
   grid-row: 3 / span 1;
 }
+
 /* Main Section Styles */
 
 .section-container {
@@ -19,28 +20,34 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  > * {
+
+  >* {
     margin-bottom: $projectSectionsPadding;
   }
+
   .section-text {
     width: 90%;
     font-size: 1.17em;
     margin-bottom: $projectSectionsPadding;
-    > * {
+
+    >* {
       margin-bottom: 4vh;
     }
   }
 }
+
 /* Main Section Styles End */
 
 #about-me {
   grid-column: 1 / span 3;
   background-color: $darkBackGround;
+
   #about-me-sub-container {
     color: $darkBackgroundText;
     padding-bottom: calc(#{$projectSectionsPadding} + 20px * 3);
     margin: 0 10vw;
   }
+
   a {
     color: $darkBackgroundText;
   }
@@ -61,6 +68,7 @@ main {
   margin-top: -10vh;
   border-radius: 10px;
 }
+
 .skill {
   color: $darkBlue;
   padding: 2vh 2vh;
@@ -85,6 +93,7 @@ main {
   display: flex;
   flex-direction: column;
   margin-bottom: 3vh;
+
   svg.feather {
     stroke-width: 1px;
     stroke: $darkRed;
@@ -92,9 +101,11 @@ main {
     height: 4em;
     font-weight: 100;
   }
+
   svg.feather-book {
     transform: rotate(-20deg);
   }
+
   .feather,
   .skill-headline {
     margin: 10px 0;
@@ -110,14 +121,16 @@ main {
   flex-wrap: wrap;
   width: 100%;
 }
+
 .skill-icon-row {
   display: flex;
   flex-direction: row;
 }
+
 .skill-icon {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.2rem;
+  margin: 1.2rem .5rem;
   width: 5.2rem; // based on maximum icon text width (visual studio)
   white-space: nowrap;
   overflow: initial;
@@ -126,14 +139,18 @@ main {
 
   span {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
 #projects {
   text-align: center;
-  > div {
+
+  >div {
     margin-bottom: $projectSectionsPadding;
   }
+
   h2 {
     margin: $projectSectionsPadding 0;
   }
@@ -164,7 +181,7 @@ main {
     margin-bottom: 10vw;
   }
 
-  > *:not(:last-child) {
+  >*:not(:last-child) {
     margin-bottom: 30px;
   }
 
@@ -176,7 +193,7 @@ main {
     width: 90%;
     text-align: left;
 
-    > *:not(:last-child) {
+    >*:not(:last-child) {
       margin-bottom: 20px;
     }
   }
