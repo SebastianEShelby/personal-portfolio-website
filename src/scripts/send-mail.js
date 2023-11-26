@@ -27,3 +27,5 @@ const sendMail = (recaptchaToken) => {
       localStorage.removeItem('g-recaptcha')
     })
 }
+
+export { sendMail };
