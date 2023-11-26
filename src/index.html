@@ -42,6 +42,8 @@
       localStorage.setItem('g-recaptcha', recaptchaToken)
       document.getElementById("contact-form").requestSubmit()
     }
+
+    window.onContactFormSubmit = onContactFormSubmit;
   </script>
 
 </head>
