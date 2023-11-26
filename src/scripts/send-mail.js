@@ -1,7 +1,3 @@
-(function () {
-  emailjs.init("o578bwZtNWlSgW3E3");
-})();
-
 const sendMail = (recaptchaToken) => {
   const contactForm = document.getElementById("contact-form")
 
