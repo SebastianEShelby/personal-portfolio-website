@@ -10,4 +10,10 @@ window.onload = () => {
   handleNavBar();
   preventScrollOverFlow();
   handleHamburgerMenu();
+
+  document.getElementById("contact-form").addEventListener("submit", (event) => {
+    const recaptchaToken = localStorage.getItem('g-recaptcha')
+    event.preventDefault();
+    sendMail(recaptchaToken)
+  });
 };

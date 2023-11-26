@@ -1,6 +1,5 @@
-const sendMail = (event, recaptchaToken) => {
+const sendMail = (recaptchaToken) => {
   const contactForm = document.getElementById("contact-form")
-  event.preventDefault();
 
   const nameInput = contactForm.querySelector('[name="name"]')
   const emailInput = contactForm.querySelector('[name="email"]')
@@ -24,5 +23,7 @@ const sendMail = (event, recaptchaToken) => {
     }).catch(err => {
       console.error(err)
       alert(`Something went wrong! ${err.text}`)
+    }).finally(() => {
+      localStorage.removeItem('g-recaptcha')
     })
 }
