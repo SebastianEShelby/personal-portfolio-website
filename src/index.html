@@ -26,7 +26,27 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <script type="module" src="./index.js"></script>
+  <script type="module" src="./index.js"> </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("o578bwZtNWlSgW3E3");
+    })();
+  </script>
+  <script type="text/javascript" src="./scripts/send-mail.js"> </script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    function onContactFormSubmit(recaptchaToken) {
+      const contactForm = document.getElementById("contact-form")
+      contactForm.addEventListener("submit", (event) => {
+        sendMail(event, recaptchaToken)
+      });
+      contactForm.requestSubmit()
+    }
+  </script>
+
 </head>
 
 <body>
@@ -51,7 +71,7 @@
             <li><a class="nav-link" href="#about-me">About</a></li>
             <li><a class="nav-link" href="#skills">Skills</a></li>
             <li><a class="nav-link" href="#projects">Experience</a></li>
-            <li><a class="nav-link" href="#footer">Contact</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -393,6 +413,26 @@
           </div>
         </div>
       </section>
+      <section id="contact" class="section-container">
+        <div class="section-sub-container">
+          <h2>Contact</h2>
+          <form id="contact-form" name="contact-form" class="contact-form">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Name" required>
+              <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <textarea name="message" minlength="250" maxlength="600" form="contact-form" placeholder="Message..."
+              required></textarea>
+            <button class="button is-primary is-outlined is-small g-recaptcha"
+              data-sitekey="6LcNzhwpAAAAALgnnVbQcFv_K24S04Q0rcolDHzU" data-callback='onContactFormSubmit'
+              data-action='submit'>
+              <i class="icon" data-feather="mail"></i>
+              <span>Send</span>
+            </button>
+          </form>
+        </div>
+      </section>
+
     </main>
 
     <footer id="footer">
