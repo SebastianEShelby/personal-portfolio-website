@@ -14,11 +14,14 @@ $footerDivMargin: 2vh;
 @import './utils.scss';
 @import './sanitize.scss';
 @import './themes.scss';
+@import './button.scss';
 @import './nav.scss';
 @import './header.scss';
 @import './main.scss';
+@import './about-me.scss';
+@import './skills.scss';
+@import './projects.scss';
 @import './footer.scss';
-@import './button.scss';
 /* External css files end here */
 
 /* Global styles start here  */
@@ -64,6 +67,7 @@ a {
   &:active {
     color: $darkRed;
   }
+
   text-decoration: none;
   color: $darkBlue;
   text-transform: capitalize;
@@ -80,6 +84,7 @@ button {
 .sub-headline {
   font-weight: 400;
 }
+
 /* Global styles end here  */
 
 /* Page structure styles start here */
@@ -89,12 +94,10 @@ button {
   height: 100%;
   grid-template-columns: [first-column] $bodyGridPadding [line2] auto [line3] $bodyGridPadding [last-column];
   grid-template-rows:
-    [first-row] $firstGridRow [row2] minmax(92vh, auto) [row3] minmax(
-      100vh,
-      auto
-    )
-    [row4] minmax(20vh, auto) [last-row];
+    [first-row] $firstGridRow [row2] minmax(92vh, auto) [row3] minmax(100vh,
+      auto) [row4] minmax(20vh, auto) [last-row];
 }
+
 /* Page structure styles end here */
 
 /* Svg styles start here */
