@@ -37,7 +37,7 @@
   <script type="text/javascript" src="./scripts/send-mail.js">
   </script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script>
+  <script type="text/javascript" async defer>
     function onContactFormSubmit(recaptchaToken) {
       console.log('7', recaptchaToken)
       sendMail(recaptchaToken)
