@@ -3,7 +3,7 @@ $firstGridRow: 10vh;
 $buttonIconMargin: 15px;
 $bodyGridPadding: 5vw;
 $navContainerPadding: 20px;
-$buttonFont: 'Niramit', sans-serif;
+$fontFamilyDefault: 'Niramit', sans-serif;
 $headerDivMargin: 1vh;
 $footerDivMargin: 2vh;
 
@@ -32,7 +32,7 @@ html {
 }
 
 body {
-  font-family: 'Niramit', sans-serif;
+  font-family: $fontFamilyDefault;
   font-size: 16px;
   color: $darkBlue;
   line-height: 1.5;
