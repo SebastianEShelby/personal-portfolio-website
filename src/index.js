@@ -12,8 +12,8 @@ window.onload = () => {
   handleHamburgerMenu();
 
   document.getElementById("contact-form").addEventListener("submit", (event) => {
-    const recaptchaToken = localStorage.getItem('g-recaptcha')
     event.preventDefault();
+    const recaptchaToken = localStorage.getItem('g-recaptcha')
     sendMail(recaptchaToken)
   });
 };
