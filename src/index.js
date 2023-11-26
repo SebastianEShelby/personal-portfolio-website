@@ -2,7 +2,6 @@ import { handleNavBar } from './scripts/sticky-nav';
 import './scss/styles.scss';
 import { preventScrollOverFlow } from './scripts/scroll-effects';
 import { handleHamburgerMenu } from './scripts/hamburger-menu';
-import { sendMail } from './scripts/send-mail'
 
 // wait for the window to load and identify dom elements
 window.onload = () => {
@@ -11,10 +10,4 @@ window.onload = () => {
   handleNavBar();
   preventScrollOverFlow();
   handleHamburgerMenu();
-
-  document.getElementById("contact-form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    const recaptchaToken = localStorage.getItem('g-recaptcha')
-    sendMail(recaptchaToken)
-  });
 };

@@ -29,19 +29,28 @@
   <script type="module" src="./index.js"> </script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
-
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("o578bwZtNWlSgW3E3");
-    })();
+  <script type="text/javascript" src="./scripts/send-mail.js">
   </script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script>
     function onContactFormSubmit(recaptchaToken) {
-      localStorage.setItem('g-recaptcha', recaptchaToken)
-      document.getElementById("contact-form").requestSubmit()
+      sendMail(recaptchaToken)
     }
-    window.onContactFormSubmit = onContactFormSubmit;
+
+    function validate(event) {
+      event.preventDefault();
+      const contactForm = document.getElementById('contact-form')
+      contactForm.reportValidity()
+      if (!contactForm.checkValidity()) return
+      grecaptcha.execute();
+    }
+
+    function onContactFormLoad() {
+      const submitElement = document.getElementById('contact-form').querySelector('button[type="submit"]')
+      submitElement.onclick = validate;
+    }
+
+
   </script>
 
 </head>
@@ -420,13 +429,15 @@
             </div>
             <textarea name="message" minlength="250" maxlength="600" form="contact-form" placeholder="Message..."
               required></textarea>
-            <button class="g-recaptcha button is-primary is-outlined is-small"
-              data-sitekey="6LcNzhwpAAAAALgnnVbQcFv_K24S04Q0rcolDHzU" data-callback='onContactFormSubmit'
-              data-action='submit'>
+            <button type="submit" class="button is-primary is-outlined is-small">
               <i class="icon" data-feather="mail"></i>
               <span>Send</span>
             </button>
+            <div class="g-recaptcha" data-sitekey="6Lc75xwpAAAAALpHKFn6cmqmc4ziHZa3XVOzwKXf"
+              data-callback="onContactFormSubmit" data-size="invisible">
+            </div>
           </form>
+          <script>onContactFormLoad();</script>
         </div>
       </section>
 
