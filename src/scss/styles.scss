@@ -17,10 +17,10 @@ $footerDivMargin: 2vh;
 @import './button.scss';
 @import './nav.scss';
 @import './header.scss';
-@import './main.scss';
-@import './about-me.scss';
-@import './skills.scss';
-@import './projects.scss';
+@import './main/main.scss';
+@import './main/about-me.scss';
+@import './main/skills.scss';
+@import './main/projects.scss';
 @import './footer.scss';
 /* External css files end here */
 
