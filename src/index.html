@@ -26,7 +26,68 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <script type="module" src="./index.js"></script>
+  <script type="module" src="./index.js"> </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("o578bwZtNWlSgW3E3");
+    })();
+  </script>
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script type="text/javascript" async defer>
+
+    const sendMail = (recaptchaToken) => {
+      const contactForm = document.getElementById("contact-form")
+
+      const nameInput = contactForm.querySelector('[name="name"]')
+      const emailInput = contactForm.querySelector('[name="email"]')
+      const messageInput = contactForm.querySelector('[name="message"]')
+      const params = {
+        name: nameInput.value,
+        email: emailInput.value,
+        message: messageInput.value,
+        'g-recaptcha-response': recaptchaToken
+      }
+
+      if (!params.name || !params.email || !params.message) return alert("Email information missing! Cannot send email")
+
+      contactForm.reset()
+
+      emailjs.send("default_service", "template_25vyieb", params)
+        .then(() => {
+          alert("Thanks for your email!")
+        }).catch(err => {
+          console.error(err)
+          alert(`Something went wrong! ${err.text}`)
+        })
+    }
+
+    function onContactFormSubmit(recaptchaToken) {
+      sendMail(recaptchaToken)
+    }
+
+    function validate(event) {
+      event.preventDefault();
+      const contactForm = document.getElementById('contact-form')
+      contactForm.reportValidity()
+      if (!contactForm.checkValidity()) return
+      grecaptcha.execute();
+    }
+
+    function onContactFormLoad() {
+      const submitElement = document.getElementById('contact-form').querySelector('button[type="submit"]')
+      submitElement.onclick = validate;
+    }
+
+    window.onContactFormLoad = onContactFormLoad;
+    window.onContactFormSubmit = onContactFormSubmit;
+    window.validate = validate;
+    window.sendMail = sendMail;
+
+  </script>
+
 </head>
 
 <body>
@@ -51,7 +112,7 @@
             <li><a class="nav-link" href="#about-me">About</a></li>
             <li><a class="nav-link" href="#skills">Skills</a></li>
             <li><a class="nav-link" href="#projects">Experience</a></li>
-            <li><a class="nav-link" href="#footer">Contact</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -393,6 +454,28 @@
           </div>
         </div>
       </section>
+      <section id="contact" class="section-container">
+        <div class="section-sub-container">
+          <h2>Contact</h2>
+          <form id="contact-form" name="contact-form" class="contact-form">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Name" required>
+              <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <textarea name="message" minlength="250" maxlength="600" form="contact-form" placeholder="Message..."
+              required></textarea>
+            <button type="submit" class="button is-primary is-outlined is-small">
+              <i class="icon" data-feather="mail"></i>
+              <span>Send</span>
+            </button>
+            <div class="g-recaptcha" data-sitekey="6Lc75xwpAAAAALpHKFn6cmqmc4ziHZa3XVOzwKXf"
+              data-callback="onContactFormSubmit" data-size="invisible">
+            </div>
+          </form>
+          <script>onContactFormLoad();</script>
+        </div>
+      </section>
+
     </main>
 
     <footer id="footer">
