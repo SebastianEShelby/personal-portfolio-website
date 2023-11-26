@@ -34,7 +34,6 @@
       emailjs.init("o578bwZtNWlSgW3E3");
     })();
   </script>
-  <!-- <script type="text/javascript" src="./scripts/send-mail.js"> -->
   </script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script type="text/javascript" async defer>
@@ -66,29 +65,20 @@
     }
 
     function onContactFormSubmit(recaptchaToken) {
-      console.log('7', recaptchaToken)
       sendMail(recaptchaToken)
-      console.log('8')
     }
 
     function validate(event) {
-      console.log('3', event)
       event.preventDefault();
-      console.log('4')
       const contactForm = document.getElementById('contact-form')
-      console.log('5', contactForm)
       contactForm.reportValidity()
       if (!contactForm.checkValidity()) return
       grecaptcha.execute();
-      console.log('6', grecaptcha)
     }
 
     function onContactFormLoad() {
-      console.log('0')
       const submitElement = document.getElementById('contact-form').querySelector('button[type="submit"]')
-      console.log('1', submitElement)
       submitElement.onclick = validate;
-      console.log('2', validate)
     }
 
     window.onContactFormLoad = onContactFormLoad;
