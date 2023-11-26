@@ -36,14 +36,11 @@
     })();
   </script>
   <script type="text/javascript" src="./scripts/send-mail.js"> </script>
-  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script>
     function onContactFormSubmit(recaptchaToken) {
-      const contactForm = document.getElementById("contact-form")
-      contactForm.addEventListener("submit", (event) => {
-        sendMail(event, recaptchaToken)
-      });
-      contactForm.requestSubmit()
+      localStorage.setItem('g-recaptcha', recaptchaToken)
+      document.getElementById("contact-form").requestSubmit()
     }
   </script>
 
@@ -423,7 +420,7 @@
             </div>
             <textarea name="message" minlength="250" maxlength="600" form="contact-form" placeholder="Message..."
               required></textarea>
-            <button class="button is-primary is-outlined is-small g-recaptcha"
+            <button class="g-recaptcha button is-primary is-outlined is-small"
               data-sitekey="6LcNzhwpAAAAALgnnVbQcFv_K24S04Q0rcolDHzU" data-callback='onContactFormSubmit'
               data-action='submit'>
               <i class="icon" data-feather="mail"></i>
