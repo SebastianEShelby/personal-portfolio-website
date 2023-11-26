@@ -5,36 +5,38 @@ $firstGridRow: 8vh;
 /* Responsive design ends here  */
 @media screen and (min-width: 1000px) {
   body {
+
     header,
     main,
     footer {
       font-size: large;
     }
   }
+
   .container {
     grid-template-columns: [first-column] 5vw [line2] auto [line3] 5vw [last-column];
     grid-template-rows:
-      [first-row] $firstGridRow [row2] minmax(92vh, auto) [row3] minmax(
-        100vh,
-        auto
-      )
-      [row4] minmax(20vh, auto) [last-row];
+      [first-row] $firstGridRow [row2] minmax(92vh, auto) [row3] minmax(100vh,
+        auto) [row4] minmax(20vh, auto) [last-row];
   }
 
   .nav-toggle-label {
     display: none;
   }
+
   .nav-bar-container {
     top: 2vh;
     padding: 10px 5vw;
     background-color: $background_color_1;
     position: absolute;
   }
+
   .sticky {
     position: fixed;
     top: 0;
     background-color: $background_color_2;
   }
+
   .nav-bar {
     position: relative;
     text-align: left;
@@ -49,6 +51,7 @@ $firstGridRow: 8vh;
     border-bottom: unset;
     margin: 0;
   }
+
   nav {
     ul {
       display: flex;
@@ -56,12 +59,14 @@ $firstGridRow: 8vh;
       align-items: center;
       justify-content: flex-start;
       height: 100%;
+
       li {
         padding-bottom: 0;
         padding-left: 1em;
       }
     }
   }
+
   .nav-link {
     display: flex;
     align-items: center;
@@ -69,6 +74,7 @@ $firstGridRow: 8vh;
     transform: scale(1, 1);
     transition: transform ease-in-out 250ms;
     height: initial;
+
     &::before {
       content: '';
       display: block;
@@ -82,6 +88,7 @@ $firstGridRow: 8vh;
       transform: scale(0, 1);
       transition: transform ease-in-out 250ms;
     }
+
     &:hover {
       &::before {
         transform: scale(1, 1);
@@ -94,16 +101,19 @@ $firstGridRow: 8vh;
     justify-self: center;
     font-size: large;
   }
+
   .skill-container {
     margin-right: calc(10vw - 2vh);
     margin-left: calc(10vw - 2vh);
     font-size: medium;
   }
+
   .skill {
     margin: 1vh 1vh;
     width: 31.5%;
     max-width: 320px;
   }
+
   // make the small buttons bigger on desktop screens
   .is-small {
     padding: 0.8em 1.5em;
@@ -111,6 +121,14 @@ $firstGridRow: 8vh;
 
   #projects-sub-container {
     margin: 0 8vw;
+  }
+
+  #contact.section-container .section-sub-container .contact-form {
+    width: 90%;
+
+    button {
+      width: 50%;
+    }
   }
 }
 
