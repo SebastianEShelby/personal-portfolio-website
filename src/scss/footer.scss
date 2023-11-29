@@ -1,3 +1,5 @@
+$footerDivMargin: 2vh;
+
 footer {
   background-color: $darkBackGround;
   grid-area: 4 / first-column/span 1 / last-column;
@@ -8,6 +10,7 @@ footer {
   align-items: center;
   justify-items: center;
   color: $lightTextColor;
+
   div {
     margin-bottom: $footerDivMargin;
     margin-top: $footerDivMargin;

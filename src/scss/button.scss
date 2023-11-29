@@ -90,10 +90,13 @@ $lightTextColor: antiquewhite;
   }
 
   .icon {
-    align-items: center;
+    place-items: center;
     justify-items: center;
     display: inline-flex;
-    justify-content: center;
+  }
+
+  span {
+    margin-bottom: 3px;
   }
 
   &.is-round {
