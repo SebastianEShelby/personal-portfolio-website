@@ -2,7 +2,6 @@ $background_color_1: unset;
 $background_color_2: #ffffff;
 $firstGridRow: 8vh;
 /* Responsive design start here (Desktop Styles) */
-/* Responsive design ends here  */
 @media screen and (min-width: 1000px) {
   body {
 
@@ -132,12 +131,21 @@ $firstGridRow: 8vh;
   }
 }
 
-/* Hiding sub headline text on mobile */
-@media screen and (min-width: 350px) {
-  .header-info h3.sub-headline {
-    display: initial !important;
+/* Responsive design ends here (Desktop Styles) */
+
+/* Responsive design start here (Small Phones in Portrait) */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .header-content {
+    font-size: small;
+  }
+
+  .header-img-container {
+    width: 20vh;
+    height: 20vh;
   }
 }
+
+/* Responsive design start here (Small Phones in Portrait) */
 
 /* Hover Query for devices with hover support */
 @media (any-hover: hover) {
