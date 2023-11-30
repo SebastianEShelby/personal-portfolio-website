@@ -101,16 +101,19 @@ $firstGridRow: 8vh;
     font-size: large;
   }
 
+  #about-me #about-me-sub-container {
+    margin: 0 20vw;
+  }
+
   .skill-container {
-    margin-right: calc(10vw - 2vh);
-    margin-left: calc(10vw - 2vh);
     font-size: medium;
   }
 
   .skill {
     margin: 1vh 1vh;
     width: 31.5%;
-    max-width: 320px;
+    max-width: 500px;
+    min-width: 355px;
   }
 
   // make the small buttons bigger on desktop screens
