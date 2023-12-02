@@ -25,17 +25,12 @@ header {
   height: 100%;
   width: 100%;
   font-size: medium;
-
-  >* {
-    margin: 3vh 0;
-  }
 }
 
 .header-img-container {
   display: flex;
   place-items: center;
   position: relative; // important for image overlay
-  width: 30vh;
   height: 30vh;
   max-height: 340px;
   max-width: 340px;
@@ -86,6 +81,6 @@ header {
   }
 
   >*:not(:last-child) {
-    margin: 3vh 0;
+    margin: 2vh 0;
   }
 }
