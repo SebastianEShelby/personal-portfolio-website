@@ -99,6 +99,14 @@ $firstGridRow: 8vh;
     padding: 4vw 1vw;
     justify-self: center;
     font-size: large;
+
+    >* {
+      margin: 1vh 0;
+    }
+  }
+
+  #about-me #about-me-sub-container {
+    margin: 0 20vw;
   }
 
   #about-me #about-me-sub-container {
