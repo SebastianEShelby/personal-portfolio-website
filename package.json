@@ -28,10 +28,5 @@
     "feather-icons": "^4.28.0",
     "parcel": "^2.7.0",
     "sass": "^1.26.7"
-  },
-  "dependencies": {
-    "@datorama/themify": "^1.0.5",
-    "@emailjs/browser": "^3.11.0",
-    "images": "^3.2.2"
   }
 }
