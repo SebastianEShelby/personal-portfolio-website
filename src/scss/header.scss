@@ -32,6 +32,7 @@ header {
   place-items: center;
   position: relative; // important for image overlay
   height: 30vh;
+  width: 30vh; // required for safari
   max-height: 340px;
   max-width: 340px;
   overflow: hidden;
